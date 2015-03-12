@@ -1,0 +1,9 @@
+// Wrapper for hierarchy override
+.cms {
+    /**
+    * Main content
+    */
+    .cms-content-fields {
+        background: $gray-lighter;
+    }
+}

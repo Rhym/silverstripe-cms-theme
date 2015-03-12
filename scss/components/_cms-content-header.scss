@@ -1,0 +1,50 @@
+/**
+ * The top bar containing breadcrumbs, and view toggle
+ */
+.cms-content-header.north {
+    background: $brand-primary;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.12);
+    /**
+     * Breadcrumbs
+     */
+    .breadcrumbs-wrapper {
+        padding: 0 0 0 $gap-lg;
+        .icon {
+            display: none;
+        }
+        .crumb,
+        .sep {
+            color: $brand-primary-color;
+        }
+    }
+    /**
+     * View tabs
+     */
+    .cms-content-header-tabs {
+        .ui-tabs-nav {
+            border-width: 0;
+            li {
+                background: transparent none;
+                box-shadow: none;
+                border-width: 0;
+                &.ui-state-active {
+                    a {
+                        background: shade($brand-primary, 15);
+                    }
+                }
+                a {
+                    text-indent: 0;
+                    background: transparent none;
+                    color: $brand-primary-color;
+                    text-shadow: none;
+                    padding: 0 $gap-md;
+                    margin: 0;
+                }
+            }
+            .content-treeview {
+            }
+            .content-listview {
+            }
+        }
+    }
+}
