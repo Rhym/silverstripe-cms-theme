@@ -1,20 +1,27 @@
+/*======================================================================*\
+    CMS Menu
+\*======================================================================*/
+
+$sidebar-background: $brand-primary;
+$sidebar-color: $brand-primary-color;
+
 /**
  * The left-hand navigation
  */
 .cms-menu {
     font-family: $font-family-base;
-    background: $brand-default;
-    color: $brand-default-color;
+    background: $sidebar-background;
+    color: $sidebar-color;
     width: 240px !important; // Override Javascript resizing the menu
     box-shadow: none;
-    border-right: 1px solid $gray-light;
+    border-right: 1px solid darken($sidebar-background, 10);
     /**
      * The container for the Silverstripe logo, Username and logout button
      */
     .cms-logo-header.north {
         padding: $gap-md $gap-md $gap-md $gap-lg;
         margin: 0 0 $gap-md 0;
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px solid darken($sidebar-background, 10);
     }
         .cms-logo-header {
             background: transparent none;
@@ -31,7 +38,7 @@
             span {
                 margin: 0 0 0 4px;
                 font-weight: 700;
-                color: $brand-default-color;
+                color: $sidebar-color;
             }
         }
         /**
@@ -41,6 +48,8 @@
             padding: 0 0 $gap-sm 0;
             border-width: 0;
             .logout-link {
+                color: $sidebar-color;
+                background: transparent none;
                 float: none;
                 width: auto;
                 height: auto;
@@ -59,11 +68,12 @@
         li {
             &.current {
                 a {
-                    color: $brand-default-color;
-                    background: $gray-lighter;
+                    color: $sidebar-color;
+                    background: darken($sidebar-background, 10);;
                 }
             }
             a {
+                color: $sidebar-color;
                 background: transparent none;
                 border-width: 0;
                 text-shadow: none;
@@ -83,7 +93,7 @@
      * The footer of the left-hand navigation, contains toggle button
      */
     .cms-panel-toggle.south {
-        border-color: $gray-light;
+        border-color: darken($sidebar-background, 10);
         box-shadow: none;
         // Disallow toggling
         display: none;

@@ -1,7 +1,12 @@
+/*======================================================================*\
+    CMS Content Tools
+\*======================================================================*/
+
 /**
  * Left-hand filter bar
  */
 .cms-content-tools {
     background: $brand-default;
     box-shadow: none;
+    border-color: darken($brand-default, 15);
 }

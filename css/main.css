@@ -34,17 +34,21 @@
     Components
 \*======================================================================*/
 
+/*======================================================================*\
+    CMS Menu
+\*======================================================================*/
+
 /**
  * The left-hand navigation
  */
 
 .cms-menu {
 	font-family: "Roboto", sans-serif;
-	background: #fff;
-	color: #212121;
+	background: #2196F3;
+	color: #fff;
 	width: 240px !important;
 	box-shadow: none;
-	border-right: 1px solid #E0E0E0; /**
+	border-right: 1px solid #0c7cd5; /**
    * The container for the Silverstripe logo, Username and logout button
    */ /**
    * Silverstripe Logo + Site Name
@@ -60,7 +64,7 @@
 .cms-menu .cms-logo-header.north {
 	padding: 16px 16px 16px 32px;
 	margin: 0 0 16px 0;
-	border-bottom: 1px solid #E0E0E0;
+	border-bottom: 1px solid #0c7cd5;
 }
 
 .cms-menu .cms-logo-header {
@@ -79,7 +83,7 @@
 .cms-menu .cms-logo span {
 	margin: 0 0 0 4px;
 	font-weight: 700;
-	color: #212121;
+	color: #fff;
 }
 
 .cms-menu .cms-login-status {
@@ -88,6 +92,8 @@
 }
 
 .cms-menu .cms-login-status .logout-link {
+	color: #fff;
+	background: transparent none;
 	float: none;
 	width: auto;
 	height: auto;
@@ -101,11 +107,12 @@
 }
 
 .cms-menu .cms-menu-list li.current a {
-	color: #212121;
-	background: #f9f9f9;
+	color: #fff;
+	background: #0c7cd5;
 }
 
 .cms-menu .cms-menu-list li a {
+	color: #fff;
 	background: transparent none;
 	border-width: 0;
 	text-shadow: none;
@@ -123,26 +130,32 @@
 }
 
 .cms-menu .cms-panel-toggle.south {
-	border-color: #E0E0E0;
+	border-color: #0c7cd5;
 	box-shadow: none;
 	display: none;
 }
+
+/*======================================================================*\
+    CMS Content Header
+\*======================================================================*/
 
 /**
  * The top bar containing breadcrumbs, and view toggle
  */
 
 .cms-content-header.north {
-	background: #2196F3;
-	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.12); /**
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9; /**
    * Breadcrumbs
+   */ /**
+   * Model admins without breadcrumbs
    */ /**
    * View tabs
    */
 }
 
 .cms-content-header.north .breadcrumbs-wrapper {
-	padding: 0 0 0 32px;
+	padding: 0;
 }
 
 .cms-content-header.north .breadcrumbs-wrapper .icon {
@@ -151,7 +164,15 @@
 
 .cms-content-header.north .breadcrumbs-wrapper .crumb,
 .cms-content-header.north .breadcrumbs-wrapper .sep {
-	color: #fff;
+	color: #212121;
+}
+
+.cms-content-header.north .cms-content-header-info h2 {
+	color: #212121;
+}
+
+.cms-content-header.north .cms-content-header-info .icon {
+	display: none;
 }
 
 .cms-content-header.north .cms-content-header-tabs .ui-tabs-nav {
@@ -165,17 +186,21 @@
 }
 
 .cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li.ui-state-active a {
-	background: #1c7fce;
+	background: #e6e6e6;
 }
 
 .cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li a {
 	text-indent: 0;
 	background: transparent none;
-	color: #fff;
+	color: #212121;
 	text-shadow: none;
 	padding: 0 16px;
 	margin: 0;
 }
+
+/*======================================================================*\
+    CMS Content Tools
+\*======================================================================*/
 
 /**
  * Left-hand filter bar
@@ -184,11 +209,20 @@
 .cms-content-tools {
 	background: #fff;
 	box-shadow: none;
+	border-color: #d9d9d9;
 }
+
+/*======================================================================*\
+    CMS Content
+\*======================================================================*/
 
 .cms-content {
 	background: #f9f9f9;
 }
+
+/*======================================================================*\
+    CMS Content Fields
+\*======================================================================*/
 
 .cms { /**
   * Main content
@@ -197,6 +231,49 @@
 
 .cms .cms-content-fields {
 	background: #f9f9f9;
+}
+
+/*======================================================================*\
+    Buttons
+\*======================================================================*/
+
+.cms .ss-ui-button {
+	border-width: 0;
+	border-radius: 2px;
+	text-decoration: none;
+	background: #fff;
+	color: #212121;
+	box-shadow: rgba(0, 0, 0, 0.11765) 0 1px 6px 0, rgba(0, 0, 0, 0.11765) 0 1px 6px 0;
+}
+
+.cms .ss-ui-button:hover,
+.cms .ss-ui-button:focus,
+.cms .ss-ui-button:active {
+	background: #f9f9f9;
+	color: #212121;
+	border-width: 0;
+	box-shadow: rgba(0, 0, 0, 0.11765) 0 1px 6px 0, rgba(0, 0, 0, 0.11765) 0 1px 6px 0;
+}
+
+.cms .ss-ui-button .ui-button-text {
+	padding: 8px 16px;
+}
+
+.cms .ss-ui-button .ui-icon {
+	display: none;
+}
+
+.cms .ss-ui-button.ss-ui-action-constructive {
+	box-shadow: none;
+	background: #2196F3;
+	color: #fff;
+}
+
+.cms .ss-ui-button.ss-ui-action-constructive:hover,
+.cms .ss-ui-button.ss-ui-action-constructive:focus,
+.cms .ss-ui-button.ss-ui-action-constructive:active {
+	box-shadow: none;
+	background: #37a0f4;
 }
 
 /*======================================================================*\

@@ -1,20 +1,35 @@
+/*======================================================================*\
+    CMS Content Header
+\*======================================================================*/
+
 /**
  * The top bar containing breadcrumbs, and view toggle
  */
 .cms-content-header.north {
-    background: $brand-primary;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.12);
+    background: $brand-default;
+    border-bottom: 1px solid darken($brand-default, 15);
     /**
      * Breadcrumbs
      */
     .breadcrumbs-wrapper {
-        padding: 0 0 0 $gap-lg;
+        padding: 0;
         .icon {
             display: none;
         }
         .crumb,
         .sep {
-            color: $brand-primary-color;
+            color: $brand-default-color;
+        }
+    }
+    /**
+     * Model admins without breadcrumbs
+     */
+    .cms-content-header-info {
+        h2 { //There is no hook for this heading, silly SS.
+            color: $brand-default-color;
+        }
+        .icon {
+            display: none;
         }
     }
     /**
@@ -29,13 +44,13 @@
                 border-width: 0;
                 &.ui-state-active {
                     a {
-                        background: shade($brand-primary, 15);
+                        background: darken($brand-default, 10);
                     }
                 }
                 a {
                     text-indent: 0;
                     background: transparent none;
-                    color: $brand-primary-color;
+                    color: $brand-default-color;
                     text-shadow: none;
                     padding: 0 $gap-md;
                     margin: 0;
