@@ -1,0 +1,71 @@
+.cms-menu {
+    font-family: $font-family-base;
+    background: $brand-default;
+    color: $brand-default-color;
+    width: 240px;
+    box-shadow: none;
+    border-right: 1px solid $gray-light;
+    .cms-logo-header.north {
+        padding: $gap-md $gap-md $gap-md $gap-lg;
+        margin: 0 0 $gap-md 0;
+        border-bottom: 1px solid $gray-light;
+    }
+        .cms-logo-header {
+            background: transparent none;
+        }
+        .cms-logo {
+            padding: $gap-sm 0 0 0;
+            border-width: 0;
+            a {
+                display: none;
+            }
+            span {
+                margin: 0 0 0 4px;
+                font-weight: 700;
+                color: $brand-default-color;
+            }
+        }
+        .cms-login-status {
+            padding: 0 0 $gap-sm 0;
+            border-width: 0;
+            .logout-link {
+                float: none;
+                width: auto;
+                height: auto;
+                text-indent: 0;
+                display: block;
+                content: "Logout";
+            }
+            span {
+                display: none;
+            }
+        }
+    .cms-menu-list {
+        li {
+            &.current {
+                a {
+                    color: $brand-default-color;
+                    background: $gray-lighter;
+                }
+            }
+            a {
+                background: transparent none;
+                border-width: 0;
+                text-shadow: none;
+                font-weight: 700;
+                font-size: $font-size-base;
+                padding: $gap-md $gap-md $gap-md $gap-lg;
+                .icon {
+                    display: none;
+                }
+                .text {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .cms-panel-toggle.south {
+        border-color: $gray-light;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,53 @@
+/*======================================================================*\
+    Colors
+\*======================================================================*/
+
+$gray-darker: #212121 !default; // Text
+$gray-dark: #757575 !default; // Secondary Text / Icons
+$gray: #BDBDBD !default; // Hint Text
+$gray-light: #E0E0E0 !default; // Dividers
+$gray-lighter: #f9f9f9 !default;
+
+$brand-default: #fff !default;
+$brand-default-dark: shade($brand-default, 10) !default;
+$brand-default-light: tint($brand-default, 10) !default;
+$brand-default-color: $gray-darker !default;
+
+$brand-primary: #2196F3 !default;
+$brand-primary-dark: shade($brand-primary, 10) !default;
+$brand-primary-light: tint($brand-primary, 10) !default;
+$brand-primary-color: #fff !default;
+
+$brand-secondary: #FF4081 !default;
+$brand-secondary-dark: shade($brand-secondary, 10) !default;
+$brand-secondary-light: tint($brand-secondary, 10) !default;
+$brand-secondary-color: #fff !default;
+
+$brand-inverse: #212121 !default;
+$brand-inverse-dark: shade($brand-inverse, 10) !default;
+$brand-inverse-light: tint($brand-inverse, 10) !default;
+$brand-inverse-color: #fff !default;
+
+/*======================================================================*\
+    Fonts
+\*======================================================================*/
+
+$font-family-base: 'Roboto', sans-serif;
+
+$font-size-base: 13px;
+
+/*======================================================================*\
+    Colors - Buttons
+\*======================================================================*/
+
+/*======================================================================*\
+    Gaps
+\*======================================================================*/
+
+$gutter: 30px !default;
+
+$gap-xl: 64px !default;
+$gap-lg: 32px !default;
+$gap-md: 16px !default;
+$gap-sm: 8px !default;
+$gap-xs: 4px !default;

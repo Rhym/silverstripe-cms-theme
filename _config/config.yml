@@ -1,0 +1,4 @@
+LeftAndMain:
+  extra_requirements_css:
+    - https://fonts.googleapis.com/css?family=Roboto:400,700
+    - cms-branding/css/main.min.css
