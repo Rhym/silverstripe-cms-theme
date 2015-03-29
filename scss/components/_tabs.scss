@@ -1,0 +1,19 @@
+/*======================================================================*\
+    Tabs
+\*======================================================================*/
+
+.cms {
+    .ui-tabs-nav {
+        li {
+            &.ui-state-default {
+                background: $gray-light;
+            }
+            &.ui-state-active {
+                background: $gray-lighter;
+            }
+        }
+        a {
+            outline: 0;
+        }
+    }
+}

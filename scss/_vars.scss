@@ -2,6 +2,8 @@
     Colors
 \*======================================================================*/
 
+$ss-background-default: #e6eaed;
+
 $gray-darker: #212121 !default; // Text
 $gray-dark: #757575 !default; // Secondary Text / Icons
 $gray: #BDBDBD !default; // Hint Text
@@ -13,7 +15,7 @@ $brand-default-dark: shade($brand-default, 10) !default;
 $brand-default-light: tint($brand-default, 10) !default;
 $brand-default-color: $gray-darker !default;
 
-$brand-primary: #2196F3 !default;
+$brand-primary: #3F51B5 !default;
 $brand-primary-dark: shade($brand-primary, 10) !default;
 $brand-primary-light: tint($brand-primary, 10) !default;
 $brand-primary-color: #fff !default;
@@ -32,7 +34,7 @@ $brand-inverse-color: #fff !default;
     Fonts
 \*======================================================================*/
 
-$font-family-base: 'Roboto', sans-serif;
+$font-family-base: sans-serif;
 
 $font-size-base: 13px;
 $font-size-heading-base: 24px;
@@ -52,3 +54,9 @@ $gap-lg: 32px !default;
 $gap-md: 16px !default;
 $gap-sm: 8px !default;
 $gap-xs: 4px !default;
+
+/*======================================================================*\
+    Icons
+\*======================================================================*/
+
+$icons-inverse: true;

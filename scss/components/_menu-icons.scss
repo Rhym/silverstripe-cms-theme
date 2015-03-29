@@ -1,0 +1,53 @@
+/*======================================================================*\
+    Menu Icons
+\*======================================================================*/
+
+/**
+ * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
+ */
+
+//TODO: Create sprites instead of individual images.
+@if $icons-inverse == true {
+    .cms-menu {
+        /**
+         * The list of ModelAdmin actions
+         */
+        .cms-menu-list {
+            #Menu-CMSPagesController {
+                .icon {
+                    background-image: url(../images/icons/admin/pages.png);
+                }
+            }
+            #Menu-AssetAdmin {
+                .icon {
+                    background-image: url(../images/icons/admin/assets.png);
+                }
+            }
+            #Menu-ReportAdmin {
+                .icon {
+                    background-image: url(../images/icons/admin/reports.png);
+                }
+            }
+            #Menu-SecurityAdmin {
+                .icon {
+                    background-image: url(../images/icons/admin/security.png);
+                }
+            }
+            #Menu-ContactMessageAdmin {
+                .icon {
+                    background-image: url(../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png);
+                }
+            }
+            #Menu-CMSSettingsController {
+                .icon {
+                    background-image: url(../images/icons/admin/settings.png);
+                }
+            }
+            #Menu-Help {
+                .icon {
+                    background-image: url(../images/icons/admin/help.png);
+                }
+            }
+        }
+    }
+}

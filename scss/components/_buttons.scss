@@ -4,36 +4,16 @@
 
 .cms {
     .ss-ui-button {
-        border-width: 0;
-        border-radius: 2px;
-        text-decoration: none;
-        background: $brand-default;
-        color: $brand-default-color;
-        box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px 0, rgba(0, 0, 0, 0.117647) 0 1px 6px 0;
-        &:hover,
-        &:focus,
-        &:active {
-            background: $gray-lighter;
-            color: $brand-default-color;
-            border-width: 0;
-            box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px 0, rgba(0, 0, 0, 0.117647) 0 1px 6px 0;
-        }
-        .ui-button-text {
-            padding: $gap-sm $gap-md;
-        }
-        .ui-icon {
-            display: none;
-        }
         &.ss-ui-action-constructive {
-            box-shadow: none;
-            background: $brand-primary;
-            color: $brand-primary-color;
-            &:hover,
-            &:focus,
-            &:active {
-                box-shadow: none;
-                background: tint($brand-primary, 10);
-            }
+//            text-decoration: none;
+//            background: linear-gradient($brand-primary, $brand-primary-dark);
+//            border: 1px solid shade($brand-primary, 20);
+//            &:hover,
+//            &:focus,
+//            &:active {
+//                background: linear-gradient($brand-primary-light, $brand-primary);
+//                border-color: shade($brand-primary, 20);
+//            }
         }
     }
 }

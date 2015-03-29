@@ -19,10 +19,24 @@ $sidebar-color: $brand-primary-color;
      * The container for the Silverstripe logo, Username and logout button
      */
     .cms-logo-header.north {
-        padding: $gap-md $gap-md $gap-md $gap-lg;
+        padding: $gap-md $gap-md $gap-md $gap-md;
         margin: 0 0 $gap-md 0;
         border-bottom: 1px solid darken($sidebar-background, 10);
     }
+        .logo {
+            margin: 0 0 $gap-md 0;
+            a.front-end-link {
+                display: block;
+                position: static;
+                text-indent: 0;
+                background: transparent none;
+                width: 100%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
         .cms-logo-header {
             background: transparent none;
         }
@@ -77,14 +91,18 @@ $sidebar-color: $brand-primary-color;
                 background: transparent none;
                 border-width: 0;
                 text-shadow: none;
-                font-weight: 700;
                 font-size: $font-size-base;
-                padding: $gap-md $gap-md $gap-md $gap-lg;
+                padding: $gap-md $gap-md $gap-md $gap-md;
                 .icon {
-                    display: none;
+                    /**
+                     * Display full opacity to inverse icons.
+                     */
+                    @if $icons-inverse == true {
+                        opacity: 1;
+                    }
                 }
                 .text {
-                    margin: 0;
+                    margin: 0 0 0 30px;
                 }
             }
         }

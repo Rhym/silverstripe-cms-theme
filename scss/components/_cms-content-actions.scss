@@ -1,0 +1,23 @@
+/*======================================================================*\
+    CMS content Actions
+\*======================================================================*/
+
+.cms-content-actions,
+.cms-preview-controls {
+    background: $brand-default;
+    box-shadow: none;
+}
+
+.cms{
+    .ss-ui-action-tabset.action-menus.ss-tabset{
+        .ui-tabs-panel {
+            background: $brand-default;
+            color: $brand-default-color;
+            button.ss-ui-button {
+                &:hover {
+                    background: $gray-lighter;
+                }
+            }
+        }
+    }
+}
