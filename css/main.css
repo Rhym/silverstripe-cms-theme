@@ -56,11 +56,11 @@
 
 .cms-menu {
 	font-family: sans-serif;
-	background: #3F51B5;
+	background: #2196F3;
 	color: #fff;
 	width: 240px !important;
 	box-shadow: none;
-	border-right: 1px solid #32408f; /**
+	border-right: 1px solid #0c7cd5; /**
    * The container for the Silverstripe logo, Username and logout button
    */ /**
    * Silverstripe Logo + Site Name
@@ -76,7 +76,7 @@
 .cms-menu .cms-logo-header.north {
 	padding: 16px 16px 16px 16px;
 	margin: 0 0 16px 0;
-	border-bottom: 1px solid #32408f;
+	border-bottom: 1px solid #0c7cd5;
 }
 
 .cms-menu .logo {
@@ -137,7 +137,7 @@
 
 .cms-menu .cms-menu-list li.current a {
 	color: #fff;
-	background: #32408f;
+	background: #0c7cd5;
 }
 
 .cms-menu .cms-menu-list li a {
@@ -160,7 +160,7 @@
 }
 
 .cms-menu .cms-panel-toggle.south {
-	border-color: #32408f;
+	border-color: #0c7cd5;
 	box-shadow: none;
 	display: none;
 }
