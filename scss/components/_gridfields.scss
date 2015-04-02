@@ -72,7 +72,8 @@
                     /**
                      * Sortable GridField bar
                      */
-                    &.extra {
+                    &.sortablerowsheading {
+                        border-left: 1px solid $gray;
                         background: $gray-light;
                         color: $gray-darker;
                     }

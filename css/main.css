@@ -398,7 +398,8 @@
 	border-left-width: 1px;
 }
 
-.cms table.ss-gridfield-table tr th.extra {
+.cms table.ss-gridfield-table tr th.sortablerowsheading {
+	border-left: 1px solid #BDBDBD;
 	background: #E0E0E0;
 	color: #444;
 }
