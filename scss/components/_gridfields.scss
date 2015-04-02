@@ -43,6 +43,21 @@
                         }
                     }
                 }
+                /**
+                 * Search filter
+                 */
+                &.filter-header {
+                    .extra {
+                        background: $brand-inverse;
+                        color: $brand-inverse-color;
+                        /**
+                         * Input fields in the search filter.
+                         */
+                        .fieldholder-small {
+                            padding: 0;
+                        }
+                    }
+                }
                 th {
                     border-radius: 0;
                     &.main {
@@ -53,6 +68,13 @@
                         &:first-child {
                             border-left-width: 1px;
                         }
+                    }
+                    /**
+                     * Sortable GridField bar
+                     */
+                    &.extra {
+                        background: $gray-light;
+                        color: $gray-darker;
                     }
                     button {
                         &.ss-gridfield-sort {

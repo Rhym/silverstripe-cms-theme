@@ -39,11 +39,26 @@
 \*======================================================================*/
 
 .ss-toggle .ui-accordion-header.ui-state-default,
+.cms table.ss-gridfield-table tr.title th,
+.cms table.ss-gridfield-table tr td.bottom-all,
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
-	background: linear-gradient(#f9f9f9, #E0E0E0);
+	background: linear-gradient(#f9f9f9, #f1f1f1);
 	border-color: #BDBDBD !important;
 }
+
+.cms table.ss-gridfield-table tr th.main {
+	background: #f9f9f9;
+	border-color: #BDBDBD !important;
+}
+
+/*======================================================================*\
+    Mixins
+\*======================================================================*/
+
+/*======================================================================*\
+    Buttons
+\*======================================================================*/
 
 /*======================================================================*\
     Components
@@ -54,171 +69,47 @@
 \*======================================================================*/
 
 /*======================================================================*\
-    Loading Logo
+    Buttons
 \*======================================================================*/
 
-.ss-loading-screen .loading-logo {
-	background: transparent none;
+/*======================================================================*\
+    CMS Content
+\*======================================================================*/
+
+.cms-content {
+	background: #f9f9f9;
 }
 
 /*======================================================================*\
-    CMS Menu
+    CMS content Actions
 \*======================================================================*/
 
-/**
- * The left-hand navigation
- */
-
-.cms-menu {
-	font-family: sans-serif;
-	background: #2196F3;
-	color: #fff;
-	width: 240px !important;
+.cms-content-actions,
+.cms-preview-controls {
+	background: #fff;
 	box-shadow: none;
-	border-right: 1px solid #0c7cd5; /**
-   * The container for the Silverstripe logo, Username and logout button
-   */ /**
-   * Silverstripe Logo + Site Name
-   */ /**
-   * Logout Button
-   */ /**
-   * The list of ModelAdmin actions
-   */ /**
-   * The footer of the left-hand navigation, contains toggle button
-   */
 }
 
-.cms-menu .cms-logo-header.north {
-	padding: 16px 16px 16px 16px;
-	margin: 0 0 16px 0;
-	border-bottom: 1px solid #0c7cd5;
+.cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel {
+	background: #fff;
+	color: #444;
 }
 
-.cms-menu .logo {
-	margin: 0 0 16px 0;
-}
-
-.cms-menu .logo a.front-end-link {
-	display: block;
-	position: static;
-	text-indent: 0;
-	background: transparent none;
-	width: 100%;
-}
-
-.cms-menu .logo img {
-	max-width: 100%;
-	height: auto;
-}
-
-.cms-menu .cms-logo-header {
-	background: transparent none;
-}
-
-.cms-menu .cms-logo {
-	padding: 8px 0 0 0;
-	border-width: 0;
-}
-
-.cms-menu .cms-logo a {
-	display: none;
-}
-
-.cms-menu .cms-logo span {
-	margin: 0 0 0 4px;
-	font-weight: 700;
-	color: #fff;
-}
-
-.cms-menu .cms-login-status {
-	padding: 0 0 8px 0;
-	border-width: 0;
-}
-
-.cms-menu .cms-login-status .logout-link {
-	color: #fff;
-	background: transparent none;
-	float: none;
-	width: auto;
-	height: auto;
-	text-indent: 0;
-	display: block;
-	content: "Logout";
-}
-
-.cms-menu .cms-login-status span {
-	display: none;
-}
-
-.cms-menu .cms-menu-list li.current a {
-	color: #fff;
-	background: #0c7cd5;
-}
-
-.cms-menu .cms-menu-list li a {
-	color: #fff;
-	background: transparent none;
-	border-width: 0;
-	text-shadow: none;
-	font-size: 13px;
-	padding: 16px 16px 16px 16px;
-}
-
-.cms-menu .cms-menu-list li a .icon { /**
-       * Display full opacity to inverse icons.
-       */
-	opacity: 1;
-}
-
-.cms-menu .cms-menu-list li a .text {
-	margin: 0 0 0 30px;
-}
-
-.cms-menu .cms-panel-toggle.south {
-	border-color: #0c7cd5;
-	box-shadow: none;
-	display: none;
+.cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:hover {
+	background: #f9f9f9;
 }
 
 /*======================================================================*\
-    Menu Icons
+    CMS Content Fields
 \*======================================================================*/
 
-/**
- * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
- */
-
-.cms-menu { /**
-   * The list of ModelAdmin actions
-   */
+.cms { /**
+  * Main content
+  */
 }
 
-.cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
-	background-image: url("../images/icons/admin/pages.png");
-}
-
-.cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url("../images/icons/admin/assets.png");
-}
-
-.cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
-	background-image: url("../images/icons/admin/reports.png");
-}
-
-.cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
-	background-image: url("../images/icons/admin/security.png");
-}
-
-.cms-menu .cms-menu-list #Menu-ContactMessageAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
-}
-
-.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
-	background-image: url("../images/icons/admin/settings.png");
-}
-
-.cms-menu .cms-menu-list #Menu-Help .icon {
-	background-image: url("../images/icons/admin/help.png");
+.cms .cms-content-fields {
+	background: #f9f9f9;
 }
 
 /*======================================================================*\
@@ -296,56 +187,134 @@
 .cms-content-tools {
 	background: #fff;
 	box-shadow: none;
-	border-color: #d9d9d9;
+	border-color: #d9d9d9; /**
+   * Buttons
+   */
+}
+
+.cms-content-tools .ss-ui-button.cms-tree-expand-trigger,
+.cms-content-tools .ss-ui-button.ss-ui-action-constructive {
+	font-size: 11px;
 }
 
 /*======================================================================*\
-    CMS Content
+    CMS Menu
 \*======================================================================*/
 
-.cms-content {
-	background: #f9f9f9;
-}
+/**
+ * The left-hand navigation
+ */
 
-/*======================================================================*\
-    CMS Content Fields
-\*======================================================================*/
-
-.cms { /**
-  * Main content
-  */
-}
-
-.cms .cms-content-fields {
-	background: #f9f9f9;
-}
-
-/*======================================================================*\
-    CMS content Actions
-\*======================================================================*/
-
-.cms-content-actions,
-.cms-preview-controls {
-	background: #fff;
+.cms-menu {
+	font-family: sans-serif;
+	background: #607D8B;
+	color: #fff;
+	width: 240px !important;
 	box-shadow: none;
+	border-right: 1px solid #4b626d; /**
+   * The container for the Silverstripe logo, Username and logout button
+   */ /**
+   * Silverstripe Logo + Site Name
+   */ /**
+   * Logout Button
+   */ /**
+   * The list of ModelAdmin actions
+   */ /**
+   * The footer of the left-hand navigation, contains toggle button
+   */
 }
 
-.cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel {
-	background: #fff;
-	color: #444;
+.cms-menu .cms-logo-header.north {
+	padding: 16px 16px 16px 16px;
+	margin: 0 0 16px 0;
+	border-bottom: 1px solid #4b626d;
 }
 
-.cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:hover {
-	background: #f9f9f9;
+.cms-menu .logo {
+	margin: 0 0 16px 0;
 }
 
-/*======================================================================*\
-    Buttons
-\*======================================================================*/
+.cms-menu .logo a.front-end-link {
+	display: block;
+	position: static;
+	text-indent: 0;
+	background: transparent none;
+	width: 100%;
+}
 
-/*======================================================================*\
-    Message
-\*======================================================================*/
+.cms-menu .logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.cms-menu .cms-logo-header {
+	background: transparent none;
+}
+
+.cms-menu .cms-logo {
+	padding: 8px 0 0 0;
+	border-width: 0;
+}
+
+.cms-menu .cms-logo a {
+	display: none;
+}
+
+.cms-menu .cms-logo span {
+	margin: 0 0 0 4px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.cms-menu .cms-login-status {
+	padding: 0 0 8px 0;
+	border-width: 0;
+}
+
+.cms-menu .cms-login-status .logout-link {
+	color: #fff;
+	background: transparent none;
+	float: none;
+	width: auto;
+	height: auto;
+	text-indent: 0;
+	display: block;
+	content: "Logout";
+}
+
+.cms-menu .cms-login-status span {
+	display: none;
+}
+
+.cms-menu .cms-menu-list li.current a {
+	color: #fff;
+	background: #4b626d;
+}
+
+.cms-menu .cms-menu-list li a {
+	color: #fff;
+	background: transparent none;
+	border-width: 0;
+	text-shadow: none;
+	font-size: 13px;
+	padding: 16px 16px 16px 16px;
+}
+
+.cms-menu .cms-menu-list li a .icon { /**
+       * Display full opacity to inverse icons.
+       */
+	opacity: 1;
+}
+
+.cms-menu .cms-menu-list li a .text {
+	margin: 0 0 0 30px;
+}
+
+.cms-menu .cms-panel-toggle.south {
+	border-color: #4b626d;
+	box-shadow: none;
+	display: none;
+}
 
 /*======================================================================*\
     Fields
@@ -355,6 +324,150 @@
 	border-color: #E0E0E0;
 	border-width: 1px;
 }
+
+/*======================================================================*\
+    GridField
+\*======================================================================*/
+
+.cms table.ss-gridfield-table .right .pagination-records-number,
+.cms table.ss-gridfield-table tr th.main,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active,
+.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number {
+	color: #444 !important;
+	text-shadow: none;
+}
+
+.cms table.ss-gridfield-table .right .pagination-records-number span,
+.cms table.ss-gridfield-table tr th.main span,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort span,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover span,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active span,
+.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number span {
+	text-shadow: none;
+}
+
+.cms table.ss-gridfield-table tr { /**
+   * No items to display
+   */ /**
+   * Search filter
+   */
+}
+
+.cms table.ss-gridfield-table tr.title th {
+	border: 1px solid;
+	border-bottom-width: 0;
+}
+
+.cms table.ss-gridfield-table tr.title th h2 {
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+	color: #444;
+}
+
+.cms table.ss-gridfield-table tr.ss-gridfield-no-items > td:first-child {
+	padding: 6px 8px;
+	border-bottom: 1px solid #E0E0E0;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.cms table.ss-gridfield-table tr.filter-header .extra {
+	background: #212121;
+	color: #fff; /**
+     * Input fields in the search filter.
+     */
+}
+
+.cms table.ss-gridfield-table tr.filter-header .extra .fieldholder-small {
+	padding: 0;
+}
+
+.cms table.ss-gridfield-table tr th {
+	border-radius: 0; /**
+     * Sortable GridField bar
+     */
+}
+
+.cms table.ss-gridfield-table tr th.main {
+	border-color: #BDBDBD;
+	border-left-width: 0;
+}
+
+.cms table.ss-gridfield-table tr th.main:first-child {
+	border-left-width: 1px;
+}
+
+.cms table.ss-gridfield-table tr th.extra {
+	background: #E0E0E0;
+	color: #444;
+}
+
+.cms table.ss-gridfield-table tr th button { /**
+       * Search Icon
+       */
+}
+
+.cms table.ss-gridfield-table tr th button.ss-ui-button.ss-gridfield-button-filter.trigger {
+	background-position: -17px -38px;
+}
+
+.cms table.ss-gridfield-table tr td.bottom-all {
+	border: 1px solid #BDBDBD;
+}
+
+/*======================================================================*\
+    Loading Logo
+\*======================================================================*/
+
+.ss-loading-screen .loading-logo {
+	background: transparent none;
+}
+
+/*======================================================================*\
+    Menu Icons
+\*======================================================================*/
+
+/**
+ * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
+ */
+
+.cms-menu { /**
+   * The list of ModelAdmin actions
+   */
+}
+
+.cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
+	background-image: url("../images/icons/admin/pages.png");
+}
+
+.cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
+	background-image: url("../images/icons/admin/assets.png");
+}
+
+.cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
+	background-image: url("../images/icons/admin/reports.png");
+}
+
+.cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
+	background-image: url("../images/icons/admin/security.png");
+}
+
+.cms-menu .cms-menu-list #Menu-ContactMessageAdmin .icon {
+	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
+}
+
+.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
+	background-image: url("../images/icons/admin/settings.png");
+}
+
+.cms-menu .cms-menu-list #Menu-Help .icon {
+	background-image: url("../images/icons/admin/help.png");
+}
+
+/*======================================================================*\
+    Message
+\*======================================================================*/
 
 /*======================================================================*\
     Tabs

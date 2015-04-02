@@ -2,18 +2,13 @@
     Buttons
 \*======================================================================*/
 
-.cms {
-    .ss-ui-button {
-        &.ss-ui-action-constructive {
-//            text-decoration: none;
-//            background: linear-gradient($brand-primary, $brand-primary-dark);
-//            border: 1px solid shade($brand-primary, 20);
-//            &:hover,
-//            &:focus,
-//            &:active {
-//                background: linear-gradient($brand-primary-light, $brand-primary);
-//                border-color: shade($brand-primary, 20);
-//            }
-        }
-    }
-}
+//.cms {
+//    .ss-ui-button {
+//        &.ss-ui-action-constructive {
+//            @include button-default($brand-secondary, $brand-secondary, $brand-secondary-color);
+//        }
+//        &.cms-tree-expand-trigger {
+//            @include button-default;
+//        }
+//    }
+//}

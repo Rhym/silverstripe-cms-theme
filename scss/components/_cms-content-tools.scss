@@ -9,4 +9,13 @@
     background: $brand-default;
     box-shadow: none;
     border-color: darken($brand-default, 15);
+    /**
+     * Buttons
+     */
+    .ss-ui-button {
+        &.cms-tree-expand-trigger,
+        &.ss-ui-action-constructive {
+            font-size: 11px;
+        }
+    }
 }
