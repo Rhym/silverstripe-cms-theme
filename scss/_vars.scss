@@ -4,7 +4,7 @@
 
 $ss-background-default: #e6eaed;
 
-$gray-darker: #212121 !default; // Text
+$gray-darker: #444 !default; // Text
 $gray-dark: #757575 !default; // Secondary Text / Icons
 $gray: #BDBDBD !default; // Hint Text
 $gray-light: #E0E0E0 !default; // Dividers
@@ -20,7 +20,7 @@ $brand-primary-dark: shade($brand-primary, 10) !default;
 $brand-primary-light: tint($brand-primary, 10) !default;
 $brand-primary-color: #fff !default;
 
-$brand-secondary: #FF4081 !default;
+$brand-secondary: #607D8B !default;
 $brand-secondary-dark: shade($brand-secondary, 10) !default;
 $brand-secondary-light: tint($brand-secondary, 10) !default;
 $brand-secondary-color: #fff !default;
@@ -60,3 +60,16 @@ $gap-xs: 4px !default;
 \*======================================================================*/
 
 $icons-inverse: true;
+
+/*======================================================================*\
+    Gridfield / Accordion Style
+\*======================================================================*/
+
+%gridfield-accordion-style {
+    background: linear-gradient($gray-lighter, $gray-light);
+    border-color: $gray !important; // Override javascript hierarchy
+}
+%gridfield-accordion-content-style {
+    background: $gray-lighter;
+    border-color: $gray !important;
+}

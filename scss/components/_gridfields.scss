@@ -1,0 +1,89 @@
+/*======================================================================*\
+    GridField
+\*======================================================================*/
+
+%gridfield-color {
+    color: $gray-darker !important; // TinyMCE has important tags everywhere. Sigh.
+    text-shadow: none;
+    span {
+        text-shadow: none;
+    }
+}
+
+.cms {
+    table {
+        &.ss-gridfield-table {
+            .right {
+                .pagination-records-number {
+                    @extend %gridfield-color;
+                }
+            }
+            tr {
+                &.title {
+                    th {
+                        border: 1px solid;
+                        border-bottom-width: 0;
+                        @extend %gridfield-accordion-style;
+                        h2 {
+                            text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+                            color: $gray-darker;
+                        }
+                    }
+                }
+                /**
+                 * No items to display
+                 */
+                &.ss-gridfield-no-items {
+                    > td {
+                        &:first-child {
+                            padding: 6px 8px;
+                            border-bottom: 1px solid $gray-light;
+                            border-bottom-left-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                        }
+                    }
+                }
+                th {
+                    border-radius: 0;
+                    &.main {
+                        @extend %gridfield-color;
+                        @extend %gridfield-accordion-content-style;
+                        border-color: $gray;
+                        border-left-width: 0;
+                        &:first-child {
+                            border-left-width: 1px;
+                        }
+                    }
+                    button {
+                        &.ss-gridfield-sort {
+                            @extend %gridfield-color;
+                            &:hover,
+                            &:active {
+                                @extend %gridfield-color;
+                            }
+                        }
+                        /**
+                         * Search Icon
+                         */
+                        &.ss-ui-button {
+                            &.ss-gridfield-button-filter {
+                                &.trigger {
+                                    background-position: -17px -38px;
+                                }
+                            }
+                        }
+                    }
+                }
+                td {
+                    &.bottom-all {
+                        border: 1px solid $gray;
+                        @extend %gridfield-accordion-style;
+                        .pagination-records-number {
+                            @extend %gridfield-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

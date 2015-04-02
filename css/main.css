@@ -35,7 +35,22 @@
 \*======================================================================*/
 
 /*======================================================================*\
+    Gridfield / Accordion Style
+\*======================================================================*/
+
+.ss-toggle .ui-accordion-header.ui-state-default,
+.cms .defaultSkin .mceToolbar,
+.cms .defaultSkin .mceStatusbar {
+	background: linear-gradient(#f9f9f9, #E0E0E0);
+	border-color: #BDBDBD !important;
+}
+
+/*======================================================================*\
     Components
+\*======================================================================*/
+
+/*======================================================================*\
+    Accordions
 \*======================================================================*/
 
 /*======================================================================*\
@@ -179,31 +194,31 @@
 }
 
 .cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
-	background-image: url(../images/icons/admin/pages.png);
+	background-image: url("../images/icons/admin/pages.png");
 }
 
 .cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url(../images/icons/admin/assets.png);
+	background-image: url("../images/icons/admin/assets.png");
 }
 
 .cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
-	background-image: url(../images/icons/admin/reports.png);
+	background-image: url("../images/icons/admin/reports.png");
 }
 
 .cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
-	background-image: url(../images/icons/admin/security.png);
+	background-image: url("../images/icons/admin/security.png");
 }
 
 .cms-menu .cms-menu-list #Menu-ContactMessageAdmin .icon {
-	background-image: url(../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png);
+	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
-	background-image: url(../images/icons/admin/settings.png);
+	background-image: url("../images/icons/admin/settings.png");
 }
 
 .cms-menu .cms-menu-list #Menu-Help .icon {
-	background-image: url(../images/icons/admin/help.png);
+	background-image: url("../images/icons/admin/help.png");
 }
 
 /*======================================================================*\
@@ -235,11 +250,11 @@
 
 .cms-content-header.north .breadcrumbs-wrapper .crumb,
 .cms-content-header.north .breadcrumbs-wrapper .sep {
-	color: #212121;
+	color: #444;
 }
 
 .cms-content-header.north .cms-content-header-info h2 {
-	color: #212121;
+	color: #444;
 }
 
 .cms-content-header.north .cms-content-header-info .icon {
@@ -264,7 +279,7 @@
 .cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li a {
 	text-indent: 0;
 	background: transparent none;
-	color: #212121;
+	color: #444;
 	text-shadow: none;
 	padding: 0 16px 1px 16px;
 	margin: 0;
@@ -317,7 +332,7 @@
 
 .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel {
 	background: #fff;
-	color: #212121;
+	color: #444;
 }
 
 .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:hover {
@@ -355,6 +370,94 @@
 
 .cms .ui-tabs-nav a {
 	outline: 0;
+}
+
+/*======================================================================*\
+    TinyMCE
+\*======================================================================*/
+
+.cms { /**
+   * Custom Icons
+   */ /**
+   * Toolbar
+   */
+}
+
+.cms .defaultSkin .mceIcon {
+	background-image: url("../images/icons/custom-icons.gif");
+}
+
+.cms .defaultSkin { /**
+     * Buttons
+     */ /**
+     * Layout
+     */
+}
+
+.cms .defaultSkin a:link,
+.cms .defaultSkin a:hover,
+.cms .defaultSkin a:focus,
+.cms .defaultSkin a:visited,
+.cms .defaultSkin a:active {
+	border-color: transparent;
+	border-radius: 2px;
+}
+
+.cms .defaultSkin a.mceButtonEnabled:hover {
+	border-color: #BDBDBD;
+	background: transparent none;
+	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cms .defaultSkin a.mceButtonActive {
+	border-color: #BDBDBD;
+	background: #E0E0E0;
+	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cms .defaultSkin .mceListBoxEnabled .mceText,
+.cms .defaultSkin .mceListBoxEnabled .mceOpen {
+	border-color: #BDBDBD;
+}
+
+.cms .defaultSkin .mceListBoxEnabled .mceText {
+	border-radius: 0;
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.cms .defaultSkin .mceListBoxEnabled .mceOpen {
+	border-radius: 0;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.cms .defaultSkin .mceLayout {
+	border-width: 0;
+}
+
+.cms .defaultSkin .mceToolbar {
+	margin: 0;
+	padding: 5px;
+}
+
+.cms .defaultSkin .mceToolbar.mceFirst {
+	border: 1px solid #BDBDBD;
+	border-bottom-width: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.cms .defaultSkin .mceStatusbar {
+	padding: 5px;
+	border: 1px solid;
+	border-top-width: 0;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.cms .defaultSkin .mceIframeContainer {
+	border: 1px solid #BDBDBD;
 }
 
 /*======================================================================*\

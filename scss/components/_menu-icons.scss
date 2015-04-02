@@ -6,6 +6,9 @@
  * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
  */
 
+$cms-branding-icon-path: "../images/icons/admin";
+$boilerplate-module-path: "../../boilerplate/code/Modules";
+
 //TODO: Create sprites instead of individual images.
 @if $icons-inverse == true {
     .cms-menu {
@@ -15,37 +18,37 @@
         .cms-menu-list {
             #Menu-CMSPagesController {
                 .icon {
-                    background-image: url(../images/icons/admin/pages.png);
+                    background-image: url('#{$cms-branding-icon-path}/pages.png');
                 }
             }
             #Menu-AssetAdmin {
                 .icon {
-                    background-image: url(../images/icons/admin/assets.png);
+                    background-image: url('#{$cms-branding-icon-path}/assets.png');
                 }
             }
             #Menu-ReportAdmin {
                 .icon {
-                    background-image: url(../images/icons/admin/reports.png);
+                    background-image: url('#{$cms-branding-icon-path}/reports.png');
                 }
             }
             #Menu-SecurityAdmin {
                 .icon {
-                    background-image: url(../images/icons/admin/security.png);
+                    background-image: url('#{$cms-branding-icon-path}/security.png');
                 }
             }
             #Menu-ContactMessageAdmin {
                 .icon {
-                    background-image: url(../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png);
+                    background-image: url('#{$boilerplate-module-path}/ContactForm/images/message_menu_alt.png');
                 }
             }
             #Menu-CMSSettingsController {
                 .icon {
-                    background-image: url(../images/icons/admin/settings.png);
+                    background-image: url('#{$cms-branding-icon-path}/settings.png');
                 }
             }
             #Menu-Help {
                 .icon {
-                    background-image: url(../images/icons/admin/help.png);
+                    background-image: url('#{$cms-branding-icon-path}/help.png');
                 }
             }
         }

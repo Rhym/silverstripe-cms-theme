@@ -1,0 +1,88 @@
+/*======================================================================*\
+    TinyMCE
+\*======================================================================*/
+
+.cms {
+    /**
+     * Custom Icons
+     */
+    .defaultSkin {
+        .mceIcon {
+            background-image: url('../images/icons/custom-icons.gif');
+        }
+    }
+    /**
+     * Toolbar
+     */
+    .defaultSkin{
+        /**
+         * Buttons
+         */
+        a {
+            &:link,
+            &:hover,
+            &:focus,
+            &:visited,
+            &:active {
+                border-color: transparent;
+                border-radius: 2px;
+            }
+            &.mceButtonEnabled {
+                &:hover {
+                    border-color: $gray;
+                    background: transparent none;
+                    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+                }
+            }
+            &.mceButtonActive {
+                border-color: $gray;
+                background: $gray-light;
+                box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+            }
+        }
+        .mceListBoxEnabled {
+            .mceText,
+            .mceOpen {
+                border-color: $gray;
+            }
+            .mceText {
+                border-radius: 0;
+                border-bottom-left-radius: 2px;
+                border-top-left-radius: 2px;
+            }
+            .mceOpen {
+                border-radius: 0;
+                border-bottom-right-radius: 2px;
+                border-top-right-radius: 2px;
+            }
+        }
+        /**
+         * Layout
+         */
+        .mceLayout {
+            border-width: 0;
+        }
+        .mceToolbar {
+            margin: 0;
+            padding: 5px;
+            @extend %gridfield-accordion-style;
+            &.mceFirst {
+                border: 1px solid $gray;
+                border-bottom-width: 0;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+        .mceStatusbar {
+            padding: 5px;
+            border: 1px solid;
+            border-top-width: 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            @extend %gridfield-accordion-style;
+        }
+        .mceIframeContainer {
+            border: 1px solid $gray;
+        }
+    }
+}
