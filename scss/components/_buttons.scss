@@ -5,10 +5,15 @@
 //.cms {
 //    .ss-ui-button {
 //        &.ss-ui-action-constructive {
-//            @include button-default($brand-secondary, $brand-secondary, $brand-secondary-color);
-//        }
-//        &.cms-tree-expand-trigger {
-//            @include button-default;
+//            color: $brand-primary-color;
+//            background: linear-gradient(tint($brand-primary, 10), shade($brand-primary, 10));
+//            border-color: $brand-primary-dark;
+//            &.ui-state-hover,
+//            &.ui-state-active {
+//                color: $brand-primary-color;
+//                background: linear-gradient(tint($brand-primary, 20), $brand-primary);
+//                border-color: $brand-primary-dark;
+//            }
 //        }
 //    }
 //}
