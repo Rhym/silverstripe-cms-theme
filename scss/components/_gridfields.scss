@@ -104,6 +104,27 @@
                         .pagination-records-number {
                             @extend %gridfield-color;
                         }
+                        /**
+                         * Pagination
+                         */
+                        .datagrid-pagination {
+                            .ui-button-text,
+                            .pagination-page-number {
+                                color: $gray-darker;
+                                text-shadow: none;
+                            }
+                            /**
+                             * Pagination buttons
+                             */
+                            button {
+                                &.ss-gridfield-firstpage,
+                                &.ss-gridfield-previouspage,
+                                &.ss-gridfield-nextpage,
+                                &.ss-gridfield-lastpage {
+                                    background-image: url('../images/icons/pagination-arrows.png');
+                                }
+                            }
+                        }
                     }
                 }
             }

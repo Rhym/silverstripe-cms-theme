@@ -414,7 +414,27 @@
 }
 
 .cms table.ss-gridfield-table tr td.bottom-all {
-	border: 1px solid #BDBDBD;
+	border: 1px solid #BDBDBD; /**
+     * Pagination
+     */
+}
+
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination { /**
+       * Pagination buttons
+       */
+}
+
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .ui-button-text,
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .pagination-page-number {
+	color: #444;
+	text-shadow: none;
+}
+
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-firstpage,
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-previouspage,
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-nextpage,
+.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-lastpage {
+	background-image: url("../images/icons/pagination-arrows.png");
 }
 
 /*======================================================================*\
