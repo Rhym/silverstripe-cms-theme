@@ -1,9 +1,49 @@
-/*======================================================================*\
-    Loading Logo
-\*======================================================================*/
+/** =========================================
+ * Loading Logo
+ ===========================================*/
+
+$loader-size: 25px;
+
+@mixin loading-spinner() {
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: $loader-size;
+        height: $loader-size;
+        background: transparent none;
+        border: 4px solid $gray-light;
+        border-top-color: $brand-primary !important; // Fixes an bug in chrome.
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        margin: (-$loader-size / 2) 0 0 (-$loader-size / 2);
+        animation: infinite-spinning 0.8s linear infinite
+    }
+}
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .ss-loading-screen {
     .loading-logo {
         background: transparent none;
+        @include loading-spinner;
+        /**
+         * Blue loading .gif
+         */
+        .loading-animation {
+            display: none !important;
+        }
     }
+}
+.cms-content-loading-spinner {
+    background-image: none;
+    @include loading-spinner;
 }
