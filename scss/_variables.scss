@@ -62,6 +62,7 @@ $icons-inverse: true;
  -------------------------------------------*/
 
 %gridfield-accordion-style {
+    background: $gray-lighter;
     background: linear-gradient($gray-lighter, shade($gray-lighter, 3));
     border-color: $gray !important; // Override javascript hierarchy
 }
