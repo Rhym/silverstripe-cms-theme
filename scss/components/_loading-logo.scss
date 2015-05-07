@@ -13,6 +13,7 @@ $loader-size: 25px;
         height: $loader-size;
         background: transparent none;
         border: 4px solid $gray-light;
+        border-color: rgba(0,0,0,0.12);
         border-top-color: $brand-primary !important; // Fixes an bug in chrome.
         border-radius: 50%;
         top: 50%;

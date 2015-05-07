@@ -463,6 +463,7 @@
 	height: 25px;
 	background: transparent none;
 	border: 4px solid #E0E0E0;
+	border-color: rgba(0, 0, 0, 0.12);
 	border-top-color: #1b354c !important;
 	border-radius: 50%;
 	top: 50%;
@@ -488,6 +489,7 @@
 	height: 25px;
 	background: transparent none;
 	border: 4px solid #E0E0E0;
+	border-color: rgba(0, 0, 0, 0.12);
 	border-top-color: #1b354c !important;
 	border-radius: 50%;
 	top: 50%;
