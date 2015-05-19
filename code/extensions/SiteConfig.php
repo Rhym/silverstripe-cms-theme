@@ -14,17 +14,17 @@ class CMSBrandingSiteConfigExtension extends DataExtension {
      */
     public function updateCMSFields(FieldList $fields) {
 
-        /* =========================================
+        /** =========================================
          * Settings
-         =========================================*/
+        ===========================================*/
 
         if (!$fields->fieldByName('Root.Settings')){
             $fields->addFieldToTab('Root', new TabSet('Settings'));
         }
 
-        /* =========================================
+        /** -----------------------------------------
          * CMS
-         =========================================*/
+        -------------------------------------------*/
 
         $fields->findOrMakeTab('Root.Settings.CMS', 'CMS');
         $fields->addFieldsToTab('Root.Settings.CMS',
