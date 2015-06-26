@@ -14,7 +14,7 @@ $sidebar-color: $brand-primary-color;
     color: $sidebar-color;
     width: 240px !important; // Override Javascript resizing the menu
     box-shadow: none;
-    border-right: 1px solid darken($sidebar-background, 10);
+    border-right: 1px solid rgba(0,0,0,0.3);
     /**
      * The container for the Silverstripe logo, Username and logout button
      */

@@ -220,7 +220,7 @@
 	color: #fff;
 	width: 240px !important;
 	box-shadow: none;
-	border-right: 1px solid #0e1b26; /**
+	border-right: 1px solid rgba(0, 0, 0, 0.3); /**
    * The container for the Silverstripe logo, Username and logout button
    */ /**
    * Silverstripe Logo + Site Name
