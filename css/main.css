@@ -236,7 +236,7 @@
 .cms-menu .cms-logo-header.north {
 	padding: 16px 16px 16px 16px;
 	margin: 0 0 16px 0;
-	border-bottom: 1px solid #0e1b26;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .cms-menu .logo {
@@ -297,7 +297,7 @@
 
 .cms-menu .cms-menu-list li.current a {
 	color: #fff;
-	background: #0e1b26;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .cms-menu .cms-menu-list li a {
@@ -320,7 +320,7 @@
 }
 
 .cms-menu .cms-panel-toggle.south {
-	border-color: #0e1b26;
+	border-color: rgba(0, 0, 0, 0.3);
 	box-shadow: none;
 	display: none;
 }
