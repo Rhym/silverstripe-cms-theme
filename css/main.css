@@ -529,12 +529,36 @@
    */
 }
 
-.cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
-	background-image: url("../images/icons/admin/pages.png");
+.cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
+	background-image: url("../images/icons/admin/assets.png");
 }
 
 .cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
 	background-image: url("../images/icons/admin/assets.png");
+}
+
+.cms-menu .cms-menu-list #Menu-BlogPageModelAdmin .icon {
+	background-image: url("../../boilerplate/code/Modules/Blog/images/pencil-alt.png");
+}
+
+.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
+	background-image: url("../images/icons/admin/settings.png");
+}
+
+.cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon {
+	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
+}
+
+.cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
+	background-image: url("../images/icons/admin/pages.png");
+}
+
+.cms-menu .cms-menu-list #Menu-PortfolioPageModelAdmin .icon {
+	background-image: url("../../boilerplate/code/Modules/Portfolio/images/briefcase-alt.png");
+}
+
+.cms-menu .cms-menu-list #Menu-Help .icon {
+	background-image: url("../images/icons/admin/help.png");
 }
 
 .cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
@@ -543,18 +567,6 @@
 
 .cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
 	background-image: url("../images/icons/admin/security.png");
-}
-
-.cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
-}
-
-.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
-	background-image: url("../images/icons/admin/settings.png");
-}
-
-.cms-menu .cms-menu-list #Menu-Help .icon {
-	background-image: url("../images/icons/admin/help.png");
 }
 
 /** =========================================

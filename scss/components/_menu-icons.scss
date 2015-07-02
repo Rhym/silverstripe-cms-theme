@@ -16,14 +16,44 @@ $boilerplate-module-path: "../../boilerplate/code/Modules";
          * The list of ModelAdmin actions
          */
         .cms-menu-list {
-            #Menu-CMSPagesController {
+            #Menu-AssetAdmin {
                 .icon {
-                    background-image: url('#{$cms-branding-icon-path}/pages.png');
+                    background-image: url('#{$cms-branding-icon-path}/assets.png');
                 }
             }
             #Menu-AssetAdmin {
                 .icon {
                     background-image: url('#{$cms-branding-icon-path}/assets.png');
+                }
+            }
+            #Menu-BlogPageModelAdmin {
+                .icon {
+                    background-image: url('#{$boilerplate-module-path}/Blog/images/pencil-alt.png');
+                }
+            }
+            #Menu-CMSSettingsController {
+                .icon {
+                    background-image: url('#{$cms-branding-icon-path}/settings.png');
+                }
+            }
+            #Menu-ContactMessageModelAdmin {
+                .icon {
+                    background-image: url('#{$boilerplate-module-path}/ContactForm/images/message_menu_alt.png');
+                }
+            }
+            #Menu-CMSPagesController {
+                .icon {
+                    background-image: url('#{$cms-branding-icon-path}/pages.png');
+                }
+            }
+            #Menu-PortfolioPageModelAdmin {
+                .icon {
+                    background-image: url('#{$boilerplate-module-path}/Portfolio/images/briefcase-alt.png');
+                }
+            }
+            #Menu-Help {
+                .icon {
+                    background-image: url('#{$cms-branding-icon-path}/help.png');
                 }
             }
             #Menu-ReportAdmin {
@@ -34,21 +64,6 @@ $boilerplate-module-path: "../../boilerplate/code/Modules";
             #Menu-SecurityAdmin {
                 .icon {
                     background-image: url('#{$cms-branding-icon-path}/security.png');
-                }
-            }
-            #Menu-ContactMessageModelAdmin {
-                .icon {
-                    background-image: url('#{$boilerplate-module-path}/ContactForm/images/message_menu_alt.png');
-                }
-            }
-            #Menu-CMSSettingsController {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/settings.png');
-                }
-            }
-            #Menu-Help {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/help.png');
                 }
             }
         }
