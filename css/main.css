@@ -422,6 +422,10 @@
 	background-position: -17px -38px;
 }
 
+.cms table.ss-gridfield-table tr td.col-buttons .gridfield-button-unpublish .btn-icon-unpublish {
+	background: url("../images/icons/plug-disconnect.png");
+}
+
 .cms table.ss-gridfield-table tr td.bottom-all {
 	border: 1px solid #BDBDBD; /**
      * Pagination

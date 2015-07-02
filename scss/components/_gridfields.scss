@@ -98,6 +98,13 @@
                     }
                 }
                 td {
+                    &.col-buttons {
+                        .gridfield-button-unpublish {
+                            .btn-icon-unpublish {
+                                background: url('../images/icons/plug-disconnect.png');
+                            }
+                        }
+                    }
                     &.bottom-all {
                         border: 1px solid $gray;
                         @extend %gridfield-accordion-style;
