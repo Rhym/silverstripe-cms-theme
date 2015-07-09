@@ -20,6 +20,6 @@
     "issues": "https://github.com/Rhym/silverstripe-cms-theme/issues"
   },
   "extra": {
-    "installer-name": "cms-branding"
+    "installer-name": "silverstripe-branding"
   }
 }
