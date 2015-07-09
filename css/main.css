@@ -457,6 +457,86 @@
 }
 
 /** =========================================
+ * CMS Menu
+ ===========================================*/
+
+/**
+ * The left-hand navigation
+ */
+
+.cms-menu { /**
+   * The list of ModelAdmin actions
+   */
+}
+
+.cms-menu .cms-menu-list li.children.current,
+.cms-menu .cms-menu-list li.children.opened {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.cms-menu .cms-menu-list li.children.current.opened .toggle-children.opened {
+	background: transparent none;
+}
+
+.cms-menu .cms-menu-list li.children .grouped-cms-menu.text {
+	margin-left: 32px;
+}
+
+.cms-menu .cms-menu-list li.children .grouped-cms-menu::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	margin: -8px 0 0 4px;
+	background-image: url("../images/icons/admin/menu.png");
+	height: 16px;
+	width: 16px;
+}
+
+.cms-menu .cms-menu-list li.children li {
+	background: transparent none;
+}
+
+.cms-menu .cms-menu-list li.children li.current a {
+	font-weight: bold;
+}
+
+.cms-menu .cms-menu-list li.children li a {
+	height: auto;
+	position: relative;
+	border-width: 0;
+	background: rgba(0, 0, 0, 0.15);
+	font-size: 13px;
+	font-weight: normal;
+	padding: 16px 16px 16px 16px;
+	line-height: 1em;
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children {
+	font-size: 13px;
+	padding: 16px 16px 16px 16px;
+	top: 0;
+	right: 0;
+	float: none;
+	height: auto;
+	width: auto;
+	line-height: inherit;
+	text-align: center;
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children.opened {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon {
+	background-position: 0 -846px;
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon {
+	background-position: 0 -830px;
+}
+
+/** =========================================
  * Loading Logo
  ===========================================*/
 
