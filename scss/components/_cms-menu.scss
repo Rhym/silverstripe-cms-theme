@@ -9,6 +9,9 @@ $sidebar-color: $brand-primary-color;
  * The left-hand navigation
  */
 .cms-menu {
+    /** Render the fonts a little better. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: $font-family-base;
     background: $sidebar-background;
     color: $sidebar-color;
@@ -23,58 +26,58 @@ $sidebar-color: $brand-primary-color;
         margin: 0 0 $gap-md 0;
         border-bottom: 1px solid rgba(0,0,0,0.3);
     }
-        .logo {
-            margin: 0 0 $gap-md 0;
-            a.front-end-link {
-                display: block;
-                position: static;
-                text-indent: 0;
-                background: transparent none;
-                width: 100%;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-        .cms-logo-header {
+    .logo {
+        margin: 0 0 $gap-md 0;
+        a.front-end-link {
+            display: block;
+            position: static;
+            text-indent: 0;
             background: transparent none;
+            width: 100%;
         }
-        /**
-         * Silverstripe Logo + Site Name
-         */
-        .cms-logo {
-            padding: $gap-sm 0 0 0;
-            border-width: 0;
-            a {
-                display: none;
-            }
-            span {
-                margin: 0 0 0 4px;
-                font-weight: 700;
-                color: $sidebar-color;
-            }
+        img {
+            max-width: 100%;
+            height: auto;
         }
-        /**
-         * Logout Button
-         */
-        .cms-login-status {
-            padding: 0 0 $gap-sm 0;
-            border-width: 0;
-            .logout-link {
-                color: $sidebar-color;
-                background: transparent none;
-                float: none;
-                width: auto;
-                height: auto;
-                text-indent: 0;
-                display: block;
-                content: "Logout";
-            }
-            span {
-                display: none;
-            }
+    }
+    .cms-logo-header {
+        background: transparent none;
+    }
+    /**
+     * Silverstripe Logo + Site Name
+     */
+    .cms-logo {
+        padding: $gap-sm 0 0 0;
+        border-width: 0;
+        a {
+            display: none;
         }
+        span {
+            margin: 0 0 0 4px;
+            font-weight: 700;
+            color: $sidebar-color;
+        }
+    }
+    /**
+     * Logout Button
+     */
+    .cms-login-status {
+        padding: 0 0 $gap-sm 0;
+        border-width: 0;
+        .logout-link {
+            color: $sidebar-color;
+            background: transparent none;
+            float: none;
+            width: auto;
+            height: auto;
+            text-indent: 0;
+            display: block;
+            content: "Logout";
+        }
+        span {
+            display: none;
+        }
+    }
     /**
      * The list of ModelAdmin actions
      */
@@ -102,7 +105,7 @@ $sidebar-color: $brand-primary-color;
                     }
                 }
                 .text {
-                    margin: 0 0 0 30px;
+                    margin: 0 0 0 $gap-lg;
                 }
             }
         }

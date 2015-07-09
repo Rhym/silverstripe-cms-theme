@@ -1,0 +1,88 @@
+/** =========================================
+ * CMS Menu
+ ===========================================*/
+
+/**
+ * The left-hand navigation
+ */
+.cms-menu {
+    /**
+     * The list of ModelAdmin actions
+     */
+    .cms-menu-list {
+        li {
+            &.children {
+                &.current,
+                &.opened {
+                    border-bottom: 1px solid rgba(0,0,0,0.3);
+                }
+                &.current.opened {
+                    .toggle-children {
+                        &.opened {
+                            background: transparent none;
+                        }
+                    }
+                }
+                .grouped-cms-menu {
+                    &.text {
+                        margin-left: $gap-lg;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: $gap-md;
+                        margin: -8px 0 0 4px;
+                        background-image: url('#{$cms-branding-icon-path}/menu.png');
+                        height: 16px;
+                        width: 16px;
+                    }
+                }
+                li {
+                    background: transparent none;
+                    &.current {
+                        a {
+                            //background: rgba(0,0,0,0.2);
+                            font-weight: bold;
+                        }
+                    }
+                    a {
+                        height: auto;
+                        position: relative;
+                        border-width: 0;
+                        background: rgba(0,0,0,0.15);
+                        font-size: $font-size-base;
+                        font-weight: normal;
+                        padding: $gap-md $gap-md $gap-md $gap-md;
+                        line-height: 1em;
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            //background: rgba(0,0,0,0.2);
+                        }
+                    }
+                }
+                .toggle-children {
+                    font-size: $font-size-base;
+                    padding: $gap-md $gap-md $gap-md $gap-md;
+                    top: 0;
+                    right: 0;
+                    float: none;
+                    height: auto;
+                    width: auto;
+                    line-height: inherit;
+                    text-align: center;
+                    &.opened {
+                        background: rgba(0,0,0,0.15);
+                        .toggle-children-icon {
+                            background-position: 0 -846px;
+                        }
+                    }
+                    .toggle-children-icon {
+                        background-position: 0 -830px;
+                    }
+                }
+            }
+        }
+    }
+}

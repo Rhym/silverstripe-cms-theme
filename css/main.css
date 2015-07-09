@@ -70,6 +70,10 @@
  ===========================================*/
 
 /** =========================================
+ * Typography
+ ===========================================*/
+
+/** =========================================
  * Components
  ===========================================*/
 
@@ -214,7 +218,9 @@
  * The left-hand navigation
  */
 
-.cms-menu {
+.cms-menu { /** Render the fonts a little better. */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-family: sans-serif;
 	background: #1b354c;
 	color: #fff;
@@ -316,7 +322,7 @@
 }
 
 .cms-menu .cms-menu-list li a .text {
-	margin: 0 0 0 30px;
+	margin: 0 0 0 32px;
 }
 
 .cms-menu .cms-panel-toggle.south {
