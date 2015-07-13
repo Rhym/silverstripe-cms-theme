@@ -1,8 +1,19 @@
 # Silverstripe CMS Theme
 
-Just a nice little UI change for the cms. All colours are set in the *scss/_vars.scss*
+Just a nice little UI change for the cms.
 
 The theme supports an UploadField in the *Settings > Settings Tab > CMS Tab* for a logo to be displayed in the left-hand menu of the CMS.
+
+### Changing the theme colour
+
+In your _config.yml
+
+```
+LeftAndMain:
+  extensions:
+    - CMSBrandingLeftAndMainExtension
+  cms_menu_background: '#8996a1'
+```
 
 ### Example
 
