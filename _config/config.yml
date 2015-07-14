@@ -1,6 +1,8 @@
 LeftAndMain:
   extra_requirements_css:
     - silverstripe-branding/css/main.min.css
+  extensions:
+    - CMSBrandingLeftAndMainExtension
 
 SiteConfig:
   extensions:
