@@ -1,4 +1,4 @@
-# Silverstripe CMS Theme
+# Silverstripe CMS Branding
 
 Just a nice little UI change for the cms.
 
