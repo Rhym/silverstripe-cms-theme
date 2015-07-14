@@ -3,6 +3,7 @@
 /**
  * Class CMSBrandingSiteConfigExtension
  *
+ * @method Image CMSLogo
  */
 class CMSBrandingSiteConfigExtension extends DataExtension {
 
@@ -53,7 +54,7 @@ class CMSBrandingSiteConfigExtension extends DataExtension {
      * @return string|DataObject
      */
     public function getCustomCMSLogo() {
-        return Config::inst()->get('SiteConfig', 'cms_logo') ?: Image::get()->byID($this->CMSLogoID);
+        return Config::inst()->get('SiteConfig', 'cms_logo') ?: Image::get()->byID($this->owner->CMSLogoID);
     }
 
 }
