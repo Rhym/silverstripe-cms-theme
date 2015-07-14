@@ -4,8 +4,12 @@
             <a href="$ApplicationLink" target="_blank" title="$ApplicationName (Version - $CMSVersion)">
                 $ApplicationName <% if $CMSVersion %><abbr class="version">$CMSVersion</abbr><% end_if %>
             </a>
-            <% if $SiteConfig.CMSLogo %>
-                <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CMSLogo.setHeight(50)}</a></div><!-- /.logo -->
+            <% if $SiteConfig.CustomCMSLogo %>
+                <% if $SiteConfig.CustomCMSLogo.is_a('DataObject') %>
+                    <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CustomCMSLogo.setHeight(50)}</a></div><!-- /.logo -->
+                <% else %>
+                    <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank"><img src="{$SiteConfig.CustomCMSLogo}" alt="$SiteConfig.Title CMS Logo"></a></div><!-- /.logo -->
+                <% end_if %>
             <% else %>
                 <span><% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %></span>
             <% end_if %>
