@@ -34,6 +34,9 @@
                         left: $gap-md;
                         margin: -8px 0 0 4px;
                         background-image: url('#{$cms-branding-icon-path}/menu.png');
+                        @if $icons-inverse == true {
+                            background-image: url('#{$cms-branding-icon-path}/menu-alt.png');
+                        }
                         height: 16px;
                         width: 16px;
                     }
@@ -42,7 +45,6 @@
                     background: transparent none;
                     &.current {
                         a {
-                            //background: rgba(0,0,0,0.2);
                             font-weight: bold;
                         }
                     }
@@ -55,11 +57,6 @@
                         font-weight: normal;
                         padding: $gap-md $gap-md $gap-md $gap-md;
                         line-height: 1em;
-                        &:hover,
-                        &:focus,
-                        &:active {
-                            //background: rgba(0,0,0,0.2);
-                        }
                     }
                 }
                 .toggle-children {
@@ -75,11 +72,15 @@
                     &.opened {
                         background: rgba(0,0,0,0.15);
                         .toggle-children-icon {
-                            background-position: 0 -846px;
+                            @if $icons-inverse == true {
+                                background-position: 0 -846px;
+                            }
                         }
                     }
                     .toggle-children-icon {
-                        background-position: 0 -830px;
+                        @if $icons-inverse == true {
+                            background-position: 0 -830px;
+                        }
                     }
                 }
             }

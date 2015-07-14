@@ -489,6 +489,7 @@
 	left: 16px;
 	margin: -8px 0 0 4px;
 	background-image: url("../images/icons/admin/menu.png");
+	background-image: url("../images/icons/admin/menu-alt.png");
 	height: 16px;
 	width: 16px;
 }
@@ -612,6 +613,7 @@
 
 /**
  * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
+ @todo: Create sprites instead of individual images.
  */
 
 .cms-menu { /**
@@ -620,11 +622,11 @@
 }
 
 .cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url("../images/icons/admin/assets.png");
+	background-image: url("../images/icons/admin/assets-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url("../images/icons/admin/assets.png");
+	background-image: url("../images/icons/admin/assets-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-BlogPageModelAdmin .icon {
@@ -632,15 +634,15 @@
 }
 
 .cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
-	background-image: url("../images/icons/admin/settings.png");
+	background-image: url("../images/icons/admin/settings-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message_menu_alt.png");
+	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message-menu-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
-	background-image: url("../images/icons/admin/pages.png");
+	background-image: url("../images/icons/admin/pages-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-PortfolioPageModelAdmin .icon {
@@ -648,15 +650,15 @@
 }
 
 .cms-menu .cms-menu-list #Menu-Help .icon {
-	background-image: url("../images/icons/admin/help.png");
+	background-image: url("../images/icons/admin/help-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
-	background-image: url("../images/icons/admin/reports.png");
+	background-image: url("../images/icons/admin/reports-alt.png");
 }
 
 .cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
-	background-image: url("../images/icons/admin/security.png");
+	background-image: url("../images/icons/admin/security-alt.png");
 }
 
 /** =========================================
