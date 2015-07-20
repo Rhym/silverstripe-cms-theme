@@ -4,13 +4,13 @@
 
 /** -----------------------------------------
  * Variables
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 $loader-size: 25px;
 
 /** -----------------------------------------
  * Mixins
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 @mixin loading-spinner() {
     &:after {
@@ -21,7 +21,7 @@ $loader-size: 25px;
         height: $loader-size;
         background: transparent none;
         border: 4px solid $gray-light;
-        border-color: rgba(0,0,0,0.12);
+        border-color: rgba(0, 0, 0, 0.12);
         border-top-color: $brand-primary !important; // Fixes an bug in chrome.
         border-radius: 50%;
         top: 50%;
@@ -33,7 +33,7 @@ $loader-size: 25px;
 
 /** -----------------------------------------
  * Animation
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 @keyframes infinite-spinning {
     from {
@@ -46,7 +46,7 @@ $loader-size: 25px;
 
 /** -----------------------------------------
  * Styling
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 .ss-loading-screen {
     .loading-logo {
@@ -60,6 +60,7 @@ $loader-size: 25px;
         }
     }
 }
+
 .cms-content-loading-spinner {
     background-image: none;
     @include loading-spinner;

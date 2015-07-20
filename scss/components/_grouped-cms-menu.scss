@@ -14,7 +14,7 @@
             &.children {
                 &.current,
                 &.opened {
-                    border-bottom: 1px solid rgba(0,0,0,0.3);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
                 }
                 &.current.opened {
                     .toggle-children {
@@ -52,7 +52,7 @@
                         height: auto;
                         position: relative;
                         border-width: 0;
-                        background: rgba(0,0,0,0.15);
+                        background: rgba(0, 0, 0, 0.15);
                         font-size: $font-size-base;
                         font-weight: normal;
                         padding: $gap-md $gap-md $gap-md $gap-md;
@@ -70,7 +70,7 @@
                     line-height: inherit;
                     text-align: center;
                     &.opened {
-                        background: rgba(0,0,0,0.15);
+                        background: rgba(0, 0, 0, 0.15);
                         .toggle-children-icon {
                             @if $icons-inverse == true {
                                 background-position: 0 -846px;

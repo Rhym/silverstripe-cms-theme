@@ -4,10 +4,14 @@
 
 $ss-background-default: #e6eaed;
 
-$gray-darker: #444 !default; // Text
-$gray-dark: #757575 !default; // Secondary Text / Icons
-$gray: #BDBDBD !default; // Hint Text
-$gray-light: #E0E0E0 !default; // Dividers
+$gray-darker: #444 !default;
+// Text
+$gray-dark: #757575 !default;
+// Secondary Text / Icons
+$gray: #BDBDBD !default;
+// Hint Text
+$gray-light: #E0E0E0 !default;
+// Dividers
 $gray-lighter: #f9f9f9 !default;
 
 $brand-default: #fff !default;
@@ -32,7 +36,7 @@ $brand-inverse-color: #fff !default;
 
 /** -----------------------------------------
  * Fonts
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 $font-family-base: sans-serif;
 
@@ -41,7 +45,7 @@ $font-size-heading-base: 24px;
 
 /** -----------------------------------------
  * Sizing
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 $gutter: 30px !default;
 
@@ -53,7 +57,7 @@ $gap-xs: 4px !default;
 
 /** -----------------------------------------
  * Icons
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 $cms-branding-icon-path: "../images/icons/admin";
 $boilerplate-module-path: "../../boilerplate/code/Modules";
@@ -61,13 +65,14 @@ $icons-inverse: true;
 
 /** -----------------------------------------
  * GridFields / Accordions
- -------------------------------------------*/
+ * ----------------------------------------*/
 
 %gridfield-accordion-style {
     background: $gray-lighter;
     background: linear-gradient($gray-lighter, shade($gray-lighter, 3));
     border-color: $gray !important; // Override javascript hierarchy
 }
+
 %gridfield-accordion-content-style {
     background: $gray-lighter;
     border-color: $gray !important;

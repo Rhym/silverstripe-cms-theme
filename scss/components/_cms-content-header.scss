@@ -25,7 +25,8 @@
      * Model admins without breadcrumbs
      */
     .cms-content-header-info {
-        h2 { //There is no hook for this heading, silly SS.
+        h2 {
+            //There is no hook for this heading, silly SS.
             color: $brand-default-color;
         }
         .icon {

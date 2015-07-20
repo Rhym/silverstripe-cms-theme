@@ -5,7 +5,8 @@
  *
  * @method Image CMSLogo
  */
-class CMSBrandingSiteConfigExtension extends DataExtension {
+class CMSBrandingSiteConfigExtension extends DataExtension
+{
 
     /**
      * @var bool
@@ -22,18 +23,19 @@ class CMSBrandingSiteConfigExtension extends DataExtension {
     /**
      * @param FieldList $fields
      */
-    public function updateCMSFields(FieldList $fields) {
+    public function updateCMSFields(FieldList $fields)
+    {
         /** =========================================
          * @var UploadField $cmsLogo
         ===========================================*/
 
         /** -----------------------------------------
          * CMS
-        -------------------------------------------*/
+         * ----------------------------------------*/
 
         if (Permission::check('ADMIN') && !Config::inst()->get('SiteConfig', 'cms_logo')) {
 
-            if (!$fields->fieldByName('Root.Settings')){
+            if (!$fields->fieldByName('Root.Settings')) {
                 $fields->addFieldToTab('Root', TabSet::create('Settings'));
             }
 
@@ -53,7 +55,8 @@ class CMSBrandingSiteConfigExtension extends DataExtension {
     /**
      * @return string|DataObject
      */
-    public function getCustomCMSLogo() {
+    public function getCustomCMSLogo()
+    {
         return Config::inst()->get('SiteConfig', 'cms_logo') ?: Image::get()->byID($this->owner->CMSLogoID);
     }
 

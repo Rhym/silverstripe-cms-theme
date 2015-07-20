@@ -17,14 +17,14 @@ $sidebar-color: $brand-primary-color;
     color: $sidebar-color;
     width: 240px !important; // Override Javascript resizing the menu
     box-shadow: none;
-    border-right: 1px solid rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
     /**
      * The container for the Silverstripe logo, Username and logout button
      */
     .cms-logo-header.north {
         padding: $gap-md $gap-md $gap-md $gap-md;
         margin: 0 0 $gap-md 0;
-        border-bottom: 1px solid rgba(0,0,0,0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
     .logo {
         margin: 0 0 $gap-md 0;
@@ -86,7 +86,7 @@ $sidebar-color: $brand-primary-color;
             &.current {
                 a {
                     color: $sidebar-color;
-                    background: rgba(0,0,0,0.3);
+                    background: rgba(0, 0, 0, 0.3);
                 }
             }
             a {
@@ -114,7 +114,7 @@ $sidebar-color: $brand-primary-color;
      * The footer of the left-hand navigation, contains toggle button
      */
     .cms-panel-toggle.south {
-        border-color: rgba(0,0,0,0.3);
+        border-color: rgba(0, 0, 0, 0.3);
         box-shadow: none;
         // Disallow toggling
         display: none;

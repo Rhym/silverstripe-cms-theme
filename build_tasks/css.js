@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     'use strict';
 
     var config = grunt.config;
@@ -9,45 +9,45 @@ module.exports = function(grunt) {
 
     /** -----------------------------------------
      * Sass
-     -------------------------------------------*/
+     * ----------------------------------------*/
 
     config.set('sass.cms', {
-        files:[{
+        files: [{
             '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/scss/main.scss'
         }]
     });
 
     /** -----------------------------------------
-     * Autoprefixer
-     -------------------------------------------*/
+     * Auto Pre-fixer
+     * ----------------------------------------*/
 
-    config.set( 'autoprefixer.cms', {
+    config.set('autoprefixer.cms', {
         options: {
             browsers: ['last 3 versions']
         },
-        files:[{
+        files: [{
             '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/css/main.css'
         }]
     });
 
     /** -----------------------------------------
      * Combine Media Queries
-     -------------------------------------------*/
+     * ----------------------------------------*/
 
-    config.set( 'cmq.cms', {
+    config.set('cmq.cms', {
         options: {
             log: false
         },
-        files:[{
+        files: [{
             '<%= directories.cmsBranding %>/css/': ['<%= directories.cmsBranding %>/css/main.css']
         }]
     });
 
     /** -----------------------------------------
-     * CSSMin
-     -------------------------------------------*/
+     * CSS Minification
+     * ----------------------------------------*/
 
-    config.set( 'cssmin.cms', {
+    config.set('cssmin.cms', {
         options: {
             rebase: false
         },
@@ -59,17 +59,17 @@ module.exports = function(grunt) {
     });
 
     /** -----------------------------------------
-     * CSSLint
-     -------------------------------------------*/
+     * CSS Lint
+     * ----------------------------------------*/
 
-    config.set( 'csslint.strict', {
+    config.set('csslint.strict', {
         options: {
             import: 2
         },
         src: ['<%= directories.cmsBranding %>/css/main.min.css']
     });
 
-    config.set( 'csslint.lax', {
+    config.set('csslint.lax', {
         options: {
             import: false
         },

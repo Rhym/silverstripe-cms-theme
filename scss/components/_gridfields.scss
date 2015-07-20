@@ -25,7 +25,7 @@
                         border-bottom-width: 0;
                         @extend %gridfield-accordion-style;
                         h2 {
-                            text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+                            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
                             color: $gray-darker;
                         }
                     }

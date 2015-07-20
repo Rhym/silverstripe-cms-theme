@@ -2,7 +2,10 @@
   "name": "ryanpotter/silverstripe-cms-theme",
   "description": "CMS Theme",
   "type": "silverstripe-module",
-  "keywords": ["silverstripe", "theme"],
+  "keywords": [
+    "silverstripe",
+    "theme"
+  ],
   "license": "BSD-3-Clause",
   "authors": [
     {
@@ -11,8 +14,7 @@
       "role": "Developer"
     }
   ],
-  "require":
-  {
+  "require": {
     "silverstripe/framework": ">=3.0.1,<3.2",
     "composer/installers": "*"
   },
