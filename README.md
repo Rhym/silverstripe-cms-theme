@@ -13,6 +13,13 @@ SiteConfig:
   cms_logo: 'mysite/images/cms_logo.png'
 ```
 
+You can set the theme colour of the left menu by defining it through a YML configuration like the below:
+
+```yml
+LeftAndMain:
+  cms_menu_background: '#ff0000'
+```
+
 ### Example
 
 ![demo-image](https://cloud.githubusercontent.com/assets/1136811/7264694/a272d25c-e8e2-11e4-8981-4216ad31f09e.png)
