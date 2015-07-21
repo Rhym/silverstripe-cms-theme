@@ -1,91 +1,91 @@
 module.exports = function (grunt) {
-    'use strict';
+  'use strict';
 
-    var config = grunt.config;
+  var config = grunt.config;
 
-    /** =========================================
-     * CSS
-     ===========================================*/
+  /** =========================================
+   * CSS
+   ===========================================*/
 
-    /** -----------------------------------------
-     * Sass
-     * ----------------------------------------*/
+  /** -----------------------------------------
+   * Sass
+   * ----------------------------------------*/
 
-    config.set('sass.cms', {
-        files: [{
-            '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/scss/main.scss'
-        }]
-    });
+  config.set('sass.cms', {
+    files: [{
+      '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/scss/main.scss'
+    }]
+  });
 
-    /** -----------------------------------------
-     * Auto Pre-fixer
-     * ----------------------------------------*/
+  /** -----------------------------------------
+   * Auto Pre-fixer
+   * ----------------------------------------*/
 
-    config.set('autoprefixer.cms', {
-        options: {
-            browsers: ['last 3 versions']
-        },
-        files: [{
-            '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/css/main.css'
-        }]
-    });
+  config.set('autoprefixer.cms', {
+    options: {
+      browsers: ['last 3 versions']
+    },
+    files: [{
+      '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/css/main.css'
+    }]
+  });
 
-    /** -----------------------------------------
-     * Combine Media Queries
-     * ----------------------------------------*/
+  /** -----------------------------------------
+   * Combine Media Queries
+   * ----------------------------------------*/
 
-    config.set('cmq.cms', {
-        options: {
-            log: false
-        },
-        files: [{
-            '<%= directories.cmsBranding %>/css/': ['<%= directories.cmsBranding %>/css/main.css']
-        }]
-    });
+  config.set('cmq.cms', {
+    options: {
+      log: false
+    },
+    files: [{
+      '<%= directories.cmsBranding %>/css/': ['<%= directories.cmsBranding %>/css/main.css']
+    }]
+  });
 
-    /** -----------------------------------------
-     * CSS Minification
-     * ----------------------------------------*/
+  /** -----------------------------------------
+   * CSS Minification
+   * ----------------------------------------*/
 
-    config.set('cssmin.cms', {
-        options: {
-            rebase: false
-        },
-        expand: true,
-        cwd: '<%= directories.cmsBranding %>/css/',
-        src: ['main.css'],
-        dest: '<%= directories.cmsBranding %>/css/',
-        ext: '.min.css'
-    });
+  config.set('cssmin.cms', {
+    options: {
+      rebase: false
+    },
+    expand: true,
+    cwd: '<%= directories.cmsBranding %>/css/',
+    src: ['main.css'],
+    dest: '<%= directories.cmsBranding %>/css/',
+    ext: '.min.css'
+  });
 
-    /** -----------------------------------------
-     * CSS Lint
-     * ----------------------------------------*/
+  /** -----------------------------------------
+   * CSS Lint
+   * ----------------------------------------*/
 
-    config.set('csslint.strict', {
-        options: {
-            import: 2
-        },
-        src: ['<%= directories.cmsBranding %>/css/main.min.css']
-    });
+  config.set('csslint.strict', {
+    options: {
+      import: 2
+    },
+    src: ['<%= directories.cmsBranding %>/css/main.min.css']
+  });
 
-    config.set('csslint.lax', {
-        options: {
-            import: false
-        },
-        src: ['<%= directories.cmsBranding %>/css/main.min.css']
-    });
+  config.set('csslint.lax', {
+    options: {
+      import: false
+    },
+    src: ['<%= directories.cmsBranding %>/css/main.min.css']
+  });
 
-    /** =========================================
-     * Watch
-     ===========================================*/
+  /** =========================================
+   * Watch
+   ===========================================*/
 
-    config.set('watch.cms', {
-        files: ['<%= directories.cmsBranding %>/scss/**/*.scss'],
-        tasks: ['sass:cms', 'autoprefixer:cms', 'cmq:cms', 'cssmin:cms'],
-        options: {
-            spawn: false
-        }
-    });
+  config.set('watch.cms', {
+    files: ['<%= directories.cmsBranding %>/scss/**/*.scss'],
+    tasks: ['sass:cms', 'autoprefixer:cms', 'cmq:cms', 'cssmin:cms'],
+    options: {
+      spawn: false
+    }
+  });
 
 };
