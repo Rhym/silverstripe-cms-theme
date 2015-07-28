@@ -47,7 +47,7 @@ class CMSBrandingSiteConfigExtension extends DataExtension
                 )
             );
             $cmsLogo->setFolderName('Uploads/CMS');
-            $cmsLogo->setRightTitle('Logo displayed in the top left-hand side of the CMS menu. Rescaled to a height of 50px.');
+            $cmsLogo->setRightTitle('Logo displayed in the top left-hand side of the CMS menu.');
         }
 
     }

@@ -6,7 +6,7 @@
             </a>
             <% if $SiteConfig.CustomCMSLogo %>
                 <% if $SiteConfig.CustomCMSLogo.is_a('DataObject') %>
-                    <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CustomCMSLogo.setHeight(50)}</a></div><!-- /.logo -->
+                    <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CustomCMSLogo}</a></div><!-- /.logo -->
                 <% else %>
                     <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank"><img src="{$SiteConfig.CustomCMSLogo}" alt="$SiteConfig.Title CMS Logo"></a></div><!-- /.logo -->
                 <% end_if %>

@@ -29,6 +29,7 @@ $sidebar-color: $brand-primary-color;
     .logo {
         margin: 0 0 $gap-md 0;
         a.front-end-link {
+            margin: 0;
             display: block;
             position: static;
             text-indent: 0;

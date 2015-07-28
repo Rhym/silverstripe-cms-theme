@@ -250,6 +250,7 @@
 }
 
 .cms-menu .logo a.front-end-link {
+	margin: 0;
 	display: block;
 	position: static;
 	text-indent: 0;
