@@ -11,22 +11,9 @@ module.exports = function (grunt) {
    * Sass
    * ----------------------------------------*/
 
-  config.set('sass.cms', {
+  config.set('sass.all', {
     files: [{
       '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/scss/main.scss'
-    }]
-  });
-
-  /** -----------------------------------------
-   * Auto Pre-fixer
-   * ----------------------------------------*/
-
-  config.set('autoprefixer.cms', {
-    options: {
-      browsers: ['last 3 versions']
-    },
-    files: [{
-      '<%= directories.cmsBranding %>/css/main.css': '<%= directories.cmsBranding %>/css/main.css'
     }]
   });
 
@@ -34,7 +21,7 @@ module.exports = function (grunt) {
    * Combine Media Queries
    * ----------------------------------------*/
 
-  config.set('cmq.cms', {
+  config.set('cmq.all', {
     options: {
       log: false
     },
@@ -44,18 +31,23 @@ module.exports = function (grunt) {
   });
 
   /** -----------------------------------------
-   * CSS Minification
+   * PostCSS
    * ----------------------------------------*/
 
-  config.set('cssmin.cms', {
+  config.set('postcss.all', {
     options: {
-      rebase: false
+      map: true,
+      processors: [
+        require('pixrem')(),
+        require('autoprefixer-core')({
+          browsers: 'last 3 versions'
+        }),
+        require('cssnano')()
+      ]
     },
-    expand: true,
-    cwd: '<%= directories.cmsBranding %>/css/',
-    src: ['main.css'],
-    dest: '<%= directories.cmsBranding %>/css/',
-    ext: '.min.css'
+    dist: {
+      src: '<%= directories.cmsBranding %>/css/*.css'
+    }
   });
 
   /** -----------------------------------------
@@ -80,9 +72,9 @@ module.exports = function (grunt) {
    * Watch
    ===========================================*/
 
-  config.set('watch.cms', {
+  config.set('watch', {
     files: ['<%= directories.cmsBranding %>/scss/**/*.scss'],
-    tasks: ['sass:cms', 'autoprefixer:cms', 'cmq:cms', 'cssmin:cms'],
+    tasks: ['sass', 'cmq', 'postcss'],
     options: {
       spawn: false
     }

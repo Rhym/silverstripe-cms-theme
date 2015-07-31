@@ -578,7 +578,6 @@
 	top: 50%;
 	left: 50%;
 	margin: -12.5px 0 0 -12.5px;
-	-webkit-animation: infinite-spinning 0.8s linear infinite;
 	animation: infinite-spinning 0.8s linear infinite;
 }
 
@@ -604,7 +603,6 @@
 	top: 50%;
 	left: 50%;
 	margin: -12.5px 0 0 -12.5px;
-	-webkit-animation: infinite-spinning 0.8s linear infinite;
 	animation: infinite-spinning 0.8s linear infinite;
 }
 
@@ -795,29 +793,15 @@
  * Use this for putting all the CSS declarations, hacks and things we are not proud of.
  */
 
-@-webkit-keyframes infinite-spinning {
-
-from {
-	-webkit-transform: rotate(0deg);
-	transform: rotate(0deg);
-}
-
-to {
-	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
-}
-
-}
+/*# sourceMappingURL=main.css.map */
 
 @keyframes infinite-spinning {
 
 from {
-	-webkit-transform: rotate(0deg);
 	transform: rotate(0deg);
 }
 
 to {
-	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 }
 
