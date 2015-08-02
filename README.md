@@ -18,6 +18,8 @@ You can set the theme colour of the left menu by defining it through a YML confi
 ```yml
 LeftAndMain:
   cms_menu_background: '#ff0000'
+  cms_menu_active_text_color: '#00ff00'
+  cms_menu_active_background_color: '#0000ff'
 ```
 
 ### Example
