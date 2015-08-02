@@ -22,7 +22,7 @@ $sidebar-color: $brand-primary-color;
      * The container for the Silverstripe logo, Username and logout button
      */
     .cms-logo-header.north {
-        padding: 20px 25px;
+        padding: 20px;
         margin: 0 0 $gap-md 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
@@ -54,7 +54,7 @@ $sidebar-color: $brand-primary-color;
             display: none;
         }
         span {
-            margin: 0 0 0 4px;
+            margin: 0px;
             font-weight: 700;
             color: $sidebar-color;
         }
@@ -88,7 +88,7 @@ $sidebar-color: $brand-primary-color;
         li {
             &.current {
                 a {
-                    color: rgba(0,0,0,.7);
+                    color: rgba(255,255,255,1.0);
                     background: rgba(0,0,0,.3);
 
                     &:hover{
