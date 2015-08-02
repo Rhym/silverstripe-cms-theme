@@ -88,11 +88,11 @@ $sidebar-color: $brand-primary-color;
         li {
             &.current {
                 a {
-                    color: #eee;
-                    background: #ce0058;
+                    color: rgba(0,0,0,.7);
+                    background: rgba(0,0,0,.3);
 
                     &:hover{
-                        background: #ce0058;
+                        background: rgba(0,0,0,.3);
                     }
                 }
             }

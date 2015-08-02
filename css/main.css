@@ -305,12 +305,12 @@
 }
 
 .cms-menu .cms-menu-list li.current a {
-	color: #eee;
-	background: #ce0058;
+	color: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .cms-menu .cms-menu-list li.current a:hover {
-	background: #ce0058;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .cms-menu .cms-menu-list li a {
