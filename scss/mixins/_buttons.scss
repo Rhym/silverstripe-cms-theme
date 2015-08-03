@@ -3,16 +3,16 @@
  ===========================================*/
 
 @mixin button-default($background: $brand-default, $border: $brand-default, $color: $brand-default-color) {
-    border-radius: 2px;
+    border-radius: $border-radius-small;
     padding: 0.6em 1.2em;
-    font-size: 12px;
+    font-size: $font-size-small;
     text-decoration: none;
     font-weight: normal;
     text-transform: uppercase;
     background: $background;
     border-color: $border;
     color: $color;
-    transition: .1s linear all;
+    transition: $transition-base all;
     &:hover,
     &:focus,
     &:active {

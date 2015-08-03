@@ -24,8 +24,8 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
         /** Set the background colour of the cms sidebar menu. */
         Requirements::customCSS(
             '.cms-menu {background: ' . $this->owner->config()->cms_menu_background . ';}'
-            .  '.cms-menu .cms-menu-list li.current a  {background: ' . $this->owner->config()->cms_menu_active_background_color . '; color: ' . $this->owner->config()->cms_menu_active_text_color . '}'
-            .  '.cms-menu .cms-menu-list li.current a:hover  {background: ' . $this->owner->config()->cms_menu_active_background_color . ';}'
+            . '.cms-menu .cms-menu-list li.current a, .cms-menu .cms-menu-list li.children.current > a {background: ' . $this->owner->config()->cms_menu_active_background_color . '; color: ' . $this->owner->config()->cms_menu_active_text_color . '}'
+            . '.cms-menu .cms-menu-list li.current a:hover  {background: ' . $this->owner->config()->cms_menu_active_background_color . ';}'
         );
     }
 

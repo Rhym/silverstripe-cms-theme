@@ -17,18 +17,18 @@ $sidebar-color: $brand-primary-color;
     color: $sidebar-color;
     width: 240px !important; // Override Javascript resizing the menu
     box-shadow: none;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, $opacity-base);
     /**
      * The container for the Silverstripe logo, Username and logout button
      */
     .cms-logo-header.north {
-        padding: 20px;
+        padding: $menu-padding;
         margin: 0 0 $gap-md 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, $opacity-base);
     }
     .logo {
-        margin: 0 0 $gap-md 0;
         a.front-end-link {
+            padding: 0;
             margin: 0;
             display: block;
             position: static;
@@ -48,14 +48,15 @@ $sidebar-color: $brand-primary-color;
      * Silverstripe Logo + Site Name
      */
     .cms-logo {
-        padding: $gap-sm 0 0 0;
+        margin: 0 0 $gap-md 0;
+        padding: 0;
         border-width: 0;
         a {
             display: none;
         }
         span {
-            margin: 0px;
-            font-weight: 700;
+            margin: 0;
+            font-weight: $menu-font-weight;
             color: $sidebar-color;
         }
     }
@@ -63,7 +64,7 @@ $sidebar-color: $brand-primary-color;
      * Logout Button
      */
     .cms-login-status {
-        font-weight: 700;
+        font-weight: $menu-font-weight;
         padding: 0;
         border-width: 0;
         .logout-link {
@@ -88,27 +89,26 @@ $sidebar-color: $brand-primary-color;
         li {
             &.current {
                 a {
-                    color: rgba(255,255,255,1.0);
-                    background: rgba(0,0,0,.3);
-
-                    &:hover{
-                        background: rgba(0,0,0,.3);
+                    color: $sidebar-color;
+                    background: rgba(0, 0, 0, $opacity-base);
+                    &:hover {
+                        background: rgba(0, 0, 0, $opacity-base);
                     }
                 }
             }
             a {
                 font-family: 'Open Sans', sans-serif;
-                color: #eee;
-                font-weight: 600;
+                color: $sidebar-color;
+                font-weight: $menu-font-weight;
                 background: transparent none;
                 border-width: 0;
                 text-shadow: none;
-                font-size: 14px;
-                line-height: 18px;
-                padding: 12px 20px;
-                transition: background-color 100ms ease-in-out;
-                &:hover{
-                    background: rgba(0, 0, 0, 0.3);
+                font-size: $font-size-base;
+                line-height: $line-height-base;
+                padding: $menu-padding-y $menu-padding-x;
+                transition: $transition-base background-color;
+                &:hover {
+                    background: rgba(0, 0, 0, $opacity-base);
                 }
                 .icon {
                     margin-left: 0;
@@ -129,7 +129,7 @@ $sidebar-color: $brand-primary-color;
      * The footer of the left-hand navigation, contains toggle button
      */
     .cms-panel-toggle.south {
-        border-color: rgba(0, 0, 0, 0.3);
+        border-color: rgba(0, 0, 0, $opacity-base);
         box-shadow: none;
         // Disallow toggling
         display: none;

@@ -30,6 +30,18 @@
  * Variables
  ===========================================*/
 
+/** Text */
+
+/** Secondary Text / Icons */
+
+/** Hint Text */
+
+/** Dividers */
+
+/** -----------------------------------------
+ * Opacity
+ * ----------------------------------------*/
+
 /** -----------------------------------------
  * Fonts
  * ----------------------------------------*/
@@ -39,7 +51,19 @@
  * ----------------------------------------*/
 
 /** -----------------------------------------
+ * Animation
+ * ----------------------------------------*/
+
+/** -----------------------------------------
+ * Border Radii
+ * ----------------------------------------*/
+
+/** -----------------------------------------
  * Icons
+ * ----------------------------------------*/
+
+/** -----------------------------------------
+ * CMS Menu
  * ----------------------------------------*/
 
 /** -----------------------------------------
@@ -52,7 +76,7 @@
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f2f2f2);
+	background: linear-gradient(#f9f9f9, #f1f1f1);
 	border-color: #BDBDBD !important;
 }
 
@@ -245,11 +269,8 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.cms-menu .logo {
-	margin: 0 0 16px 0;
-}
-
 .cms-menu .logo a.front-end-link {
+	padding: 0;
 	margin: 0;
 	display: block;
 	position: static;
@@ -268,7 +289,8 @@
 }
 
 .cms-menu .cms-logo {
-	padding: 8px 0 0 0;
+	margin: 0 0 16px 0;
+	padding: 0;
 	border-width: 0;
 }
 
@@ -277,13 +299,13 @@
 }
 
 .cms-menu .cms-logo span {
-	margin: 0px;
-	font-weight: 700;
+	margin: 0;
+	font-weight: 600;
 	color: #fff;
 }
 
 .cms-menu .cms-login-status {
-	font-weight: 700;
+	font-weight: 600;
 	padding: 0;
 	border-width: 0;
 }
@@ -305,7 +327,7 @@
 }
 
 .cms-menu .cms-menu-list li.current a {
-	color: white;
+	color: #fff;
 	background: rgba(0, 0, 0, 0.3);
 }
 
@@ -315,15 +337,15 @@
 
 .cms-menu .cms-menu-list li a {
 	font-family: 'Open Sans', sans-serif;
-	color: #eee;
+	color: #fff;
 	font-weight: 600;
 	background: transparent none;
 	border-width: 0;
 	text-shadow: none;
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 18px;
 	padding: 12px 20px;
-	transition: background-color 100ms ease-in-out;
+	transition: 0.1s ease-out background-color;
 }
 
 .cms-menu .cms-menu-list li a:hover {
@@ -488,7 +510,16 @@
 .cms-menu .cms-menu-list li.children.current,
 .cms-menu .cms-menu-list li.children.opened {
 	border-bottom: 0;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.cms-menu .cms-menu-list li.children.current > a,
+.cms-menu .cms-menu-list li.children.opened > a {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.cms-menu .cms-menu-list li.children > a {
+	padding-right: 42px;
 }
 
 .cms-menu .cms-menu-list li.children .grouped-cms-menu.text {
@@ -508,8 +539,15 @@
 }
 
 .cms-menu .cms-menu-list li.children ul {
-	padding: 4px 0;
-	background-color: rgba(255, 255, 255, 0.08);
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cms-menu .cms-menu-list li.children ul li.current a {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.cms-menu .cms-menu-list li.children ul li a:hover {
+	background: rgba(0, 0, 0, 0.2);
 }
 
 .cms-menu .cms-menu-list li.children li {
@@ -518,18 +556,17 @@
 
 .cms-menu .cms-menu-list li.children li.current a {
 	color: #fff;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 .cms-menu .cms-menu-list li.children li a {
-	color: #b4b9be;
+	color: #fff;
 	height: auto;
 	position: relative;
 	border-width: 0;
 	background: none;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 25px;
+	font-size: 13px;
+	padding: 12px 24px;
 	line-height: 1em;
 }
 
@@ -541,19 +578,20 @@
 	font-size: 13px;
 	top: 50%;
 	right: 4px;
+	box-sizing: border-box;
 	margin-top: -17px;
 	float: none;
 	line-height: inherit;
 	text-align: center;
-	width: 32px;
-	height: 32px;
+	width: 34px;
+	height: 34px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-radius: 15%;
-	transition: all 100ms ease-in-out;
+	border-radius: 4px;
+	transition: 0.1s ease-out background-color;
 }
 
 .cms-menu .cms-menu-list li.children .toggle-children:hover {
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon {
