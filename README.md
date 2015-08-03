@@ -24,7 +24,7 @@ LeftAndMain:
 
 ### Example
 
-![demo-image](https://cloud.githubusercontent.com/assets/1953220/9028461/9f5b9824-39cd-11e5-8655-3016fe71120f.png)
+![demo-image](https://cloud.githubusercontent.com/assets/1136811/9029315/c9cb7eea-39e5-11e5-8948-9acb16ce3df9.jpg)
 
 ## Grouping CMS Menus
 
@@ -32,4 +32,4 @@ CMS Branding will work with [Grouped CMS Menu](https://github.com/silverstripe-a
 out of the box
 
 ### Example
-![demo-image-grouped](https://cloud.githubusercontent.com/assets/1953220/9028460/9f5b5238-39cd-11e5-8d49-e81f8e56cdbe.png)
+![demo-image-grouped](https://cloud.githubusercontent.com/assets/1136811/9029316/c9cffcfe-39e5-11e5-86d8-47e5dbd7e962.jpg)
