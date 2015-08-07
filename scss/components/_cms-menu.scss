@@ -118,6 +118,9 @@ $sidebar-color: $brand-primary-color;
                     @if $icons-inverse == true {
                         opacity: 1;
                     }
+                    &.icon-16 {
+                        background-size: 100% !important;
+                    }
                 }
                 .text {
                     margin: 0 0 0 $gap-lg;
