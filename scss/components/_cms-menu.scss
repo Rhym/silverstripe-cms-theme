@@ -119,7 +119,16 @@ $sidebar-color: $brand-primary-color;
                         opacity: 1;
                     }
                     &.icon-16 {
-                        background-size: 100% !important;
+                        background: none;
+                        text-indent: 0;
+                        &::before {
+                            @include icon-base;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
                     }
                 }
                 .text {

@@ -76,7 +76,7 @@
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f2f2f2);
+	background: linear-gradient(#f9f9f9, #f1f1f1);
 	border-color: #BDBDBD !important;
 }
 
@@ -91,6 +91,10 @@
 
 /** =========================================
  * Buttons
+ ===========================================*/
+
+/** =========================================
+ * Icons
  ===========================================*/
 
 /** =========================================
@@ -360,7 +364,25 @@
 }
 
 .cms-menu .cms-menu-list li a .icon.icon-16 {
-	background-size: 100% !important;
+	background: none;
+	text-indent: 0;
+}
+
+.cms-menu .cms-menu-list li a .icon.icon-16::before {
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 14px/1 FontAwesome;
+	content: '\f15b';
+	display: block;
+	color: #fff;
+	width: 1.28571429em;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .cms-menu .cms-menu-list li a .text {
@@ -531,13 +553,20 @@
 }
 
 .cms-menu .cms-menu-list li.children .grouped-cms-menu::after {
-	content: '';
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 14px/1 FontAwesome;
+	content: '\f15b';
+	display: block;
+	color: #fff;
+	width: 1.28571429em;
+	text-align: center;
+	content: '\f0c9';
 	position: absolute;
 	top: 50%;
 	left: 16px;
 	margin: -8px 0 0 4px;
-	background-image: url("../images/icons/admin/menu.png");
-	background-image: url("../images/icons/admin/menu-alt.png");
 	height: 16px;
 	width: 16px;
 }
@@ -599,17 +628,38 @@
 }
 
 .cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon {
-	margin-top: -3px;
-	background-position: 0 -846px;
+	background-image: none;
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon::before {
+	margin-top: 0;
+	content: '\f0d8';
 }
 
 .cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon {
+	background-image: none;
+	height: 16px;
+	width: 16px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-left: -4px;
-	margin-top: -1px;
-	background-position: 0 -830px;
+	margin: -8px 0 0 -8px;
+}
+
+.cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon::before {
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 14px/1 FontAwesome;
+	content: '\f15b';
+	display: block;
+	color: #fff;
+	width: 1.28571429em;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.3);
+	margin-top: 1px;
+	content: '\f0d7';
+	width: 16px;
 }
 
 /** =========================================
@@ -684,54 +734,45 @@
  * Menu Icons
  ===========================================*/
 
-/**
- * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
- @todo: Create sprites instead of individual images.
- */
-
 .cms-menu { /**
    * The list of ModelAdmin actions
    */
 }
 
-.cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url("../images/icons/admin/assets-alt.png");
+.cms-menu .cms-menu-list #Menu-AssetAdmin .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-AssetAdmin .icon {
-	background-image: url("../images/icons/admin/assets-alt.png");
+.cms-menu .cms-menu-list #Menu-BlogPageModelAdmin .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-BlogPageModelAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/Blog/images/pencil-alt.png");
+.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon {
-	background-image: url("../images/icons/admin/settings-alt.png");
+.cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/ContactForm/images/message-menu-alt.png");
+.cms-menu .cms-menu-list #Menu-CMSPagesController .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-CMSPagesController .icon {
-	background-image: url("../images/icons/admin/pages-alt.png");
+.cms-menu .cms-menu-list #Menu-PortfolioPageModelAdmin .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-PortfolioPageModelAdmin .icon {
-	background-image: url("../../boilerplate/code/Modules/Portfolio/images/briefcase-alt.png");
+.cms-menu .cms-menu-list #Menu-Help .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-Help .icon {
-	background-image: url("../images/icons/admin/help-alt.png");
+.cms-menu .cms-menu-list #Menu-ReportAdmin .icon::before {
+	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-ReportAdmin .icon {
-	background-image: url("../images/icons/admin/reports-alt.png");
-}
-
-.cms-menu .cms-menu-list #Menu-SecurityAdmin .icon {
-	background-image: url("../images/icons/admin/security-alt.png");
+.cms-menu .cms-menu-list #Menu-SecurityAdmin .icon::before {
+	content: "";
 }
 
 /** =========================================

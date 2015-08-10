@@ -2,10 +2,6 @@
  * Menu Icons
  ===========================================*/
 
-/**
- * Manually override the icons in the left hand menu if the variable $icons-inverse is true.
- @todo: Create sprites instead of individual images.
- */
 @if $icons-inverse == true {
     .cms-menu {
         /**
@@ -13,54 +9,31 @@
          */
         .cms-menu-list {
             #Menu-AssetAdmin {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/assets-alt.png');
-                }
-            }
-            #Menu-AssetAdmin {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/assets-alt.png');
-                }
+                @include cms-icon('\f03e');
             }
             #Menu-BlogPageModelAdmin {
-                .icon {
-                    background-image: url('#{$boilerplate-module-path}/Blog/images/pencil-alt.png');
-                }
+                @include cms-icon('\f040');
             }
             #Menu-CMSSettingsController {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/settings-alt.png');
-                }
+                @include cms-icon('\f085');
             }
             #Menu-ContactMessageModelAdmin {
-                .icon {
-                    background-image: url('#{$boilerplate-module-path}/ContactForm/images/message-menu-alt.png');
-                }
+                @include cms-icon('\f0e6');
             }
             #Menu-CMSPagesController {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/pages-alt.png');
-                }
+                @include cms-icon('\f0e8');
             }
             #Menu-PortfolioPageModelAdmin {
-                .icon {
-                    background-image: url('#{$boilerplate-module-path}/Portfolio/images/briefcase-alt.png');
-                }
+                @include cms-icon('\f0b1');
             }
             #Menu-Help {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/help-alt.png');
-                }
+                @include cms-icon('\f059');
             }
             #Menu-ReportAdmin {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/reports-alt.png');
-                }
+                @include cms-icon('\f200');
             }
             #Menu-SecurityAdmin {
-                .icon {
-                    background-image: url('#{$cms-branding-icon-path}/security-alt.png');
-                }
+                @include cms-icon('\f007');
             }
         }
     }
