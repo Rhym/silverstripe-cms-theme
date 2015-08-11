@@ -2,39 +2,30 @@
  * Menu Icons
  ===========================================*/
 
-@if $icons-inverse == true {
-    .cms-menu {
-        /**
-         * The list of ModelAdmin actions
-         */
-        .cms-menu-list {
-            #Menu-AssetAdmin {
-                @include cms-icon('\f03e');
-            }
-            #Menu-BlogPageModelAdmin {
-                @include cms-icon('\f040');
-            }
-            #Menu-CMSSettingsController {
-                @include cms-icon('\f085');
-            }
-            #Menu-ContactMessageModelAdmin {
-                @include cms-icon('\f0e6');
-            }
-            #Menu-CMSPagesController {
-                @include cms-icon('\f0e8');
-            }
-            #Menu-PortfolioPageModelAdmin {
-                @include cms-icon('\f0b1');
-            }
-            #Menu-Help {
-                @include cms-icon('\f059');
-            }
-            #Menu-ReportAdmin {
-                @include cms-icon('\f200');
-            }
-            #Menu-SecurityAdmin {
-                @include cms-icon('\f007');
-            }
-        }
-    }
+#Menu-AssetAdmin {
+    @include cms-icon('\f03e');
+}
+#Menu-BlogPageModelAdmin {
+    @include cms-icon('\f040');
+}
+#Menu-CMSSettingsController {
+    @include cms-icon('\f085');
+}
+#Menu-ContactMessageModelAdmin {
+    @include cms-icon('\f0e6');
+}
+#Menu-CMSPagesController {
+    @include cms-icon('\f0e8');
+}
+#Menu-PortfolioPageModelAdmin {
+    @include cms-icon('\f0b1');
+}
+#Menu-Help {
+    @include cms-icon('\f059');
+}
+#Menu-ReportAdmin {
+    @include cms-icon('\f200');
+}
+#Menu-SecurityAdmin {
+    @include cms-icon('\f007');
 }

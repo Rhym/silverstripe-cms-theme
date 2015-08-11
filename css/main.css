@@ -734,44 +734,39 @@
  * Menu Icons
  ===========================================*/
 
-.cms-menu { /**
-   * The list of ModelAdmin actions
-   */
-}
-
-.cms-menu .cms-menu-list #Menu-AssetAdmin .icon::before {
+#Menu-AssetAdmin .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-BlogPageModelAdmin .icon::before {
+#Menu-BlogPageModelAdmin .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-CMSSettingsController .icon::before {
+#Menu-CMSSettingsController .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-ContactMessageModelAdmin .icon::before {
+#Menu-ContactMessageModelAdmin .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-CMSPagesController .icon::before {
+#Menu-CMSPagesController .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-PortfolioPageModelAdmin .icon::before {
+#Menu-PortfolioPageModelAdmin .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-Help .icon::before {
+#Menu-Help .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-ReportAdmin .icon::before {
+#Menu-ReportAdmin .icon::before {
 	content: "";
 }
 
-.cms-menu .cms-menu-list #Menu-SecurityAdmin .icon::before {
+#Menu-SecurityAdmin .icon::before {
 	content: "";
 }
 
