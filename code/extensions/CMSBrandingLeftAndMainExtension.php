@@ -24,7 +24,7 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
 
     public function init()
     {
-        Requirements::css(SILVERSTRIPE_BRANDING_MODULE_BOWER_DIR . '/font-awesome/css/font-awesome.min.css');
+        Requirements::css(SILVERSTRIPE_BRANDING_MODULE . '/css/font-awesome.min.css');
         /** Set the background colour of the cms sidebar menu. */
         Requirements::customCSS(
             '.cms-menu .cms-logo span, .cms-menu .cms-login-status .logout-link {color: ' . $this->owner->config()->cms_menu_color . '}'
