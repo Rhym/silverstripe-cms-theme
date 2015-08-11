@@ -33,4 +33,16 @@ CMS Branding will work with [Grouped CMS Menu](https://github.com/silverstripe-a
 out of the box
 
 ### Example
-![demo-image-grouped](https://cloud.githubusercontent.com/assets/1136811/9187064/631d9a98-4020-11e5-9ca6-31b10c12fc2d.jpg)
+![demo-image-grouped](https://cloud.githubusercontent.com/assets/1136811/9187572/5b2ab504-4026-11e5-9d78-bb2f9fb04f74.jpg)
+
+### Overriding/Adding Icons
+
+The icons in this cms theme use [Font-Awesome](http://fortawesome.github.io/Font-Awesome/), to override these icons simply extend the LeftAndMain class, and specify with CSS what icon to use. e.g:
+
+```php
+Requirements::customCSS('#Menu-CMSSettingsController .icon::before {content: "\f25b"}');
+```
+
+The Font-Awesome font uses unicodes to determine what icon to display. To figure out what the unicode of the icon you want is, click on the corresponding icon on the [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) website and it will display the unicode on the page. e.g:
+
+![unicode](https://cloud.githubusercontent.com/assets/1136811/9187509/aab709de-4025-11e5-987e-aff1f6e67de2.jpg)
