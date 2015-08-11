@@ -25,7 +25,7 @@ LeftAndMain:
 
 ### Example
 
-![demo-image](https://cloud.githubusercontent.com/assets/1136811/9187063/631bfa4e-4020-11e5-954b-8e787d229b1e.jpg)
+![demo-image](https://cloud.githubusercontent.com/assets/1136811/9187098/c6951f74-4020-11e5-9367-9f7a9cb00ec2.jpg)
 
 ## Grouping CMS Menus
 
