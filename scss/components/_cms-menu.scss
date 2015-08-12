@@ -121,22 +121,7 @@ $sidebar-color: $brand-primary-color;
                     &.fa {
                         background: none;
                         text-indent: 0;
-                    }
-                    &.icon-cmssettingscontroller,
-                    &.icon-cmspagescontroller,
-                    &.icon-securityadmin,
-                    &.icon-reportadmin,
-                    &.icon-assetadmin {
-                        background: none;
-                        text-indent: 0;
-                        &::before {
-                            @include icon-base;
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                        }
+                        font-size: $icon-size;
                     }
                 }
                 .text {

@@ -49,7 +49,7 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
 
         $class = 'icon-' . strtolower($controller);
 
-        if($alternative = Config::inst()->get($controller, 'menu_icon_class', Config::FIRST_SET)) {
+        if ($alternative = Config::inst()->get($controller, 'menu_icon_class', Config::FIRST_SET)) {
             $class = $alternative;
         }
 
@@ -65,7 +65,7 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
     {
         $mainMenu = $this->owner->MainMenu($cached);
 
-        if($this->owner->has_extension('GroupedCmsMenu')) {
+        if ($this->owner->has_extension('GroupedCmsMenu')) {
             $mainMenu = $this->owner->GroupedMainMenu($cached);
         }
 

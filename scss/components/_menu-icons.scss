@@ -2,30 +2,9 @@
  * Menu Icons
  ===========================================*/
 
-#Menu-AssetAdmin {
-    @include cms-icon('\f03e');
-}
-#Menu-BlogPageModelAdmin {
-    @include cms-icon('\f040');
-}
-#Menu-CMSSettingsController {
-    @include cms-icon('\f085');
-}
-#Menu-ContactMessageModelAdmin {
-    @include cms-icon('\f0e6');
-}
-#Menu-CMSPagesController {
-    @include cms-icon('\f0e8');
-}
-#Menu-PortfolioPageModelAdmin {
-    @include cms-icon('\f0b1');
-}
+/** Menu isn't part of the menu loop, so it needs to be targeted individually. */
 #Menu-Help {
-    @include cms-icon('\f059');
-}
-#Menu-ReportAdmin {
-    @include cms-icon('\f200');
-}
-#Menu-SecurityAdmin {
-    @include cms-icon('\f007');
+    .icon {
+        @include cms-icon('\f059');
+    }
 }

@@ -37,12 +37,15 @@ out of the box
 
 ### Overriding/Adding Icons
 
-The icons in this cms theme use [Font-Awesome](http://fortawesome.github.io/Font-Awesome/), to override these icons simply extend the LeftAndMain class, and specify with CSS what icon to use. e.g:
+The icons in this cms theme use [Font-Awesome](http://fortawesome.github.io/Font-Awesome/), to override these icons simply add the class that represents the icon you wish to display in your ModelAdmin extension. e.g:
 
 ```php
-Requirements::customCSS('#Menu-CMSSettingsController .icon::before {content: "\f25b"}');
+private static $menu_icon_class = 'fa fa-pencil';
 ```
 
-The Font-Awesome font uses unicodes to determine what icon to display. To figure out what the unicode of the icon you want is, click on the corresponding icon on the [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) website and it will display the unicode on the page. e.g:
+Alternatively you can set this using a YML config. e.g
 
-![unicode](https://cloud.githubusercontent.com/assets/1136811/9187509/aab709de-4025-11e5-987e-aff1f6e67de2.jpg)
+```yml
+CMSPagesController:
+  menu_icon_class: 'fa fa-sitemap'
+```

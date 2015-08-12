@@ -2,26 +2,25 @@
  * Icons
  ===========================================*/
 
-@mixin icon-base() {
+@mixin icon-base($icon-size: $icon-size) {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font: normal normal normal 14px/1 FontAwesome;
-    content: '\f15b';
+    font: normal normal normal $icon-size/1 FontAwesome;
     display: block;
-    color: $sidebar-color;
-    width: 1.28571429em;
-    text-align: center;
+    text-indent: 0;
+    height: $icon-size;
+    width: $icon-size;
+    content: '\f0c9';
 }
 
 @mixin cms-icon($icon: '\f15b') {
-    .icon-cmssettingscontroller,
-    .icon-cmspagescontroller,
-    .icon-securityadmin,
-    .icon-reportadmin,
-    .icon-assetadmin {
-        &::before {
-            content: '#{$icon}';
-        }
+    background: none;
+    &::before {
+        @include icon-base($icon-size);
+        text-indent: 0;
+        content: '#{$icon}';
+        height: $icon-size;
+        width: $icon-size;
     }
 }

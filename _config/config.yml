@@ -1,8 +1,23 @@
+AssetAdmin:
+  menu_icon_class: 'fa fa-picture-o'
+
+CMSPagesController:
+  menu_icon_class: 'fa fa-sitemap'
+
+CMSSettingsController:
+  menu_icon_class: 'fa fa-cogs'
+
 LeftAndMain:
   extra_requirements_css:
     - silverstripe-branding/css/main.css
   extensions:
     - CMSBrandingLeftAndMainExtension
+
+ReportAdmin:
+  menu_icon_class: 'fa fa-pie-chart'
+
+SecurityAdmin:
+  menu_icon_class: 'fa fa-users'
 
 SiteConfig:
   extensions:

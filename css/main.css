@@ -76,7 +76,7 @@
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f2f2f2);
+	background: linear-gradient(#f9f9f9, #f1f1f1);
 	border-color: #BDBDBD !important;
 }
 
@@ -366,36 +366,7 @@
 .cms-menu .cms-menu-list li a .icon.fa {
 	background: none;
 	text-indent: 0;
-}
-
-.cms-menu .cms-menu-list li a .icon.icon-cmssettingscontroller,
-.cms-menu .cms-menu-list li a .icon.icon-cmspagescontroller,
-.cms-menu .cms-menu-list li a .icon.icon-securityadmin,
-.cms-menu .cms-menu-list li a .icon.icon-reportadmin,
-.cms-menu .cms-menu-list li a .icon.icon-assetadmin {
-	background: none;
-	text-indent: 0;
-}
-
-.cms-menu .cms-menu-list li a .icon.icon-cmssettingscontroller::before,
-.cms-menu .cms-menu-list li a .icon.icon-cmspagescontroller::before,
-.cms-menu .cms-menu-list li a .icon.icon-securityadmin::before,
-.cms-menu .cms-menu-list li a .icon.icon-reportadmin::before,
-.cms-menu .cms-menu-list li a .icon.icon-assetadmin::before {
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 14px/1 FontAwesome;
-	content: '\f15b';
-	display: block;
-	color: #fff;
-	width: 1.28571429em;
-	text-align: center;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	font-size: 16px;
 }
 
 .cms-menu .cms-menu-list li a .text {
@@ -569,19 +540,17 @@
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 14px/1 FontAwesome;
-	content: '\f15b';
+	font: normal normal normal 16px FontAwesome;
 	display: block;
-	color: #fff;
-	width: 1.28571429em;
-	text-align: center;
+	text-indent: 0;
+	height: 16px;
+	width: 16px;
+	content: '\f0c9';
 	content: '\f0c9';
 	position: absolute;
 	top: 50%;
 	left: 16px;
 	margin: -8px 0 0 4px;
-	height: 16px;
-	width: 16px;
 }
 
 .cms-menu .cms-menu-list li.children ul {
@@ -663,16 +632,15 @@
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 14px/1 FontAwesome;
-	content: '\f15b';
+	font: normal normal normal 16px FontAwesome;
 	display: block;
-	color: #fff;
-	width: 1.28571429em;
-	text-align: center;
+	text-indent: 0;
+	height: 16px;
+	width: 16px;
+	content: '\f0c9';
 	color: rgba(255, 255, 255, 0.3);
 	margin-top: 1px;
 	content: '\f0d7';
-	width: 16px;
 }
 
 /** =========================================
@@ -747,81 +715,27 @@
  * Menu Icons
  ===========================================*/
 
-#Menu-AssetAdmin .icon-cmssettingscontroller::before,
-#Menu-AssetAdmin .icon-cmspagescontroller::before,
-#Menu-AssetAdmin .icon-securityadmin::before,
-#Menu-AssetAdmin .icon-reportadmin::before,
-#Menu-AssetAdmin .icon-assetadmin::before {
-	content: "";
+/** Menu isn't part of the menu loop, so it needs to be targeted individually. */
+
+#Menu-Help .icon {
+	background: none;
 }
 
-#Menu-BlogPageModelAdmin .icon-cmssettingscontroller::before,
-#Menu-BlogPageModelAdmin .icon-cmspagescontroller::before,
-#Menu-BlogPageModelAdmin .icon-securityadmin::before,
-#Menu-BlogPageModelAdmin .icon-reportadmin::before,
-#Menu-BlogPageModelAdmin .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-CMSSettingsController .icon-cmssettingscontroller::before,
-#Menu-CMSSettingsController .icon-cmspagescontroller::before,
-#Menu-CMSSettingsController .icon-securityadmin::before,
-#Menu-CMSSettingsController .icon-reportadmin::before,
-#Menu-CMSSettingsController .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-ContactMessageModelAdmin .icon-cmssettingscontroller::before,
-#Menu-ContactMessageModelAdmin .icon-cmspagescontroller::before,
-#Menu-ContactMessageModelAdmin .icon-securityadmin::before,
-#Menu-ContactMessageModelAdmin .icon-reportadmin::before,
-#Menu-ContactMessageModelAdmin .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-CMSPagesController .icon-cmssettingscontroller::before,
-#Menu-CMSPagesController .icon-cmspagescontroller::before,
-#Menu-CMSPagesController .icon-securityadmin::before,
-#Menu-CMSPagesController .icon-reportadmin::before,
-#Menu-CMSPagesController .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-PortfolioPageModelAdmin .icon-cmssettingscontroller::before,
-#Menu-PortfolioPageModelAdmin .icon-cmspagescontroller::before,
-#Menu-PortfolioPageModelAdmin .icon-securityadmin::before,
-#Menu-PortfolioPageModelAdmin .icon-reportadmin::before,
-#Menu-PortfolioPageModelAdmin .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-Help .icon-cmssettingscontroller::before,
-#Menu-Help .icon-cmspagescontroller::before,
-#Menu-Help .icon-securityadmin::before,
-#Menu-Help .icon-reportadmin::before,
-#Menu-Help .icon-assetadmin::before {
+#Menu-Help .icon::before {
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 16px FontAwesome;
+	display: block;
+	text-indent: 0;
+	height: 16px;
+	width: 16px;
+	content: '\f0c9';
+	text-indent: 0;
 	content: "";
+	height: 16px;
+	width: 16px;
 }
-
-#Menu-ReportAdmin .icon-cmssettingscontroller::before,
-#Menu-ReportAdmin .icon-cmspagescontroller::before,
-#Menu-ReportAdmin .icon-securityadmin::before,
-#Menu-ReportAdmin .icon-reportadmin::before,
-#Menu-ReportAdmin .icon-assetadmin::before {
-	content: "";
-}
-
-#Menu-SecurityAdmin .icon-cmssettingscontroller::before,
-#Menu-SecurityAdmin .icon-cmspagescontroller::before,
-#Menu-SecurityAdmin .icon-securityadmin::before,
-#Menu-SecurityAdmin .icon-reportadmin::before,
-#Menu-SecurityAdmin .icon-assetadmin::before {
-	content: "";
-}
-
-/** =========================================
- * Messages
- ===========================================*/
 
 /** =========================================
  * Tabs
