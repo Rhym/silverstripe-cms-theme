@@ -44,9 +44,11 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
      * @param null $controller
      * @return string
      */
-    public function BrandedMenuClass($controller = null) {
+    public function BrandedMenuClass($controller = null)
+    {
 
         $class = 'icon-' . strtolower($controller);
+
         if($alternative = Config::inst()->get($controller, 'menu_icon_class', Config::FIRST_SET)) {
             $class = $alternative;
         }
