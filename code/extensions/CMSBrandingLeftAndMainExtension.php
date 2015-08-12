@@ -40,4 +40,36 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
         );
     }
 
+    /**
+     * @param null $controller
+     * @return string
+     */
+    public function BrandedMenuClass($controller = null)
+    {
+
+        $class = 'icon-' . strtolower($controller);
+
+        if($alternative = Config::inst()->get($controller, 'menu_icon_class', Config::FIRST_SET)) {
+            $class = $alternative;
+        }
+
+        return $class;
+
+    }
+
+    /**
+     * @param bool $cached
+     * @return ArrayList
+     */
+    public function BrandedMainMenu($cached = true)
+    {
+        $mainMenu = $this->owner->MainMenu($cached);
+
+        if($this->owner->has_extension('GroupedCmsMenu')) {
+            $mainMenu = $this->owner->GroupedMainMenu($cached);
+        }
+
+        return $mainMenu;
+    }
+
 }

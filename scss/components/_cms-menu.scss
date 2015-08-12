@@ -118,7 +118,15 @@ $sidebar-color: $brand-primary-color;
                     @if $icons-inverse == true {
                         opacity: 1;
                     }
-                    &.icon-16 {
+                    &.fa {
+                        background: none;
+                        text-indent: 0;
+                    }
+                    &.icon-cmssettingscontroller,
+                    &.icon-cmspagescontroller,
+                    &.icon-securityadmin,
+                    &.icon-reportadmin,
+                    &.icon-assetadmin {
                         background: none;
                         text-indent: 0;
                         &::before {

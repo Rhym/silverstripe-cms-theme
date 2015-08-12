@@ -15,7 +15,11 @@
 }
 
 @mixin cms-icon($icon: '\f15b') {
-    .icon {
+    .icon-cmssettingscontroller,
+    .icon-cmspagescontroller,
+    .icon-securityadmin,
+    .icon-reportadmin,
+    .icon-assetadmin {
         &::before {
             content: '#{$icon}';
         }
