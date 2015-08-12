@@ -76,7 +76,7 @@
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f1f1f1);
+	background: linear-gradient(#f9f9f9, #f2f2f2);
 	border-color: #BDBDBD !important;
 }
 
@@ -363,12 +363,25 @@
 	opacity: 1;
 }
 
-.cms-menu .cms-menu-list li a .icon.icon-16 {
+.cms-menu .cms-menu-list li a .icon.fa {
 	background: none;
 	text-indent: 0;
 }
 
-.cms-menu .cms-menu-list li a .icon.icon-16::before {
+.cms-menu .cms-menu-list li a .icon.icon-cmssettingscontroller,
+.cms-menu .cms-menu-list li a .icon.icon-cmspagescontroller,
+.cms-menu .cms-menu-list li a .icon.icon-securityadmin,
+.cms-menu .cms-menu-list li a .icon.icon-reportadmin,
+.cms-menu .cms-menu-list li a .icon.icon-assetadmin {
+	background: none;
+	text-indent: 0;
+}
+
+.cms-menu .cms-menu-list li a .icon.icon-cmssettingscontroller::before,
+.cms-menu .cms-menu-list li a .icon.icon-cmspagescontroller::before,
+.cms-menu .cms-menu-list li a .icon.icon-securityadmin::before,
+.cms-menu .cms-menu-list li a .icon.icon-reportadmin::before,
+.cms-menu .cms-menu-list li a .icon.icon-assetadmin::before {
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -734,39 +747,75 @@
  * Menu Icons
  ===========================================*/
 
-#Menu-AssetAdmin .icon::before {
+#Menu-AssetAdmin .icon-cmssettingscontroller::before,
+#Menu-AssetAdmin .icon-cmspagescontroller::before,
+#Menu-AssetAdmin .icon-securityadmin::before,
+#Menu-AssetAdmin .icon-reportadmin::before,
+#Menu-AssetAdmin .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-BlogPageModelAdmin .icon::before {
+#Menu-BlogPageModelAdmin .icon-cmssettingscontroller::before,
+#Menu-BlogPageModelAdmin .icon-cmspagescontroller::before,
+#Menu-BlogPageModelAdmin .icon-securityadmin::before,
+#Menu-BlogPageModelAdmin .icon-reportadmin::before,
+#Menu-BlogPageModelAdmin .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-CMSSettingsController .icon::before {
+#Menu-CMSSettingsController .icon-cmssettingscontroller::before,
+#Menu-CMSSettingsController .icon-cmspagescontroller::before,
+#Menu-CMSSettingsController .icon-securityadmin::before,
+#Menu-CMSSettingsController .icon-reportadmin::before,
+#Menu-CMSSettingsController .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-ContactMessageModelAdmin .icon::before {
+#Menu-ContactMessageModelAdmin .icon-cmssettingscontroller::before,
+#Menu-ContactMessageModelAdmin .icon-cmspagescontroller::before,
+#Menu-ContactMessageModelAdmin .icon-securityadmin::before,
+#Menu-ContactMessageModelAdmin .icon-reportadmin::before,
+#Menu-ContactMessageModelAdmin .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-CMSPagesController .icon::before {
+#Menu-CMSPagesController .icon-cmssettingscontroller::before,
+#Menu-CMSPagesController .icon-cmspagescontroller::before,
+#Menu-CMSPagesController .icon-securityadmin::before,
+#Menu-CMSPagesController .icon-reportadmin::before,
+#Menu-CMSPagesController .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-PortfolioPageModelAdmin .icon::before {
+#Menu-PortfolioPageModelAdmin .icon-cmssettingscontroller::before,
+#Menu-PortfolioPageModelAdmin .icon-cmspagescontroller::before,
+#Menu-PortfolioPageModelAdmin .icon-securityadmin::before,
+#Menu-PortfolioPageModelAdmin .icon-reportadmin::before,
+#Menu-PortfolioPageModelAdmin .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-Help .icon::before {
+#Menu-Help .icon-cmssettingscontroller::before,
+#Menu-Help .icon-cmspagescontroller::before,
+#Menu-Help .icon-securityadmin::before,
+#Menu-Help .icon-reportadmin::before,
+#Menu-Help .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-ReportAdmin .icon::before {
+#Menu-ReportAdmin .icon-cmssettingscontroller::before,
+#Menu-ReportAdmin .icon-cmspagescontroller::before,
+#Menu-ReportAdmin .icon-securityadmin::before,
+#Menu-ReportAdmin .icon-reportadmin::before,
+#Menu-ReportAdmin .icon-assetadmin::before {
 	content: "";
 }
 
-#Menu-SecurityAdmin .icon::before {
+#Menu-SecurityAdmin .icon-cmssettingscontroller::before,
+#Menu-SecurityAdmin .icon-cmspagescontroller::before,
+#Menu-SecurityAdmin .icon-securityadmin::before,
+#Menu-SecurityAdmin .icon-reportadmin::before,
+#Menu-SecurityAdmin .icon-assetadmin::before {
 	content: "";
 }
 

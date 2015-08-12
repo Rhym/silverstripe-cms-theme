@@ -28,14 +28,14 @@
     </div>
     <div class="cms-panel-content center">
         <ul class="cms-menu-list">
-            <% if $GroupedMainMenu %>
-                <% loop $GroupedMainMenu %>
+            <% if $BrandedMainMenu %>
+                <% loop $BrandedMainMenu %>
                     <li class="$LinkingMode $FirstLast<% if $Children %> children <% end_if %><% if $LinkingMode == 'link' %><% else %>opened<% end_if %>" id="Menu-$Code" title="$Title.ATT">
                         <a href="$Link" $AttributesHTML>
                             <% if $Children %>
                                 <span class="grouped-cms-menu text">$Title</span>
                             <% else %>
-                                <span class="icon icon-16 icon-{$Code.LowerCase}">&nbsp;</span>
+                                <span class="icon icon-16 {$Top.BrandedMenuClass($MenuItem.controller)}">&nbsp;</span>
                                 <span class="text">$Title</span>
                             <% end_if %>
                         </a>
@@ -44,22 +44,13 @@
                                 <% loop $Children %>
                                     <li class="$LinkingMode $FirstLast" id="Menu-$Code">
                                         <a href="$Link" $AttributesHTML>
-                                            <span class="icon icon-16 icon-{$Code.LowerCase}">&nbsp;</span>
+                                            <span class="icon icon-16 {$Top.BrandedMenuClass($MenuItem.controller)}">&nbsp;</span>
                                             <span class="text">$Title</span>
                                         </a>
                                     </li>
                                 <% end_loop %>
                             </ul>
                         <% end_if %>
-                    </li>
-                <% end_loop %>
-            <% else %>
-                <% loop $MainMenu %>
-                    <li class="$LinkingMode $FirstLast <% if $LinkingMode == 'link' %><% else %>opened<% end_if %>" id="Menu-$Code" title="$Title.ATT">
-                        <a href="$Link" $AttributesHTML>
-                            <span class="icon icon-16 icon-{$Code.LowerCase}">&nbsp;</span>
-                            <span class="text">$Title</span>
-                        </a>
                     </li>
                 <% end_loop %>
             <% end_if %>
