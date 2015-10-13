@@ -136,7 +136,11 @@ $sidebar-color: $brand-primary-color;
     .cms-panel-toggle.south {
         border-color: rgba(0, 0, 0, $opacity-base);
         box-shadow: none;
-        // Disallow toggling
-        display: none;
+    }
+    &.collapsed {
+        width: 49px !important;
+        .cms-logo-header.north {
+            display: none;
+        }
     }
 }
