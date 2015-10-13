@@ -76,7 +76,7 @@
 .cms .defaultSkin .mceToolbar,
 .cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f1f1f1);
+	background: linear-gradient(#f9f9f9, #f2f2f2);
 	border-color: #BDBDBD !important;
 }
 
@@ -376,6 +376,13 @@
 .cms-menu .cms-panel-toggle.south {
 	border-color: rgba(0, 0, 0, 0.3);
 	box-shadow: none;
+}
+
+.cms-menu.collapsed {
+	width: 49px !important;
+}
+
+.cms-menu.collapsed .cms-logo-header.north {
 	display: none;
 }
 
@@ -534,6 +541,7 @@
 
 .cms-menu .cms-menu-list li.children .grouped-cms-menu.text {
 	margin-left: 32px;
+	display: block;
 }
 
 .cms-menu .cms-menu-list li.children .grouped-cms-menu::after {
@@ -563,6 +571,14 @@
 
 .cms-menu .cms-menu-list li.children ul li a:hover {
 	background: rgba(0, 0, 0, 0.2);
+}
+
+.cms-menu .cms-menu-list li.children ul.collapsed-flyout {
+	left: 50px;
+}
+
+.cms-menu .cms-menu-list li.children ul.collapsed-flyout li a {
+	border-top: none;
 }
 
 .cms-menu .cms-menu-list li.children li {
@@ -641,6 +657,10 @@
 	color: rgba(255, 255, 255, 0.3);
 	margin-top: 1px;
 	content: '\f0d7';
+}
+
+.cms-menu .cms-menu-list.collapsed li.children > a {
+	padding-right: 0;
 }
 
 /** =========================================

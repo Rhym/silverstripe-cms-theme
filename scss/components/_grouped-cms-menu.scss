@@ -26,6 +26,7 @@
                 .grouped-cms-menu {
                     &.text {
                         margin-left: $gap-lg;
+                        display: block;
                     }
                     &::after {
                         @include icon-base;
@@ -47,6 +48,14 @@
                         a {
                             &:hover {
                                 background: rgba(0, 0, 0, ($opacity-base - $opacity-light));
+                            }
+                        }
+                    }
+                    &.collapsed-flyout {
+                        left: 50px;
+                        li {
+                            a {
+                                border-top: none;
                             }
                         }
                     }
@@ -115,6 +124,15 @@
                             margin-top: 1px;
                             content: '\f0d7'; // chevron down
                         }
+                    }
+                }
+            }
+        }
+        &.collapsed {
+            li {
+                &.children {
+                    > a {
+                        padding-right: 0;
                     }
                 }
             }
