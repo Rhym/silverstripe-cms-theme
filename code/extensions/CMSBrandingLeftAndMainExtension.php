@@ -39,6 +39,8 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
             . '.cms-menu .cms-menu-list li.current > a .icon::before, .cms-menu .cms-menu-list li.current > a .grouped-cms-menu::after {color: ' . $this->owner->config()->cms_menu_active_text_color . '}'
             . '.cms-menu .cms-menu-list li.current a:hover {background: ' . $this->owner->config()->cms_menu_active_background_color . ';}'
             . '.cms-menu .cms-menu-list li.current.children > a:hover {background: rgba(0, 0, 0, 0.25);}'
+            . '.cms-menu .ss-ui-button.sticky-toggle::before{color: ' . $this->owner->config()->cms_menu_color . '}'
+            . '.cms-menu .cms-panel-toggle.south .toggle-expand span,.cms-menu .cms-panel-toggle.south .toggle-collapse span{color: ' . $this->owner->config()->cms_menu_color . '}'
         );
     }
 

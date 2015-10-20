@@ -1,4 +1,7 @@
 {
   "name": "silverstripe-branding",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "components-font-awesome": "~4.4.0"
+  }
 }

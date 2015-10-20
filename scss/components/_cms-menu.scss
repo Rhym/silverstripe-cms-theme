@@ -136,11 +136,39 @@ $sidebar-color: $brand-primary-color;
     .cms-panel-toggle.south {
         border-color: rgba(0, 0, 0, $opacity-base);
         box-shadow: none;
+        .toggle-expand,
+        .toggle-collapse {
+            span {
+                color: $sidebar-color;
+            }
+        }
     }
     &.collapsed {
         width: 49px !important;
         .cms-logo-header.north {
             display: none;
+        }
+    }
+    /**
+     * Sticky button in the toggle panel
+     */
+    .ss-ui-button{
+        &.sticky-toggle {
+            background: none;
+            box-shadow: none;
+            &::before {
+                @include icon-base(16px);
+                padding: 4px;
+                content: '\f10c';
+                color: $sidebar-color;
+                text-shadow: none;
+            }
+            &.active {
+                background: none;
+                &::before {
+                    content: '\f192';
+                }
+            }
         }
     }
 }

@@ -264,6 +264,8 @@
    * The list of ModelAdmin actions
    */ /**
    * The footer of the left-hand navigation, contains toggle button
+   */ /**
+   * Sticky button in the toggle panel
    */
 }
 
@@ -378,12 +380,46 @@
 	box-shadow: none;
 }
 
+.cms-menu .cms-panel-toggle.south .toggle-expand span,
+.cms-menu .cms-panel-toggle.south .toggle-collapse span {
+	color: #fff;
+}
+
 .cms-menu.collapsed {
 	width: 49px !important;
 }
 
 .cms-menu.collapsed .cms-logo-header.north {
 	display: none;
+}
+
+.cms-menu .ss-ui-button.sticky-toggle {
+	background: none;
+	box-shadow: none;
+}
+
+.cms-menu .ss-ui-button.sticky-toggle::before {
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 16px FontAwesome;
+	display: block;
+	text-indent: 0;
+	height: 16px;
+	width: 16px;
+	content: '\f0c9';
+	padding: 4px;
+	content: '\f10c';
+	color: #fff;
+	text-shadow: none;
+}
+
+.cms-menu .ss-ui-button.sticky-toggle.active {
+	background: none;
+}
+
+.cms-menu .ss-ui-button.sticky-toggle.active::before {
+	content: '\f192';
 }
 
 /** =========================================

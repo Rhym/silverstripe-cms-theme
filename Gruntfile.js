@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     directories: {
       cmsBranding: './',
-      fontAwesome: './components/lib/font-awesome'
+      fontAwesome: './components/lib/components-font-awesome'
     },
     pkg: grunt.file.readJSON('./package.json')
   });
