@@ -50,7 +50,6 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
      */
     public function BrandedMenuClass($controller = null)
     {
-
         $class = 'icon-' . strtolower($controller);
 
         if ($alternative = Config::inst()->get($controller, 'menu_icon_class', Config::FIRST_SET)) {
@@ -58,7 +57,6 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
         }
 
         return $class;
-
     }
 
     /**
@@ -75,5 +73,4 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
 
         return $mainMenu;
     }
-
 }
