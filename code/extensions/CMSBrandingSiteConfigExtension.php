@@ -34,7 +34,6 @@ class CMSBrandingSiteConfigExtension extends DataExtension
          * ----------------------------------------*/
 
         if (Permission::check('ADMIN') && !Config::inst()->get('SiteConfig', 'cms_logo')) {
-
             if (!$fields->fieldByName('Root.Settings')) {
                 $fields->addFieldToTab('Root', TabSet::create('Settings'));
             }
@@ -49,7 +48,6 @@ class CMSBrandingSiteConfigExtension extends DataExtension
             $cmsLogo->setFolderName('Uploads/CMS');
             $cmsLogo->setRightTitle('Logo displayed in the top left-hand side of the CMS menu.');
         }
-
     }
 
     /**
@@ -59,5 +57,4 @@ class CMSBrandingSiteConfigExtension extends DataExtension
     {
         return Config::inst()->get('SiteConfig', 'cms_logo') ?: Image::get()->byID($this->owner->CMSLogoID);
     }
-
 }
