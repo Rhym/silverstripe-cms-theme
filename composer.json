@@ -18,7 +18,7 @@
     "silverstripe-australia/grouped-cms-menu": "Group CMS menus to provide a better UX"
   },
   "require": {
-    "silverstripe/framework": "~3.1",
+    "silverstripe/framework": "~3.3",
     "composer/installers": "*"
   },
   "support": {

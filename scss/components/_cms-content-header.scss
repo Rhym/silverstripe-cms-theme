@@ -12,10 +12,6 @@
      * Breadcrumbs
      */
     .breadcrumbs-wrapper {
-        padding: 0;
-        .icon {
-            display: none;
-        }
         .crumb,
         .sep {
             color: $brand-default-color;
@@ -31,37 +27,6 @@
         }
         .icon {
             display: none;
-        }
-    }
-    /**
-     * View tabs
-     */
-    .cms-content-header-tabs {
-        .ui-tabs-nav {
-            border-width: 0;
-            li {
-                padding: 0;
-                background: transparent none;
-                box-shadow: none;
-                border-width: 0;
-                &.ui-state-active {
-                    a {
-                        background: darken($brand-default, 10);
-                    }
-                }
-                a {
-                    text-indent: 0;
-                    background: transparent none;
-                    color: $brand-default-color;
-                    text-shadow: none;
-                    padding: 0 $gap-md 1px $gap-md;
-                    margin: 0;
-                }
-            }
-            .content-treeview {
-            }
-            .content-listview {
-            }
         }
     }
 }
