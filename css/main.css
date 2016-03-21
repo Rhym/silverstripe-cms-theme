@@ -167,17 +167,7 @@
    * Breadcrumbs
    */ /**
    * Model admins without breadcrumbs
-   */ /**
-   * View tabs
    */
-}
-
-.cms-content-header.north .breadcrumbs-wrapper {
-	padding: 0;
-}
-
-.cms-content-header.north .breadcrumbs-wrapper .icon {
-	display: none;
 }
 
 .cms-content-header.north .breadcrumbs-wrapper .crumb,
@@ -191,30 +181,6 @@
 
 .cms-content-header.north .cms-content-header-info .icon {
 	display: none;
-}
-
-.cms-content-header.north .cms-content-header-tabs .ui-tabs-nav {
-	border-width: 0;
-}
-
-.cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li {
-	padding: 0;
-	background: transparent none;
-	box-shadow: none;
-	border-width: 0;
-}
-
-.cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li.ui-state-active a {
-	background: #e6e6e6;
-}
-
-.cms-content-header.north .cms-content-header-tabs .ui-tabs-nav li a {
-	text-indent: 0;
-	background: transparent none;
-	color: #444;
-	text-shadow: none;
-	padding: 0 16px 1px 16px;
-	margin: 0;
 }
 
 /** =========================================
@@ -791,22 +757,6 @@
 	content: "";
 	height: 16px;
 	width: 16px;
-}
-
-/** =========================================
- * Tabs
- ===========================================*/
-
-.cms .ui-tabs-nav li.ui-state-default {
-	background: #E0E0E0;
-}
-
-.cms .ui-tabs-nav li.ui-state-active {
-	background: #f9f9f9;
-}
-
-.cms .ui-tabs-nav a {
-	outline: 0;
 }
 
 /** =========================================
