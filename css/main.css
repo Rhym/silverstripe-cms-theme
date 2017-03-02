@@ -1039,7 +1039,7 @@
     background: transparent none;
     border-width: 0;
     text-shadow: none;
-    padding: 1em 1em;
+    padding: 1rem .5rem;
     line-height: 1.5; }
     .cms-menu .cms-menu-list li a:hover, .cms-menu .cms-menu-list li a:focus {
       background: rgba(0, 0, 0, 0.04); }
@@ -1049,18 +1049,19 @@
       line-height: 1.3em;
       transform: translate3d(0, -50%, 0);
       color: currentColor;
-      opacity: 1; }
-      .cms-menu .cms-menu-list li a .icon.fa {
-        background: none;
-        text-indent: 0;
-        font-size: 1.3em;
-        width: 2rem;
+      opacity: 1;
+      background: none;
+      text-indent: 0;
+      font-size: 1.3em;
+      width: 2rem;
+      height: 1.3em; }
+      .cms-menu .cms-menu-list li a .icon::before {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 1.3em; }
+        width: 2rem; }
     .cms-menu .cms-menu-list li a .text {
-      margin-left: 2rem; }
+      margin-left: 2.5rem; }
   .cms-menu .ss-ui-button.sticky-toggle {
     background: none;
     box-shadow: none; }
@@ -1071,8 +1072,12 @@
       font: normal normal normal 16px FontAwesome;
       content: "\f0c9";
       padding: 4px;
+      display: block;
+      width: 1.3em;
+      height: 1.3em;
       content: "\f10c";
-      text-shadow: none; }
+      text-shadow: none;
+      text-indent: 0; }
     .cms-menu .ss-ui-button.sticky-toggle.active {
       background: none; }
       .cms-menu .ss-ui-button.sticky-toggle.active::before {
@@ -1202,8 +1207,12 @@
     content: "\f03a";
     position: absolute;
     top: 50%;
-    left: 1rem;
-    transform: translate3d(0, -50%, 0); }
+    left: .5rem;
+    transform: translate3d(0, -50%, 0);
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .cms-menu .cms-menu-list li.children .toggle-children {
     top: 0;
     display: flex;
@@ -1311,7 +1320,7 @@
     font: normal normal normal 1.3em FontAwesome;
     content: "\f0c9";
     text-indent: 0;
-    content: ""; }
+    content: ""; }
 
 .chzn-container .chzn-results .highlighted {
   background: #137cbd;

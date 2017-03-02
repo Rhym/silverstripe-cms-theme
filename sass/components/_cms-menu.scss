@@ -92,7 +92,7 @@ $sidebar-border-color: rgba(0, 0, 0, 0.14);
         background: transparent none;
         border-width: 0;
         text-shadow: none;
-        padding: 1em 1em;
+        padding: 1rem .5rem;
         line-height: 1.5;
         &:hover,
         &:focus {
@@ -105,19 +105,20 @@ $sidebar-border-color: rgba(0, 0, 0, 0.14);
           transform: translate3d(0, -50%, 0);
           color: currentColor;
           opacity: 1;
-          &.fa {
-            background: none;
-            text-indent: 0;
-            font-size: 1.3em;
-            width: 2rem;
+          background: none;
+          text-indent: 0;
+          font-size: 1.3em;
+          width: 2rem;
+          height: 1.3em;
+          &::before {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 1.3em;
+            width: 2rem;
           }
         }
         .text {
-          margin-left: 2rem;
+          margin-left: 2.5rem;
         }
       }
     }
@@ -132,8 +133,12 @@ $sidebar-border-color: rgba(0, 0, 0, 0.14);
       &::before {
         @include icon-base(16px);
         padding: 4px;
+        display: block;
+        width: 1.3em;
+        height: 1.3em;
         content: "\f10c";
         text-shadow: none;
+        text-indent: 0;
       }
       &.active {
         background: none;
