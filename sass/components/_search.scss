@@ -1,0 +1,8 @@
+.chzn-container {
+  .chzn-results {
+    .highlighted {
+      background: map-get-deep($palettes, 'primary', 'base');
+      color: map-get-deep($palettes, 'primary', 'color');
+    }
+  }
+}

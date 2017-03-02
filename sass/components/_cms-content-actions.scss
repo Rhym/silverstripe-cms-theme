@@ -1,0 +1,27 @@
+/*
+|--------------------------------------------------------------------------
+| Actions
+|--------------------------------------------------------------------------
+*/
+
+.cms-content-actions,
+.cms-preview-controls {
+  background: map-get-deep($palettes, 'default', 'light');
+  box-shadow: none;
+}
+
+.cms {
+  .ss-ui-action-tabset.action-menus.ss-tabset {
+    .ui-tabs-panel {
+      background: map-get-deep($palettes, 'default', 'light');
+      color: $brand-default-color;
+      button.ss-ui-button {
+        box-shadow: none;
+        &:hover,
+        &:focus {
+          background: map-get-deep($palettes, 'default', 'base');
+        }
+      }
+    }
+  }
+}

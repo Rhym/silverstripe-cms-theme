@@ -1,0 +1,146 @@
+/*
+|--------------------------------------------------------------------------
+| Menu
+|--------------------------------------------------------------------------
+*/
+
+$sidebar-background: map-get-deep($palettes, 'default', 'base');
+$sidebar-color: #66727d;
+$sidebar-border-color: rgba(0, 0, 0, 0.14);
+
+/**
+ * The left-hand navigation
+ */
+.cms-menu {
+  /** Render the fonts a little better. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: none;
+  background: $sidebar-background;
+  /**
+   * The container for the Silverstripe logo, Username and logout button
+   */
+  .cms-logo-header.north {
+    padding: 0;
+    background: transparent none;
+    box-shadow: inset $sidebar-border-color -1px 0 0;
+    span,
+    span a {
+      color: currentColor;
+    }
+  }
+  .cms-logo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    > a {
+      display: none;
+    }
+    > span {
+      margin: 0;
+    }
+    .logo {
+      > a {
+        width: 100%;
+        background: transparent none;
+        position: static;
+        > img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .cms-login-status {
+    border-width: 0;
+    padding: 1rem;
+    .logout-link {
+      color: currentColor;
+      font-size: 1em;
+      display: block;
+      float: none;
+      padding: 0;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    > span {
+      padding: 0;
+    }
+  }
+  .cms-panel-content,
+  .cms-panel-toggle {
+    box-shadow: inset $sidebar-border-color -1px 0 0;
+  }
+  /**
+   * The list of ModelAdmin actions
+   */
+  .cms-menu-list {
+    li {
+      &.current {
+        a {
+          color: currentColor;
+          background: rgba(0, 0, 0, 0.08);
+          &:hover,
+          &:focus {
+            background: rgba(0, 0, 0, 0.08);
+          }
+        }
+      }
+      a {
+        color: currentColor;
+        background: transparent none;
+        border-width: 0;
+        text-shadow: none;
+        padding: 1em 1em;
+        line-height: 1.5;
+        &:hover,
+        &:focus {
+          background: rgba(0, 0, 0, 0.04);
+        }
+        .icon {
+          text-align: center;
+          margin: 0;
+          line-height: 1.3em;
+          transform: translate3d(0, -50%, 0);
+          color: currentColor;
+          opacity: 1;
+          &.fa {
+            background: none;
+            text-indent: 0;
+            font-size: 1.3em;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.3em;
+          }
+        }
+        .text {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  /**
+   * Sticky button in the toggle panel
+   */
+  .ss-ui-button {
+    &.sticky-toggle {
+      background: none;
+      box-shadow: none;
+      &::before {
+        @include icon-base(16px);
+        padding: 4px;
+        content: "\f10c";
+        text-shadow: none;
+      }
+      &.active {
+        background: none;
+        &::before {
+          content: "\f192";
+        }
+      }
+    }
+  }
+}

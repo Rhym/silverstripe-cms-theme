@@ -1,888 +1,1482 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic,300italic,300,600,600italic);/** =========================================
- * Main
- ===========================================*/
-
-/** =========================================
- * Functions
- ===========================================*/
-
-/** =========================================
- * Shade
-
- * Darken a color
- * @access public
- * @param {Color} $color - color to shade
- * @param {Number} $percentage - percentage of `$color` in returned color
- * @return {Color}
- ===========================================*/
-
-/** =========================================
- * Tint
-
- * Lighten a color
- * @access public
- * @param {Color} $color - color to tint
- * @param {Number} $percentage - percentage of `$color` in returned color
- * @return {Color}
- ===========================================*/
-
+@charset "UTF-8";
+/*
+|--------------------------------------------------------------------------
+| Main
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Deep mapping of variables.
+|--------------------------------------------------------------------------
+|
+| Included in the variables glob, as it needs to be used
+| at all levels.
+|
+*/
+/**
+ * Get nested variable values inside of maps.
+ */
 /** =========================================
  * Variables
  ===========================================*/
-
 /** Text */
-
 /** Secondary Text / Icons */
-
 /** Hint Text */
-
 /** Dividers */
-
 /** -----------------------------------------
  * Opacity
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Fonts
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Sizing
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Animation
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Border Radii
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Icons
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * CMS Menu
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * GridFields / Accordions
  * ----------------------------------------*/
-
-.ss-toggle .ui-accordion-header.ui-state-default,
-.cms table.ss-gridfield-table tr.title th,
-.cms table.ss-gridfield-table tr td.bottom-all,
-.cms .defaultSkin .mceToolbar,
-.cms .defaultSkin .mceStatusbar {
-	background: #f9f9f9;
-	background: linear-gradient(#f9f9f9, #f2f2f2);
-	border-color: #BDBDBD !important;
-}
+.ss-toggle .ui-accordion-header.ui-state-default, .cms table.ss-gridfield-table tr.title th, .cms table.ss-gridfield-table tr td.bottom-all, .cms .defaultSkin .mceToolbar, .cms .defaultSkin .mceStatusbar {
+  background: #f0f2f4;
+  background: #f0f2f4;
+  border-color: #ccd0d3 !important; }
 
 .cms table.ss-gridfield-table tr th.main {
-	background: #f9f9f9;
-	border-color: #BDBDBD !important;
-}
-
-/** =========================================
- * Mixins
- ===========================================*/
-
-/** =========================================
- * Buttons
- ===========================================*/
+  background: #f0f2f4;
+  border-color: #ccd0d3 !important; }
 
 /** =========================================
  * Icons
  ===========================================*/
+/*
+|--------------------------------------------------------------------------
+| Accordions
+|--------------------------------------------------------------------------
+*/
+.cms-content-actions .ss-ui-button,
+.cms-content-actions .ss-ui-button.ui-state-default,
+.cms-content-actions .ss-ui-button.ui-state-hover,
+.cms-content-actions .ss-ui-button.ui-state-focus,
+.cms-content-actions .ss-ui-button.ui-state-active,
+.cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete,
+.cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default,
+.cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover,
+.cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus,
+.cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active,
+.cms .cms-search-form .Actions .ss-ui-button,
+.cms .cms-search-form .Actions .ss-ui-button.ui-state-default,
+.cms .cms-search-form .Actions .ss-ui-button.ui-state-hover,
+.cms .cms-search-form .Actions .ss-ui-button.ui-state-focus,
+.cms .cms-search-form .Actions .ss-ui-button.ui-state-active,
+.cms .better-buttons-utils .ss-ui-button,
+.cms .better-buttons-utils .ss-ui-button.ui-state-default,
+.cms .better-buttons-utils .ss-ui-button.ui-state-hover,
+.cms .better-buttons-utils .ss-ui-button.ui-state-focus,
+.cms .better-buttons-utils .ss-ui-button.ui-state-active,
+.cms .preview-holder .ss-ui-button,
+.cms .preview-holder .ss-ui-button.ui-state-default,
+.cms .preview-holder .ss-ui-button.ui-state-hover,
+.cms .preview-holder .ss-ui-button.ui-state-focus,
+.cms .preview-holder .ss-ui-button.ui-state-active,
+.cms .edit-holder .ss-ui-button,
+.cms .edit-holder .ss-ui-button.ui-state-default,
+.cms .edit-holder .ss-ui-button.ui-state-hover,
+.cms .edit-holder .ss-ui-button.ui-state-focus,
+.cms .edit-holder .ss-ui-button.ui-state-active,
+.cms .ss-gridfield-buttonrow .ss-ui-button,
+.cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default,
+.cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover,
+.cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus,
+.cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active {
+  border: none;
+  cursor: pointer;
+  padding: 0 .74em;
+  vertical-align: middle;
+  font-size: 1em;
+  min-width: 30px;
+  min-height: 2.14em;
+  line-height: 2.14em;
+  font-weight: normal;
+  text-shadow: none;
+  text-decoration: none;
+  background: #f9f9f9;
+  background: linear-gradient(to bottom, #f9f9f9, #f2f2f2) left no-repeat, center no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  color: #4f5861; }
+  .cms-content-actions .ss-ui-button.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-button-small,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-button-small,
+  .cms .cms-search-form .Actions .ss-ui-button.ss-ui-button-small,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-button-small,
+  .cms .better-buttons-utils .ss-ui-button.ss-ui-button-small,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-button-small,
+  .cms .preview-holder .ss-ui-button.ss-ui-button-small,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-button-small,
+  .cms .edit-holder .ss-ui-button.ss-ui-button-small,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-button-small,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-button-small,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-button-small,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-button-small,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-button-small,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-button-small {
+    min-height: 1.5em;
+    line-height: 1.5em;
+    padding: 0 .4em; }
+  .cms-content-actions .ss-ui-button.ui-button-text-icon-primary, .cms-content-actions .ss-ui-button.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-state-active.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ui-button-text-icons,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ui-button-text-icon-primary,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ui-button-text-icons,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-button-text-icon-primary,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-button-text-icons,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ui-button-text-icons,
+  .cms .better-buttons-utils .ss-ui-button.ui-button-text-icon-primary,
+  .cms .better-buttons-utils .ss-ui-button.ui-button-text-icons,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ui-button-text-icons,
+  .cms .preview-holder .ss-ui-button.ui-button-text-icon-primary,
+  .cms .preview-holder .ss-ui-button.ui-button-text-icons,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ui-button-text-icons,
+  .cms .edit-holder .ss-ui-button.ui-button-text-icon-primary,
+  .cms .edit-holder .ss-ui-button.ui-button-text-icons,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ui-button-text-icons,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-button-text-icon-primary,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-button-text-icons,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ui-button-text-icon-primary,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ui-button-text-icons,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ui-button-text-icon-primary,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ui-button-text-icons,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ui-button-text-icon-primary,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ui-button-text-icons,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ui-button-text-icon-primary,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ui-button-text-icons {
+    padding-left: 2.24em; }
+  .cms-content-actions .ss-ui-button.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-state-active.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ui-corner-left,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ui-corner-left,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-corner-left,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ui-corner-left,
+  .cms .better-buttons-utils .ss-ui-button.ui-corner-left,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ui-corner-left,
+  .cms .preview-holder .ss-ui-button.ui-corner-left,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ui-corner-left,
+  .cms .edit-holder .ss-ui-button.ui-corner-left,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ui-corner-left,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-corner-left,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ui-corner-left,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ui-corner-left,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ui-corner-left,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ui-corner-left {
+    border-top-left-radius: .2em;
+    border-bottom-left-radius: .2em; }
+  .cms-content-actions .ss-ui-button.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-state-active.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ui-corner-right,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ui-corner-right,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-corner-right,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ui-corner-right,
+  .cms .better-buttons-utils .ss-ui-button.ui-corner-right,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ui-corner-right,
+  .cms .preview-holder .ss-ui-button.ui-corner-right,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ui-corner-right,
+  .cms .edit-holder .ss-ui-button.ui-corner-right,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ui-corner-right,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-corner-right,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ui-corner-right,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ui-corner-right,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ui-corner-right,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ui-corner-right {
+    border-top-right-radius: .2em;
+    border-bottom-right-radius: .2em; }
+  .cms-content-actions .ss-ui-button .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-state-default .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-state-active .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .ui-button-text,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .ui-button-text,
+  .cms .cms-search-form .Actions .ss-ui-button .ui-button-text,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .ui-button-text,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .ui-button-text,
+  .cms .better-buttons-utils .ss-ui-button .ui-button-text,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .ui-button-text,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .ui-button-text,
+  .cms .preview-holder .ss-ui-button .ui-button-text,
+  .cms .preview-holder .ss-ui-button.ui-state-default .ui-button-text,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms .preview-holder .ss-ui-button.ui-state-active .ui-button-text,
+  .cms .edit-holder .ss-ui-button .ui-button-text,
+  .cms .edit-holder .ss-ui-button.ui-state-default .ui-button-text,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms .edit-holder .ss-ui-button.ui-state-active .ui-button-text,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .ui-button-text,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .ui-button-text,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .ui-button-text,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .ui-button-text,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .ui-button-text {
+    padding: 0;
+    line-height: inherit; }
+  .cms-content-actions .ss-ui-button.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-active.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.loading .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.loading .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.loading .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.loading .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.loading .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.loading .ui-icon,
+  .cms .preview-holder .ss-ui-button.loading .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-active.loading .ui-icon,
+  .cms .edit-holder .ss-ui-button.loading .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-active.loading .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.loading .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.loading .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.loading .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.loading .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.loading .ui-icon {
+    background: transparent none; }
+    .cms-content-actions .ss-ui-button.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-active.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.loading .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.loading .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.loading .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.loading .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.loading .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active.loading .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.loading .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-active.loading .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.loading .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-active.loading .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.loading .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.loading .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.loading .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.loading .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.loading .ui-icon::after {
+      color: currentColor;
+      animation: loading 2s linear infinite;
+      content: "\f013"; }
+  .cms-content-actions .ss-ui-button.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-action-constructive,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-action-constructive,
+  .cms .cms-search-form .Actions .ss-ui-button.ss-ui-action-constructive,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-action-constructive,
+  .cms .better-buttons-utils .ss-ui-button.ss-ui-action-constructive,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-action-constructive,
+  .cms .preview-holder .ss-ui-button.ss-ui-action-constructive,
+  .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive,
+  .cms .edit-holder .ss-ui-button.ss-ui-action-constructive,
+  .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-action-constructive,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-action-constructive,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-action-constructive,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-action-constructive,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-action-constructive {
+    font-weight: normal;
+    color: #fff;
+    background: #5cb85c;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat #5cb85c; }
+    .cms-content-actions .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-action-constructive .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-action-constructive .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-action-constructive .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-action-constructive .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-action-constructive .ui-icon::after {
+      color: currentColor; }
+    .cms-content-actions .ss-ui-button.ss-ui-action-constructive.ui-state-hover, .cms-content-actions .ss-ui-button.ss-ui-action-constructive.ui-state-focus, .cms-content-actions .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms .cms-search-form .Actions .ss-ui-button.ss-ui-action-constructive.ui-state-hover,
+    .cms .cms-search-form .Actions .ss-ui-button.ss-ui-action-constructive.ui-state-focus,
+    .cms .cms-search-form .Actions .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms .better-buttons-utils .ss-ui-button.ss-ui-action-constructive.ui-state-hover,
+    .cms .better-buttons-utils .ss-ui-button.ss-ui-action-constructive.ui-state-focus,
+    .cms .better-buttons-utils .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms .preview-holder .ss-ui-button.ss-ui-action-constructive.ui-state-hover,
+    .cms .preview-holder .ss-ui-button.ss-ui-action-constructive.ui-state-focus,
+    .cms .preview-holder .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms .preview-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms .preview-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms .preview-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms .preview-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms .edit-holder .ss-ui-button.ss-ui-action-constructive.ui-state-hover,
+    .cms .edit-holder .ss-ui-button.ss-ui-action-constructive.ui-state-focus,
+    .cms .edit-holder .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms .edit-holder .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms .edit-holder .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms .edit-holder .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms .edit-holder .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-action-constructive.ui-state-hover,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-action-constructive.ui-state-focus,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ss-ui-action-constructive.ui-state-active,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-hover,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-focus,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.ss-ui-action-constructive.ui-state-active,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-hover,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-focus,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.ss-ui-action-constructive.ui-state-active,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-hover,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-focus,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.ss-ui-action-constructive.ui-state-active,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-hover,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-focus,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.ss-ui-action-constructive.ui-state-active {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+      background: #449d44;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat #449d44; }
+  .cms-content-actions .ss-ui-button.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-state-active.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus.gridfield-better-buttons-delete,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active.gridfield-better-buttons-delete,
+  .cms .cms-search-form .Actions .ss-ui-button.gridfield-better-buttons-delete,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active.gridfield-better-buttons-delete,
+  .cms .better-buttons-utils .ss-ui-button.gridfield-better-buttons-delete,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active.gridfield-better-buttons-delete,
+  .cms .preview-holder .ss-ui-button.gridfield-better-buttons-delete,
+  .cms .preview-holder .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms .preview-holder .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms .preview-holder .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms .preview-holder .ss-ui-button.ui-state-active.gridfield-better-buttons-delete,
+  .cms .edit-holder .ss-ui-button.gridfield-better-buttons-delete,
+  .cms .edit-holder .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms .edit-holder .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms .edit-holder .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms .edit-holder .ss-ui-button.ui-state-active.gridfield-better-buttons-delete,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.gridfield-better-buttons-delete,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default.gridfield-better-buttons-delete,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover.gridfield-better-buttons-delete,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus.gridfield-better-buttons-delete,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active.gridfield-better-buttons-delete {
+    color: #fff;
+    background: #d9534f;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat #d9534f; }
+  .cms-content-actions .ss-ui-button .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-default .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-hover .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-focus .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-state-active .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .ui-icon,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .ui-icon,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .ui-icon,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .ui-icon,
+  .cms .preview-holder .ss-ui-button .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-default .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .ui-icon,
+  .cms .preview-holder .ss-ui-button.ui-state-active .ui-icon,
+  .cms .edit-holder .ss-ui-button .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-default .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .ui-icon,
+  .cms .edit-holder .ss-ui-button.ui-state-active .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .ui-icon,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .ui-icon {
+    background: transparent none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    transform: translate3d(0, -50%, 0);
+    text-indent: 0; }
+    .cms-content-actions .ss-ui-button .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-state-active .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .ui-icon::after,
+    .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms .better-buttons-utils .ss-ui-button.ui-state-active .ui-icon::after,
+    .cms .preview-holder .ss-ui-button .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms .preview-holder .ss-ui-button.ui-state-active .ui-icon::after,
+    .cms .edit-holder .ss-ui-button .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms .edit-holder .ss-ui-button.ui-state-active .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .ui-icon::after,
+    .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .ui-icon::after {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal normal normal 1em FontAwesome;
+      content: "\f0c9"; }
+  .cms-content-actions .ss-ui-button .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-add::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-add::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-add::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-add::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-add::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-add::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-add::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-add::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-add::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-add::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-add::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-add::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-add::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-add::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-add::after {
+    content: "\f055"; }
+  .cms-content-actions .ss-ui-button .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-accept::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-accept::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-accept::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-accept::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-accept::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-accept::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-accept::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-accept::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-accept::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-accept::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-accept::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-accept::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-accept::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-accept::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-accept::after {
+    color: #5cb85c;
+    content: "\f00c"; }
+  .cms-content-actions .ss-ui-button .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-disk::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-disk::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-disk::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-disk::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-disk::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-disk::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-disk::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-disk::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-disk::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-disk::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-disk::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-disk::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-disk::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-disk::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-disk::after {
+    content: "\f0c7"; }
+  .cms-content-actions .ss-ui-button .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-addpage::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-addpage::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-addpage::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-addpage::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-addpage::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-addpage::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-addpage::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-addpage::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-addpage::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-addpage::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-addpage::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-addpage::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-addpage::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-addpage::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-addpage::after {
+    content: "\f0f6"; }
+  .cms-content-actions .ss-ui-button .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-decline::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-decline::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-decline::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-decline::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-decline::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-decline::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-decline::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-decline::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-decline::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-decline::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-decline::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-decline::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-decline::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-decline::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-decline::after {
+    color: #d9534f;
+    content: "\f056"; }
+  .cms-content-actions .ss-ui-button .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-state-active .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-default .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-hover .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-focus .btn-icon-download-csv::after,
+  .cms-content-actions .ss-ui-button.ui-widget.gridfield-better-buttons-delete.ui-state-active .btn-icon-download-csv::after,
+  .cms .cms-search-form .Actions .ss-ui-button .btn-icon-download-csv::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms .cms-search-form .Actions .ss-ui-button.ui-state-active .btn-icon-download-csv::after,
+  .cms .better-buttons-utils .ss-ui-button .btn-icon-download-csv::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms .better-buttons-utils .ss-ui-button.ui-state-active .btn-icon-download-csv::after,
+  .cms .preview-holder .ss-ui-button .btn-icon-download-csv::after,
+  .cms .preview-holder .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms .preview-holder .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms .preview-holder .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms .preview-holder .ss-ui-button.ui-state-active .btn-icon-download-csv::after,
+  .cms .edit-holder .ss-ui-button .btn-icon-download-csv::after,
+  .cms .edit-holder .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms .edit-holder .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms .edit-holder .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms .edit-holder .ss-ui-button.ui-state-active .btn-icon-download-csv::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button .btn-icon-download-csv::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-default .btn-icon-download-csv::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-hover .btn-icon-download-csv::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-focus .btn-icon-download-csv::after,
+  .cms .ss-gridfield-buttonrow .ss-ui-button.ui-state-active .btn-icon-download-csv::after {
+    content: "\f019"; }
 
-/** =========================================
- * Typography
- ===========================================*/
+@keyframes loading {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
-/** =========================================
- * Components
- ===========================================*/
-
-/** =========================================
- * Accordions
- ===========================================*/
-
-/** =========================================
- * Buttons
- ===========================================*/
-
-/** =========================================
- * CMS Content
- ===========================================*/
-
+/*
+|--------------------------------------------------------------------------
+| Content
+|--------------------------------------------------------------------------
+*/
 .cms-content {
-	background: #f9f9f9;
-}
+  background: #f9f9f9; }
 
-/** =========================================
- * CMS Content Actions
- ===========================================*/
-
+/*
+|--------------------------------------------------------------------------
+| Actions
+|--------------------------------------------------------------------------
+*/
 .cms-content-actions,
 .cms-preview-controls {
-	background: #fff;
-	box-shadow: none;
-}
+  background: #f9f9f9;
+  box-shadow: none; }
 
 .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel {
-	background: #fff;
-	color: #444;
-}
+  background: #f9f9f9;
+  color: #444; }
+  .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button {
+    box-shadow: none; }
+    .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:hover, .cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:focus {
+      background: #f0f2f4; }
 
-.cms .ss-ui-action-tabset.action-menus.ss-tabset .ui-tabs-panel button.ss-ui-button:hover {
-	background: #f9f9f9;
-}
-
-/** =========================================
- * Cms Content Fields
- ===========================================*/
-
-.cms { /**
-  * Main content
-  */
-}
-
+/*
+|--------------------------------------------------------------------------
+| Fields
+|--------------------------------------------------------------------------
+*/
 .cms .cms-content-fields {
-	background: #f9f9f9;
-}
+  background: #f9f9f9; }
 
-/** =========================================
- * CMS Content Header
- ===========================================*/
-
-/**
- * The top bar containing breadcrumbs, and view toggle
- */
-
-.cms-content-header.north {
-	background: #fff;
-	border-bottom: 1px solid #d9d9d9; /**
-   * Breadcrumbs
-   */ /**
-   * Model admins without breadcrumbs
-   */
-}
-
-.cms-content-header.north .breadcrumbs-wrapper .crumb,
-.cms-content-header.north .breadcrumbs-wrapper .sep {
-	color: #444;
-}
-
-.cms-content-header.north .cms-content-header-info h2 {
-	color: #444;
-}
-
-.cms-content-header.north .cms-content-header-info .icon {
-	display: none;
-}
-
-/** =========================================
- * CMS Content Tools
- ===========================================*/
-
-/**
- * Left-hand filter bar
- */
-
-.cms-content-tools {
-	background: #fff;
-	box-shadow: none;
-	border-color: #d9d9d9; /**
-   * Buttons
-   */
-}
-
-.cms-content-tools .ss-ui-button.cms-tree-expand-trigger,
-.cms-content-tools .ss-ui-button.ss-ui-action-constructive {
-	font-size: 11px;
-}
-
-/** =========================================
- * CMS Menu
- ===========================================*/
-
+/*
+|--------------------------------------------------------------------------
+| Menu
+|--------------------------------------------------------------------------
+*/
 /**
  * The left-hand navigation
  */
-
-.cms-menu { /** Render the fonts a little better. */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: sans-serif;
-	background: #1b354c;
-	color: #fff;
-	width: 240px !important;
-	box-shadow: none;
-	border-right: 1px solid rgba(0, 0, 0, 0.3); /**
+.cms-menu {
+  /** Render the fonts a little better. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: none;
+  background: #f0f2f4;
+  /**
    * The container for the Silverstripe logo, Username and logout button
-   */ /**
-   * Silverstripe Logo + Site Name
-   */ /**
-   * Logout Button
-   */ /**
-   * The list of ModelAdmin actions
-   */ /**
-   * The footer of the left-hand navigation, contains toggle button
-   */ /**
-   * Sticky button in the toggle panel
    */
-}
+  /**
+   * The list of ModelAdmin actions
+   */
+  /**
+   * Sticky button in the toggle panel
+   */ }
+  .cms-menu .cms-logo-header.north {
+    padding: 0;
+    background: transparent none;
+    box-shadow: inset rgba(0, 0, 0, 0.14) -1px 0 0; }
+    .cms-menu .cms-logo-header.north span,
+    .cms-menu .cms-logo-header.north span a {
+      color: currentColor; }
+  .cms-menu .cms-logo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14); }
+    .cms-menu .cms-logo > a {
+      display: none; }
+    .cms-menu .cms-logo > span {
+      margin: 0; }
+    .cms-menu .cms-logo .logo > a {
+      width: 100%;
+      background: transparent none;
+      position: static; }
+      .cms-menu .cms-logo .logo > a > img {
+        display: block;
+        max-width: 100%; }
+  .cms-menu .cms-login-status {
+    border-width: 0;
+    padding: 1rem; }
+    .cms-menu .cms-login-status .logout-link {
+      color: currentColor;
+      font-size: 1em;
+      display: block;
+      float: none;
+      padding: 0; }
+      .cms-menu .cms-login-status .logout-link:hover {
+        text-decoration: underline; }
+    .cms-menu .cms-login-status > span {
+      padding: 0; }
+  .cms-menu .cms-panel-content,
+  .cms-menu .cms-panel-toggle {
+    box-shadow: inset rgba(0, 0, 0, 0.14) -1px 0 0; }
+  .cms-menu .cms-menu-list li.current a {
+    color: currentColor;
+    background: rgba(0, 0, 0, 0.08); }
+    .cms-menu .cms-menu-list li.current a:hover, .cms-menu .cms-menu-list li.current a:focus {
+      background: rgba(0, 0, 0, 0.08); }
+  .cms-menu .cms-menu-list li a {
+    color: currentColor;
+    background: transparent none;
+    border-width: 0;
+    text-shadow: none;
+    padding: 1em 1em;
+    line-height: 1.5; }
+    .cms-menu .cms-menu-list li a:hover, .cms-menu .cms-menu-list li a:focus {
+      background: rgba(0, 0, 0, 0.04); }
+    .cms-menu .cms-menu-list li a .icon {
+      text-align: center;
+      margin: 0;
+      line-height: 1.3em;
+      transform: translate3d(0, -50%, 0);
+      color: currentColor;
+      opacity: 1; }
+      .cms-menu .cms-menu-list li a .icon.fa {
+        background: none;
+        text-indent: 0;
+        font-size: 1.3em;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.3em; }
+    .cms-menu .cms-menu-list li a .text {
+      margin-left: 2rem; }
+  .cms-menu .ss-ui-button.sticky-toggle {
+    background: none;
+    box-shadow: none; }
+    .cms-menu .ss-ui-button.sticky-toggle::before {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal normal normal 16px FontAwesome;
+      content: "\f0c9";
+      padding: 4px;
+      content: "\f10c";
+      text-shadow: none; }
+    .cms-menu .ss-ui-button.sticky-toggle.active {
+      background: none; }
+      .cms-menu .ss-ui-button.sticky-toggle.active::before {
+        content: "\f192"; }
 
-.cms-menu .cms-logo-header.north {
-	padding: 20px;
-	margin: 0 0 16px 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.cms-menu .logo a.front-end-link {
-	padding: 0;
-	margin: 0;
-	display: block;
-	position: static;
-	text-indent: 0;
-	background: transparent none;
-	width: 100%;
-}
-
-.cms-menu .logo img {
-	max-width: 100%;
-	height: auto;
-}
-
-.cms-menu .cms-logo-header {
-	background: transparent none;
-}
-
-.cms-menu .cms-logo {
-	margin: 0 0 16px 0;
-	padding: 0;
-	border-width: 0;
-}
-
-.cms-menu .cms-logo a {
-	display: none;
-}
-
-.cms-menu .cms-logo span {
-	margin: 0;
-	font-weight: 600;
-	color: #fff;
-}
-
-.cms-menu .cms-login-status {
-	font-weight: 600;
-	padding: 0;
-	border-width: 0;
-}
-
-.cms-menu .cms-login-status .logout-link {
-	color: #fff;
-	background: transparent none;
-	float: none;
-	width: auto;
-	height: auto;
-	text-indent: 0;
-	display: inline-block;
-	content: "Logout";
-	margin: 0;
-}
-
-.cms-menu .cms-login-status span {
-	display: none;
-}
-
-.cms-menu .cms-menu-list li.current a {
-	color: #fff;
-	background: rgba(0, 0, 0, 0.3);
-}
-
-.cms-menu .cms-menu-list li.current a:hover {
-	background: rgba(0, 0, 0, 0.3);
-}
-
-.cms-menu .cms-menu-list li a {
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	font-weight: 600;
-	background: transparent none;
-	border-width: 0;
-	text-shadow: none;
-	font-size: 13px;
-	line-height: 18px;
-	padding: 12px 20px;
-	transition: 0.1s ease-out background-color;
-}
-
-.cms-menu .cms-menu-list li a:hover {
-	background: rgba(0, 0, 0, 0.3);
-}
-
-.cms-menu .cms-menu-list li a .icon {
-	margin-left: 0; /**
-       * Display full opacity to inverse icons.
-       */
-	opacity: 1;
-}
-
-.cms-menu .cms-menu-list li a .icon.fa {
-	background: none;
-	text-indent: 0;
-	font-size: 16px;
-}
-
-.cms-menu .cms-menu-list li a .text {
-	margin: 0 0 0 32px;
-}
-
-.cms-menu .cms-panel-toggle.south {
-	border-color: rgba(0, 0, 0, 0.3);
-	box-shadow: none;
-}
-
-.cms-menu .cms-panel-toggle.south .toggle-expand span,
-.cms-menu .cms-panel-toggle.south .toggle-collapse span {
-	color: #fff;
-}
-
-.cms-menu.collapsed {
-	width: 49px !important;
-}
-
-.cms-menu.collapsed .cms-logo-header.north {
-	display: none;
-}
-
-.cms-menu .ss-ui-button.sticky-toggle {
-	background: none;
-	box-shadow: none;
-}
-
-.cms-menu .ss-ui-button.sticky-toggle::before {
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 16px FontAwesome;
-	display: block;
-	text-indent: 0;
-	height: 16px;
-	width: 16px;
-	content: '\f0c9';
-	padding: 4px;
-	content: '\f10c';
-	color: #fff;
-	text-shadow: none;
-}
-
-.cms-menu .ss-ui-button.sticky-toggle.active {
-	background: none;
-}
-
-.cms-menu .ss-ui-button.sticky-toggle.active::before {
-	content: '\f192';
-}
-
-/** =========================================
- * Fields
- ===========================================*/
+/*
+|--------------------------------------------------------------------------
+| Fields
+|--------------------------------------------------------------------------
+*/
+.tab > .field {
+  border-width: 1px; }
 
 .field {
-	border-color: #E0E0E0;
-	border-width: 1px;
-}
+  border-color: rgba(0, 0, 0, 0.14); }
 
-/** =========================================
- * Gridfields
- ===========================================*/
+/*
+|--------------------------------------------------------------------------
+| Gridfields
+|--------------------------------------------------------------------------
+*/
+.cms table.ss-gridfield-table .right .pagination-records-number, .cms table.ss-gridfield-table tr th.main, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active, .cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number {
+  color: #444 !important;
+  text-shadow: none; }
+  .cms table.ss-gridfield-table .right .pagination-records-number span, .cms table.ss-gridfield-table tr th.main span, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort span, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover span, .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active span, .cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number span {
+    text-shadow: none; }
 
-.cms table.ss-gridfield-table .right .pagination-records-number,
-.cms table.ss-gridfield-table tr th.main,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active,
-.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number {
-	color: #444 !important;
-	text-shadow: none;
-}
+.cms table.ss-gridfield-table tr {
+  /**
+         * No items to display
+         */
+  /**
+         * Search filter
+         */ }
+  .cms table.ss-gridfield-table tr.title th {
+    border: 1px solid;
+    border-bottom-width: 0; }
+    .cms table.ss-gridfield-table tr.title th h2 {
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+      color: #444; }
+  .cms table.ss-gridfield-table tr.ss-gridfield-no-items > td:first-child {
+    padding: 6px 8px;
+    border-bottom: 1px solid #E0E0E0;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em; }
+  .cms table.ss-gridfield-table tr.filter-header .extra {
+    background: #212121;
+    color: #fff;
+    /**
+             * Input fields in the search filter.
+             */ }
+    .cms table.ss-gridfield-table tr.filter-header .extra .fieldholder-small {
+      padding: 0; }
+  .cms table.ss-gridfield-table tr th {
+    border-radius: 0;
+    /**
+           * Sortable GridField bar
+           */ }
+    .cms table.ss-gridfield-table tr th.main {
+      border-color: #BDBDBD;
+      border-left-width: 0; }
+      .cms table.ss-gridfield-table tr th.main:first-child {
+        border-left-width: 1px; }
+    .cms table.ss-gridfield-table tr th.sortablerowsheading {
+      border-left: 1px solid #BDBDBD;
+      background: #E0E0E0;
+      color: #444; }
+    .cms table.ss-gridfield-table tr th button {
+      /**
+             * Search Icon
+             */ }
+      .cms table.ss-gridfield-table tr th button.ss-ui-button.ss-gridfield-button-filter.trigger {
+        background-position: -17px -38px; }
+  .cms table.ss-gridfield-table tr td.bottom-all {
+    border: 1px solid #BDBDBD;
+    /**
+             * Pagination
+             */ }
+    .cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .ui-button-text,
+    .cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .pagination-page-number {
+      color: #444;
+      text-shadow: none; }
 
-.cms table.ss-gridfield-table .right .pagination-records-number span,
-.cms table.ss-gridfield-table tr th.main span,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort span,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover span,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active span,
-.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number span {
-	text-shadow: none;
-}
-
-.cms table.ss-gridfield-table tr { /**
-   * No items to display
-   */ /**
-   * Search filter
-   */
-}
-
-.cms table.ss-gridfield-table tr.title th {
-	border: 1px solid;
-	border-bottom-width: 0;
-}
-
-.cms table.ss-gridfield-table tr.title th h2 {
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
-	color: #444;
-}
-
-.cms table.ss-gridfield-table tr.ss-gridfield-no-items > td:first-child {
-	padding: 6px 8px;
-	border-bottom: 1px solid #E0E0E0;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-.cms table.ss-gridfield-table tr.filter-header .extra {
-	background: #212121;
-	color: #fff; /**
-     * Input fields in the search filter.
-     */
-}
-
-.cms table.ss-gridfield-table tr.filter-header .extra .fieldholder-small {
-	padding: 0;
-}
-
-.cms table.ss-gridfield-table tr th {
-	border-radius: 0; /**
-     * Sortable GridField bar
-     */
-}
-
-.cms table.ss-gridfield-table tr th.main {
-	border-color: #BDBDBD;
-	border-left-width: 0;
-}
-
-.cms table.ss-gridfield-table tr th.main:first-child {
-	border-left-width: 1px;
-}
-
-.cms table.ss-gridfield-table tr th.sortablerowsheading {
-	border-left: 1px solid #BDBDBD;
-	background: #E0E0E0;
-	color: #444;
-}
-
-.cms table.ss-gridfield-table tr th button { /**
-       * Search Icon
-       */
-}
-
-.cms table.ss-gridfield-table tr th button.ss-ui-button.ss-gridfield-button-filter.trigger {
-	background-position: -17px -38px;
-}
-
-.cms table.ss-gridfield-table tr td.col-buttons .gridfield-button-unpublish .btn-icon-unpublish {
-	background: url("../images/icons/plug-disconnect.png");
-}
-
-.cms table.ss-gridfield-table tr td.bottom-all {
-	border: 1px solid #BDBDBD; /**
-     * Pagination
-     */
-}
-
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination { /**
-       * Pagination buttons
-       */
-}
-
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .ui-button-text,
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .pagination-page-number {
-	color: #444;
-	text-shadow: none;
-}
-
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-firstpage,
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-previouspage,
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-nextpage,
-.cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination button.ss-gridfield-lastpage {
-	background-image: url("../images/icons/pagination-arrows.png");
-}
-
-/** =========================================
- * CMS Menu
- ===========================================*/
-
+/*
+|--------------------------------------------------------------------------
+| CMS Menu
+|--------------------------------------------------------------------------
+*/
 /**
  * The left-hand navigation
  */
-
-.cms-menu { /**
+.cms-menu {
+  /**
    * The list of ModelAdmin actions
-   */
-}
+   */ }
+  .cms-menu .cms-menu-list li.children.current, .cms-menu .cms-menu-list li.children.opened {
+    border-bottom: 0;
+    background: rgba(0, 0, 0, 0.04); }
+    .cms-menu .cms-menu-list li.children.current > a, .cms-menu .cms-menu-list li.children.opened > a {
+      background: transparent none; }
+  .cms-menu .cms-menu-list li.children > a {
+    position: relative; }
+  .cms-menu .cms-menu-list li.children ul {
+    background-color: transparent; }
+    .cms-menu .cms-menu-list li.children ul li.current a {
+      font-weight: normal;
+      color: currentColor;
+      background: rgba(0, 0, 0, 0.04); }
+    .cms-menu .cms-menu-list li.children ul li a:hover, .cms-menu .cms-menu-list li.children ul li a:focus {
+      color: currentColor;
+      background: rgba(0, 0, 0, 0.04); }
+    .cms-menu .cms-menu-list li.children ul.collapsed-flyout li a {
+      border-top: none; }
+  .cms-menu .cms-menu-list li.children li {
+    background: transparent none; }
+    .cms-menu .cms-menu-list li.children li.last {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.14); }
+    .cms-menu .cms-menu-list li.children li a {
+      border-width: 0;
+      background: none; }
+  .cms-menu .cms-menu-list li.children .grouped-cms-menu::after {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: normal normal normal 1.3em FontAwesome;
+    content: "\f0c9";
+    content: "\f03a";
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translate3d(0, -50%, 0); }
+  .cms-menu .cms-menu-list li.children .toggle-children {
+    top: 0;
+    display: flex;
+    align-items: center; }
+    .cms-menu .cms-menu-list li.children .toggle-children::before {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal normal normal 1.3em FontAwesome;
+      content: "\f0c9";
+      content: "\f0d7"; }
+    .cms-menu .cms-menu-list li.children .toggle-children.opened::before {
+      content: "\f0d8"; }
+    .cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon {
+      display: none; }
 
-.cms-menu .cms-menu-list li.children.current,
-.cms-menu .cms-menu-list li.children.opened {
-	border-bottom: 0;
-	background: rgba(0, 0, 0, 0.05);
-}
-
-.cms-menu .cms-menu-list li.children.current > a,
-.cms-menu .cms-menu-list li.children.opened > a {
-	background: rgba(0, 0, 0, 0.25);
-}
-
-.cms-menu .cms-menu-list li.children > a {
-	padding-right: 42px;
-}
-
-.cms-menu .cms-menu-list li.children .grouped-cms-menu.text {
-	margin-left: 32px;
-	display: block;
-}
-
-.cms-menu .cms-menu-list li.children .grouped-cms-menu::after {
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 16px FontAwesome;
-	display: block;
-	text-indent: 0;
-	height: 16px;
-	width: 16px;
-	content: '\f0c9';
-	content: '\f0c9';
-	position: absolute;
-	top: 50%;
-	left: 16px;
-	margin: -8px 0 0 4px;
-}
-
-.cms-menu .cms-menu-list li.children ul {
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-.cms-menu .cms-menu-list li.children ul li.current a {
-	background: rgba(0, 0, 0, 0.2);
-}
-
-.cms-menu .cms-menu-list li.children ul li a:hover {
-	background: rgba(0, 0, 0, 0.2);
-}
-
-.cms-menu .cms-menu-list li.children ul.collapsed-flyout {
-	left: 50px;
-}
-
-.cms-menu .cms-menu-list li.children ul.collapsed-flyout li a {
-	border-top: none;
-}
-
-.cms-menu .cms-menu-list li.children li {
-	background: transparent none;
-}
-
-.cms-menu .cms-menu-list li.children li.current a {
-	color: #fff;
-	font-weight: 600;
-}
-
-.cms-menu .cms-menu-list li.children li a {
-	color: #fff;
-	height: auto;
-	position: relative;
-	border-width: 0;
-	background: none;
-	font-size: 13px;
-	padding: 12px 24px;
-	line-height: 1em;
-}
-
-.cms-menu .cms-menu-list li.children li a:hover {
-	background: rgba(0, 0, 0, 0.3);
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children {
-	font-size: 13px;
-	top: 50%;
-	right: 4px;
-	box-sizing: border-box;
-	margin-top: -17px;
-	float: none;
-	line-height: inherit;
-	text-align: center;
-	width: 34px;
-	height: 34px;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-radius: 4px;
-	transition: 0.1s ease-out background-color;
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon {
-	background-image: none;
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon::before {
-	margin-top: 0;
-	content: '\f0d8';
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon {
-	background-image: none;
-	height: 16px;
-	width: 16px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin: -8px 0 0 -8px;
-}
-
-.cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon::before {
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 16px FontAwesome;
-	display: block;
-	text-indent: 0;
-	height: 16px;
-	width: 16px;
-	content: '\f0c9';
-	color: rgba(255, 255, 255, 0.3);
-	margin-top: 1px;
-	content: '\f0d7';
-}
-
-.cms-menu .cms-menu-list.collapsed li.children > a {
-	padding-right: 0;
-}
+.field input.text {
+  outline: none;
+  border: none;
+  border-radius: .2em;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  padding: 0 .71em;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9);
+  height: 2.14em;
+  vertical-align: middle;
+  line-height: 2.14em; }
+  .field input.text:focus {
+    border: none;
+    box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3), inset 0 1px 1px rgba(19, 124, 189, 0.2); }
 
 /** =========================================
  * Loading Logo
  ===========================================*/
-
 /** -----------------------------------------
  * Variables
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Mixins
  * ----------------------------------------*/
-
 /** -----------------------------------------
  * Animation
  * ----------------------------------------*/
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /** -----------------------------------------
  * Styling
  * ----------------------------------------*/
-
 .ss-loading-screen .loading-logo {
-	background: transparent none; /**
-   * Blue loading .gif
-   */
-}
-
-.ss-loading-screen .loading-logo:after {
-	position: absolute;
-	content: '';
-	display: block;
-	width: 25px;
-	height: 25px;
-	background: transparent none;
-	border: 4px solid #E0E0E0;
-	border-color: rgba(0, 0, 0, 0.12);
-	border-top-color: #1b354c !important;
-	border-radius: 50%;
-	top: 50%;
-	left: 50%;
-	margin: -12.5px 0 0 -12.5px;
-	animation: infinite-spinning 0.8s linear infinite;
-}
-
-.ss-loading-screen .loading-logo .loading-animation {
-	display: none !important;
-}
+  background: transparent none;
+  /**
+     * Blue loading .gif
+     */ }
+  .ss-loading-screen .loading-logo:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: transparent none;
+    border: 3px solid rgba(0, 0, 0, 0.04);
+    border-top-color: #1b354c !important;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin: -1.5rem 0 0 -1.5rem;
+    animation: infinite-spinning .8s linear infinite; }
+  .ss-loading-screen .loading-logo .loading-animation {
+    display: none !important; }
 
 .cms-content-loading-spinner {
-	background-image: none;
-}
-
-.cms-content-loading-spinner:after {
-	position: absolute;
-	content: '';
-	display: block;
-	width: 25px;
-	height: 25px;
-	background: transparent none;
-	border: 4px solid #E0E0E0;
-	border-color: rgba(0, 0, 0, 0.12);
-	border-top-color: #1b354c !important;
-	border-radius: 50%;
-	top: 50%;
-	left: 50%;
-	margin: -12.5px 0 0 -12.5px;
-	animation: infinite-spinning 0.8s linear infinite;
-}
+  background-image: none; }
+  .cms-content-loading-spinner:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: transparent none;
+    border: 3px solid rgba(0, 0, 0, 0.04);
+    border-top-color: #1b354c !important;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin: -1.5rem 0 0 -1.5rem;
+    animation: infinite-spinning .8s linear infinite; }
 
 /** =========================================
  * Menu Icons
  ===========================================*/
-
-/** Menu isn't part of the menu loop, so it needs to be targeted individually. */
-
+/** Menu isn"t part of the menu loop, so it needs to be targeted individually. */
 #Menu-Help .icon {
-	background: none;
-}
+  background: none;
+  text-indent: 0; }
+  #Menu-Help .icon::before {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: normal normal normal 1.3em FontAwesome;
+    content: "\f0c9";
+    text-indent: 0;
+    content: ""; }
 
-#Menu-Help .icon::before {
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font: normal normal normal 16px FontAwesome;
-	display: block;
-	text-indent: 0;
-	height: 16px;
-	width: 16px;
-	content: '\f0c9';
-	text-indent: 0;
-	content: "";
-	height: 16px;
-	width: 16px;
-}
+.chzn-container .chzn-results .highlighted {
+  background: #137cbd;
+  color: #fff; }
+
+.field .chzn-container-single.chzn-container-active .chzn-single {
+  background: #fff;
+  box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3); }
+
+.field .chzn-container-single .chzn-single {
+  border-radius: .2em;
+  height: 2.14em;
+  vertical-align: middle;
+  line-height: 2.14em;
+  padding: 0 .71em;
+  outline: none;
+  border: 0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom, #fff, #f7f7f7) left no-repeat, center no-repeat;
+  transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9); }
+  .field .chzn-container-single .chzn-single div b {
+    background: transparent none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .field .chzn-container-single .chzn-single div b::after {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal normal normal 1.3em FontAwesome;
+      content: "\f0c9";
+      color: #5c7080;
+      content: "\f0d7"; }
+
+.field .chzn-container-single .chzn-drop {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.15); }
+
+.ss-tabset {
+  margin: 0;
+  border-width: 0;
+  box-shadow: none; }
+
+.field textarea {
+  outline: none;
+  border: none;
+  border-radius: .2em;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  padding: .57em .71em;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9); }
+  .field textarea:focus {
+    border: none;
+    box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3), inset 0 1px 1px rgba(19, 124, 189, 0.2); }
 
 /** =========================================
  * TinyMCE
  ===========================================*/
-
-.cms { /**
-   * Custom Icons
-   */ /**
-   * Toolbar
-   */
-}
-
-.cms .defaultSkin .mceIcon {
-	background-image: url("../images/icons/custom-icons.gif");
-}
-
-.cms .defaultSkin { /**
-     * Buttons
-     */ /**
-     * Layout
-     */
-}
-
-.cms .defaultSkin a:link,
-.cms .defaultSkin a:hover,
-.cms .defaultSkin a:focus,
-.cms .defaultSkin a:visited,
-.cms .defaultSkin a:active {
-	border-color: transparent;
-	border-radius: 2px;
-}
+.cms .defaultSkin a:link, .cms .defaultSkin a:hover, .cms .defaultSkin a:focus, .cms .defaultSkin a:visited, .cms .defaultSkin a:active {
+  border-color: transparent;
+  border-radius: 2px; }
 
 .cms .defaultSkin a.mceButtonEnabled:hover {
-	border-color: #BDBDBD;
-	background: transparent none;
-	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+  border-color: rgba(0, 0, 0, 0.14);
+  background: transparent none;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2); }
 
 .cms .defaultSkin a.mceButtonActive {
-	border-color: #BDBDBD;
-	background: #E0E0E0;
-	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+  border-color: rgba(0, 0, 0, 0.14);
+  background: #E0E0E0;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2); }
 
 .cms .defaultSkin .mceListBoxEnabled .mceText,
 .cms .defaultSkin .mceListBoxEnabled .mceOpen {
-	border-color: #BDBDBD;
-}
+  border-color: rgba(0, 0, 0, 0.14); }
 
 .cms .defaultSkin .mceListBoxEnabled .mceText {
-	border-radius: 0;
-	border-bottom-left-radius: 2px;
-	border-top-left-radius: 2px;
-}
+  border-radius: 2px 0 0 2px; }
 
 .cms .defaultSkin .mceListBoxEnabled .mceOpen {
-	border-radius: 0;
-	border-bottom-right-radius: 2px;
-	border-top-right-radius: 2px;
-}
+  border-radius: 0 2px 2px 0; }
 
 .cms .defaultSkin .mceLayout {
-	border-width: 0;
-}
+  border-width: 0; }
 
 .cms .defaultSkin .mceToolbar {
-	margin: 0;
-	padding: 5px;
-}
-
-.cms .defaultSkin .mceToolbar.mceFirst {
-	border: 1px solid #BDBDBD;
-	border-bottom-width: 0;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-}
+  margin: 0;
+  padding: .4em; }
+  .cms .defaultSkin .mceToolbar.mceFirst {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-bottom-width: 0;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em; }
 
 .cms .defaultSkin .mceStatusbar {
-	padding: 5px;
-	border: 1px solid;
-	border-top-width: 0;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
+  padding: .4em;
+  border: 1px solid;
+  border-top-width: 0;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em; }
 
 .cms .defaultSkin .mceIframeContainer {
-	border: 1px solid #BDBDBD;
-}
+  border: 1px solid rgba(0, 0, 0, 0.14); }
 
-/** =========================================
- * Admin
- ===========================================*/
-
-/** =========================================
- * Security
- ===========================================*/
-
-#MemberImportFormIframe {
-	box-sizing: border-box;
-	padding: 16px;
-	background: #e6eaed;
-	border-radius: 4px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.12);
-}
-
-/** =========================================
- * Shame
- ===========================================*/
+.field .TreeDropdownField {
+  background: transparent none;
+  border-width: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0; }
+  .field .TreeDropdownField:focus {
+    border-width: 0;
+    box-shadow: none; }
+    .field .TreeDropdownField:focus .treedropdownfield-title {
+      background: #fff;
+      box-shadow: 0 0 0 1px #137cbd, 0 0 0 3px rgba(19, 124, 189, 0.3);
+      border-width: 0; }
+  .field .TreeDropdownField.treedropdownfield-with-rise .treedropdownfield-panel {
+    margin: 0; }
+  .field .TreeDropdownField .treedropdownfield-title {
+    box-sizing: border-box;
+    border-radius: .2em;
+    height: 2.14em;
+    vertical-align: middle;
+    line-height: 2.14em;
+    padding: 0 .71em;
+    outline: none;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #fff, #f7f7f7) left no-repeat, center no-repeat;
+    transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9);
+    float: none;
+    width: 100%;
+    display: block; }
+  .field .TreeDropdownField .treedropdownfield-toggle-panel-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 24px;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .field .TreeDropdownField .treedropdownfield-toggle-panel-link::after {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font: normal normal normal 1.3em FontAwesome;
+      content: "\f0c9";
+      color: #5c7080;
+      content: "\f0d7"; }
+    .field .TreeDropdownField .treedropdownfield-toggle-panel-link .ui-icon {
+      display: none; }
+  .field .TreeDropdownField .treedropdownfield-panel {
+    margin: -1px 0 0;
+    border-color: rgba(0, 0, 0, 0.14); }
 
 /*
- * Use this for putting all the CSS declarations, hacks and things we are not proud of.
- */
-
-/*# sourceMappingURL=main.css.map */
-
-@keyframes infinite-spinning {
-
-from {
-	transform: rotate(0deg);
-}
-
-to {
-	transform: rotate(360deg);
-}
-
-}
-
+|--------------------------------------------------------------------------
+| Security
+|--------------------------------------------------------------------------
+*/
