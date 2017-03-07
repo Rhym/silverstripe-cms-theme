@@ -1,0 +1,24 @@
+@import "keyframes";
+@import "mixins";
+
+/*
+|--------------------------------------------------------------------------
+| Loading Logo
+|--------------------------------------------------------------------------
+*/
+
+.ss-loading-screen {
+  .loading-logo {
+    @include loading-spinner;
+    background: transparent none;
+
+    .loading-animation {
+      display: none !important;
+    }
+  }
+}
+
+.cms-content-loading-spinner {
+  @include loading-spinner;
+  background-image: none;
+}

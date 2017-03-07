@@ -4,45 +4,45 @@
 |--------------------------------------------------------------------------
 */
 
-/**
- * The left-hand navigation
- */
 .cms-menu {
-  /**
-   * The list of ModelAdmin actions
-   */
   .cms-menu-list {
     li {
       &.children {
         &.current,
         &.opened {
           border-bottom: 0;
-          background: rgba(0, 0, 0, 0.04);
+          background: $border-color--lighter;
+
           > a {
             background: transparent none;
           }
         }
+
         > a {
           position: relative;
         }
+
         ul {
           background-color: transparent;
+
           li {
             &.current {
               a {
                 font-weight: normal;
                 color: currentColor;
-                background: rgba(0, 0, 0, 0.04);
+                background: $border-color--lighter;
               }
             }
+
             a {
               &:hover,
               &:focus {
                 color: currentColor;
-                background: rgba(0, 0, 0, 0.04);
+                background: $border-color--lighter;
               }
             }
           }
+
           &.collapsed-flyout {
             li {
               a {
@@ -51,28 +51,27 @@
             }
           }
         }
+
         li {
           background: transparent none;
-          &.current {
-            a {
 
-            }
-          }
           &.last {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+            border-bottom: 1px solid $border-color;
           }
+
           a {
             border-width: 0;
             background: none;
           }
         }
+
         .grouped-cms-menu {
           &::after {
             @include icon-base;
             content: "\f03a";
             position: absolute;
             top: 50%;
-            left: .5rem;
+            left: 0.5rem;
             transform: translate3d(0, -50%, 0);
             width: 2rem;
             display: flex;
@@ -80,19 +79,23 @@
             align-items: center;
           }
         }
+
         .toggle-children {
           top: 0;
           display: flex;
           align-items: center;
+
           &::before {
             @include icon-base();
             content: "\f0d7";
           }
+
           &.opened {
             &::before {
               content: "\f0d8";
             }
           }
+
           .toggle-children-icon {
             display: none;
           }

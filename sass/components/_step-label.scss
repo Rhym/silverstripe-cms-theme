@@ -1,0 +1,34 @@
+/*
+|--------------------------------------------------------------------------
+| Step Label
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .step-label {
+    .flyout {
+      background: map-get-deep($palettes, 'primary', 'base');
+      color: map-get-deep($palettes, 'primary', 'color');
+    }
+
+    .arrow {
+      background: 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        // @TODO: Ryan Potter - 07/03/17 - Convert to ems
+        width: 26px;
+        height: 26px;
+        border: 13px solid transparent;
+        border-left-color: map-get-deep($palettes, 'primary', 'base');
+        transform: scaleX(0.5) translate3d(-50%, 0, 0);
+      }
+    }
+  }
+}

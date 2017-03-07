@@ -4,6 +4,11 @@
 |--------------------------------------------------------------------------
 */
 
+.field.CompositeField.tabset {
+  border-width: 0;
+  box-shadow: none;
+}
+
 .tab {
   > .field {
     border-width: 1px;
@@ -11,5 +16,5 @@
 }
 
 .field {
-  border-color: rgba(0, 0, 0, 0.14);
+  border-color: $border-color;
 }

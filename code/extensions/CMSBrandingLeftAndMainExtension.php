@@ -8,19 +8,11 @@ class CMSBrandingLeftAndMainExtension extends LeftAndMainExtension
   /**
    * @var string
    */
-  private static $cms_menu_background = '#005a93';
+  private static $cms_menu_background = '#1976D2';
   /**
    * @var string
    */
   private static $cms_menu_color = '#fff';
-  /**
-   * @var string
-   */
-  private static $cms_highlight_color = '#ce0058';
-  /**
-   * @var string
-   */
-  private static $cms_highlight_background_color = '#ce0058';
 
   public function init()
   {

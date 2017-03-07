@@ -1,0 +1,18 @@
+/*
+|--------------------------------------------------------------------------
+| HTML Editor Field
+|--------------------------------------------------------------------------
+*/
+
+.htmleditorfield-dialog {
+  .htmleditorfield-from-web {
+    button {
+      &.add-url {
+        .ui-button-text {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,115 +1,61 @@
-/** =========================================
- * Variables
- ===========================================*/
+// Borders
+$border-radius: 0.2em;
+$border-radius--small: 0.1em;
+$border-color: rgba(0, 0, 0, 0.14);
+$border-color--dark: rgba(0, 0, 0, 0.18);
+$border-color--light: rgba(0, 0, 0, 0.08);
+$border-color--lighter: rgba(0, 0, 0, 0.04);
+$border-transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9);
 
-$ss-background-default: #e6eaed;
+// Buttons
+$button-height: 2.14em;
+$button-height--small: 1.5em;
+$button-padding-x: 0.74em;
+$button-padding-x--small: 0.4em;
 
-$gray-darker: #444;
-/** Text */
-$gray-dark: #757575;
-/** Secondary Text / Icons */
-$gray: #BDBDBD;
-/** Hint Text */
-$gray-light: #E0E0E0;
-/** Dividers */
-$gray-lighter: #f9f9f9;
+// Input
+$input-font-size: 1em;
+$input-height: 2.14em;
+$input-padding-x: 0.74em;
+$input-shadow: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.15), inset 0 1px 1px rgba(map-get-deep($input, 'border'), 0.2);
+$input-shadow--focus: 0 0 0 1px map-get-deep($palettes, 'primary', 'base'), 0 0 0 3px rgba(map-get-deep($palettes, 'primary', 'base'), 0.3), inset 0 1px 1px rgba(map-get-deep($palettes, 'primary', 'base'), 0.2);
+$input-shadow--focus-darker: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.35), inset 0 1px 1px rgba(map-get-deep($input, 'border'), 0.4);
 
-$brand-default: #fff;
-$brand-default-dark: shade($brand-default, 10);
-$brand-default-light: tint($brand-default, 10);
-$brand-default-color: $gray-darker;
+// Icons
+$icon-size--large: 1.3em;
 
-$brand-primary: #1b354c;
-$brand-primary-dark: shade($brand-primary, 10);
-$brand-primary-light: tint($brand-primary, 10);
-$brand-primary-color: #fff;
+$icon--save: "\f0c7";
+$icon--tick: "\f00c";
+$icon--plus-circle: "\f055";
+$icon--file-text: "\f0f6";
 
-$brand-secondary: #607D8B;
-$brand-secondary-dark: shade($brand-secondary, 10);
-$brand-secondary-light: tint($brand-secondary, 10);
-$brand-secondary-color: #fff;
+$icon--times: "\f057";
+$icon--minus-circle: "\f056";
+$icon--pencil: "\f040";
+$icon--edit: "\f040";
 
-$brand-inverse: #212121;
-$brand-inverse-dark: shade($brand-inverse, 10);
-$brand-inverse-light: tint($brand-inverse, 10);
-$brand-inverse-color: #fff;
+$icon--loader: "\f013";
+$icon--download: "\f019";
+$icon--print: "\f02f";
 
-/** -----------------------------------------
- * Opacity
- * ----------------------------------------*/
+$icon--link: "\f0c1";
+$icon--link-broken: "\f127";
 
-$opacity-light: 0.1;
-$opacity-base: 0.3;
-$opacity-dark: 0.4;
+$icon--cloud-upload: "\f0ee";
+$icon--upload: "\f093";
 
-/** -----------------------------------------
- * Fonts
- * ----------------------------------------*/
+$icon--search: "\f002";
+$icon--sort: "\f0dc";
+$icon--sort-asc: "\f0de";
+$icon--sort-desc: "\f0dd";
+$icon--caret-up: "\f0d8";
+$icon--caret-down: "\f0d7";
 
-$font-family-base: sans-serif;
+$icon--back: "\f0a8";
+$icon--step-forwards: "\f051";
+$icon--step-fast-forwards: "\f050";
+$icon--step-backwards: "\f048";
+$icon--step-fast-backwards: "\f049";
 
-$font-size-small: 11px;
-$font-size-base: 13px;
-$font-size-heading-base: 24px;
-
-$line-height-base: 18px;
-
-/** -----------------------------------------
- * Sizing
- * ----------------------------------------*/
-
-$gutter: 30px;
-
-$gap-xl: 64px;
-$gap-lg: 32px;
-$gap-md: 16px;
-$gap-sm: 8px;
-$gap-xs: 4px;
-
-/** -----------------------------------------
- * Animation
- * ----------------------------------------*/
-
-$transition-base: .1s ease-out;
-
-/** -----------------------------------------
- * Border Radii
- * ----------------------------------------*/
-
-$border-radius-small: 2px;
-$border-radius-base: .2em;
-$border-radius-large: 8px;
-
-/** -----------------------------------------
- * Icons
- * ----------------------------------------*/
-
-$icon-size: 16px;
-$cms-branding-icon-path: "../images/icons/admin";
-$boilerplate-module-path: "../../boilerplate/code/Modules";
-$icons-inverse: true;
-
-/** -----------------------------------------
- * CMS Menu
- * ----------------------------------------*/
-
-$menu-font-weight: 600;
-$menu-padding: 20px;
-$menu-padding-x: $menu-padding;
-$menu-padding-y: ceil($menu-padding * 0.6);
-$menu-line-height: $line-height-base + $menu-padding-y * 2;
-
-/** -----------------------------------------
- * GridFields / Accordions
- * ----------------------------------------*/
-
-%gridfield-accordion-style {
-  background: map-get-deep($palettes, 'default', 'base');
-  background: map-get-deep($palettes, 'default', 'base');
-  border-color: map-get-deep($palettes, 'default', 'dark') !important; // Override javascript hierarchy
-}
-
-%gridfield-accordion-content-style {
-  background: map-get-deep($palettes, 'default', 'base');
-  border-color: map-get-deep($palettes, 'default', 'dark') !important; // Override javascript hierarchy
-}
+// Loader
+$loader-size: 3rem;

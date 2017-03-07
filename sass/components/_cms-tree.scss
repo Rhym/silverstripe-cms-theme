@@ -1,0 +1,45 @@
+/*
+|--------------------------------------------------------------------------
+| Site Tree
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .cms-tree {
+    &.jstree {
+      li.jstree-checked > a,
+      li.jstree-checked > a:link {
+        text-shadow: none;
+        color: map-get-deep($palettes, 'primary', 'link');
+        background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+      }
+
+      a {
+        text-shadow: none;
+        color: map-get-deep($palettes, 'primary', 'link');
+
+        &.jstree-clicked,
+        &.jstree-hovered {
+          background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+        }
+      }
+
+      span.badge {
+        &.status-modified,
+        &.status-addedtodraft,
+        &.status-archived,
+        &.status-deletedonlive,
+        &.status-removedfromdraft,
+        &.status-workflow-approval {
+          background: transparent none;
+          color: inherit;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+
+  .cms-tree-filtered {
+    background: transparent none;
+  }
+}

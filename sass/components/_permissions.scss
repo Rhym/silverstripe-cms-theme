@@ -1,0 +1,28 @@
+/*
+|--------------------------------------------------------------------------
+| Permissions
+|--------------------------------------------------------------------------
+*/
+
+.permissioncheckboxsetfield_readonly {
+  .optionset {
+    li {
+      label {
+        .ui-icon {
+          background: transparent none;
+
+          &::after {
+            @include icon-base;
+            content: $icon--minus-circle;
+            display: block;
+            text-indent: 0;
+          }
+
+          &.btn-icon-accept::after {
+            content: $icon--tick;
+          }
+        }
+      }
+    }
+  }
+}

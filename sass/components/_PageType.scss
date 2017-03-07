@@ -1,15 +1,10 @@
-@import "gridfields/mixins";
-
 /*
 |--------------------------------------------------------------------------
-| Accordions
+| Page Types
 |--------------------------------------------------------------------------
 */
 
-.ss-toggle {
-  .ui-accordion-header {
-    &.ui-state-default {
-      @include gridfield-accordion-style;
-    }
-  }
+#PageType ul li:hover,
+#PageType ul li.selected {
+  background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
 }

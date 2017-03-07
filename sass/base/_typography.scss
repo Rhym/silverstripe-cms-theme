@@ -1,15 +1,11 @@
-@import "gridfields/mixins";
-
 /*
 |--------------------------------------------------------------------------
-| Accordions
+| Typography
 |--------------------------------------------------------------------------
 */
 
-.ss-toggle {
-  .ui-accordion-header {
-    &.ui-state-default {
-      @include gridfield-accordion-style;
-    }
+.cms {
+  a {
+    color: map-get-deep($palettes, 'primary', 'link');
   }
 }

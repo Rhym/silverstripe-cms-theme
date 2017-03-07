@@ -14,10 +14,13 @@ $private-sassy-maps-suppress-warnings: false !default;
   @if not $private-sassy-maps-suppress-warnings {
     @if $get == null {
       @warn "Map has no value for key search `#{$warn}`";
-    } @else if type-of($get) != "map" {
+    }
+
+    @else if type-of($get) != "map" {
       @warn "Non-map value found for key search `#{$warn}`, cannot search for key `#{$key}`";
     }
   }
+
   @return null;
 }
 
@@ -41,7 +44,9 @@ $private-sassy-maps-suppress-warnings: false !default;
         @if $get == null {
           @return map-get-deep-warning($warn, $get, nth($keys, $i));
         }
-      } @else {
+      }
+
+      @else {
         @return map-get-deep-warning($warn, $get, nth($keys, $i));
       }
     }
