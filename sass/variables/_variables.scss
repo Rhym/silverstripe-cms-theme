@@ -1,0 +1,61 @@
+// Borders
+$border-radius: 0.2em;
+$border-radius--small: 0.1em;
+$border-color: rgba(0, 0, 0, 0.14);
+$border-color--dark: rgba(0, 0, 0, 0.18);
+$border-color--light: rgba(0, 0, 0, 0.08);
+$border-color--lighter: rgba(0, 0, 0, 0.04);
+$border-transition: box-shadow 100ms cubic-bezier(0.4, 1, 0.75, 0.9);
+
+// Buttons
+$button-height: 2.14em;
+$button-height--small: 1.5em;
+$button-padding-x: 0.74em;
+$button-padding-x--small: 0.4em;
+
+// Input
+$input-font-size: 1em;
+$input-height: 2.14em;
+$input-padding-x: 0.74em;
+$input-shadow: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.15), inset 0 1px 1px rgba(map-get-deep($input, 'border'), 0.2);
+$input-shadow--focus: 0 0 0 1px map-get-deep($palettes, 'primary', 'base'), 0 0 0 3px rgba(map-get-deep($palettes, 'primary', 'base'), 0.3), inset 0 1px 1px rgba(map-get-deep($palettes, 'primary', 'base'), 0.2);
+$input-shadow--focus-darker: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.35), inset 0 1px 1px rgba(map-get-deep($input, 'border'), 0.4);
+
+// Icons
+$icon-size--large: 1.3em;
+
+$icon--save: "\f0c7";
+$icon--tick: "\f00c";
+$icon--plus-circle: "\f055";
+$icon--file-text: "\f0f6";
+
+$icon--times: "\f057";
+$icon--minus-circle: "\f056";
+$icon--pencil: "\f040";
+$icon--edit: "\f040";
+
+$icon--loader: "\f013";
+$icon--download: "\f019";
+$icon--print: "\f02f";
+
+$icon--link: "\f0c1";
+$icon--link-broken: "\f127";
+
+$icon--cloud-upload: "\f0ee";
+$icon--upload: "\f093";
+
+$icon--search: "\f002";
+$icon--sort: "\f0dc";
+$icon--sort-asc: "\f0de";
+$icon--sort-desc: "\f0dd";
+$icon--caret-up: "\f0d8";
+$icon--caret-down: "\f0d7";
+
+$icon--back: "\f0a8";
+$icon--step-forwards: "\f051";
+$icon--step-fast-forwards: "\f050";
+$icon--step-backwards: "\f048";
+$icon--step-fast-backwards: "\f049";
+
+// Loader
+$loader-size: 3rem;

@@ -1,0 +1,371 @@
+@import "mixins";
+
+@import "../buttons/mixins";
+
+/*
+|--------------------------------------------------------------------------
+| GridFields
+|--------------------------------------------------------------------------
+*/
+
+body.cms {
+
+  .gridfield-better-buttons-prevnext {
+    .ui-button-text {
+      line-height: inherit;
+      padding: 0;
+    }
+  }
+
+  table {
+    &.ss-gridfield-table {
+      .right {
+        .pagination-records-number {
+          @include gridfield-color;
+        }
+      }
+
+      .ss-ui-button {
+        box-shadow: none;
+        background: transparent none;
+
+        &.ui-state-default,
+        &.ui-state-hover,
+        &.ui-state-active,
+        &.ui-state-focus {
+          box-shadow: none;
+          background: transparent none;
+        }
+      }
+
+      tbody {
+        td {
+          a {
+            // Edit Button
+            &.edit-link {
+              position: relative;
+              background: transparent none;
+              color: currentColor;
+
+              &::after {
+                @include icon-base($icon-size--large);
+                content: $icon--pencil;
+                display: block;
+                text-indent: 0;
+                width: 1em;
+                height: 1em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+              }
+            }
+          }
+
+          button {
+            $icon-size: 20px;
+            margin: 0;
+            padding: 0 !important;
+            width: $icon-size;
+            height: $icon-size;
+            min-height: $icon-size;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .ui-icon {
+              width: $icon-size;
+              height: $icon-size;
+              min-height: $icon-size;
+              position: static;
+              transform: translate3d(0, 0, 0);
+            }
+
+            .ui-button-text {
+              display: none;
+            }
+
+            &.gridfield-button-delete {
+              .ui-icon {
+                &::after {
+                  @include icon-base;
+                  content: $icon--times;
+                  color: map-get-deep($palettes, 'danger', 'base');
+                }
+              }
+            }
+          }
+        }
+      }
+
+      tr {
+        &:first-child {
+          &:hover {
+            background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+          }
+        }
+
+        &.even {
+          background: rgba(0, 0, 0, 0.04);
+
+          &:hover {
+            background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+          }
+        }
+
+        &.odd {
+          background: transparent none;
+
+          &:hover {
+            background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+          }
+        }
+
+        &.title {
+          th {
+            @include gridfield-accordion-style;
+            border: 1px solid;
+            border-bottom-width: 0;
+
+            h2 {
+              text-shadow: none;
+              color: map-get-deep($palettes, 'secondary', 'color');
+            }
+          }
+        }
+        // No items to display
+        &.ss-gridfield-no-items {
+          > td {
+            &:first-child {
+              padding: 6px 8px;
+              border-bottom: 1px solid $border-color;
+              border-bottom-left-radius: 0.2em;
+              border-bottom-right-radius: 0.2em;
+            }
+          }
+        }
+        // Search filter
+        &.filter-header {
+          .extra {
+            background: map-get-deep($palettes, 'secondary', 'base');
+            color: map-get-deep($palettes, 'secondary', 'color');
+            // Input fields in the search filter.
+            .fieldholder-small {
+              padding: 0;
+            }
+          }
+        }
+
+        th {
+          border-radius: 0;
+
+          &.main {
+            @include gridfield-color;
+            @include gridfield-accordion-content-style;
+            border-color: $border-color;
+            border-left-width: 0;
+
+            &:first-child {
+              border-left-width: 1px;
+            }
+          }
+          // Sortable GridField bar
+          &.sortablerowsheading {
+            border-left: 1px solid $border-color;
+            background: $border-color;
+            color: map-get-deep($palettes, 'secondary', 'color');
+          }
+
+          button {
+            &.ss-gridfield-sort {
+              @include gridfield-color;
+              background-image: none;
+
+              &:hover,
+              &:active {
+                @include gridfield-color;
+              }
+
+              &::after {
+                @include icon-base;
+                content: $icon--sort;
+                position: absolute;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                right: 4px;
+              }
+
+              &.ss-gridfield-sorted-asc {
+                &::after {
+                  content: $icon--sort-asc;
+                }
+              }
+
+              &.ss-gridfield-sorted-desc {
+                &::after {
+                  content: $icon--sort-desc;
+                }
+              }
+            }
+            &.ss-ui-button {
+
+              // Close button
+              &.ss-gridfield-button-close {
+                background: transparent none;
+                text-indent: 0;
+                color: currentColor;
+                text-shadow: none;
+                opacity: 1;
+
+                &::after {
+                  @include icon-base;
+                  content: $icon--times;
+                }
+
+                &:hover,
+                &.ui-state-default,
+                &.ui-state-hover,
+                &.ui-state-active {
+                  color: currentColor !important; // Override Gridfields important tag.
+                  background: transparent none;
+                }
+
+                .ui-button-text {
+                  display: none;
+                }
+              }
+
+              // Search Icon
+              &.ss-gridfield-button-filter {
+                text-indent: 0;
+                border-width: 0;
+                background: transparent none;
+                color: currentColor;
+                text-shadow: none;
+
+                &::after {
+                  @include icon-base;
+                  content: $icon--search;
+                }
+
+                &:hover,
+                &.ui-state-default,
+                &.ui-state-hover,
+                &.ui-state-active {
+                  color: currentColor !important; // Override Gridfields important tag.
+                  background: transparent none;
+
+                  &.trigger {
+                    background: transparent none;
+                  }
+                }
+
+                &.trigger {
+                  background: transparent none;
+                }
+
+                .ui-button-text {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          input {
+            &.ss-gridfield-sort {
+              box-shadow: $input-shadow;
+              background: map-get-deep($input, 'background');
+              border-width: 0;
+
+              &:focus {
+                border: none;
+                box-shadow: $input-shadow--focus-darker;
+              }
+            }
+          }
+        }
+
+        td {
+          &.bottom-all {
+            @include gridfield-accordion-style;
+            border: 1px solid $border-color;
+
+            .pagination-records-number {
+              @include gridfield-color;
+            }
+            // Pagination
+            .datagrid-pagination {
+              .ui-button-text,
+              .pagination-page-number {
+                color: map-get-deep($palettes, 'secondary', 'color');
+                text-shadow: none;
+              }
+
+              .pagination-page-number {
+                input {
+                  margin: 0 0.5em;
+                  border-width: 0;
+                  text-align: center;
+                  padding: 0 $input-padding-x;
+                  height: auto;
+                }
+              }
+
+              button {
+                &.ss-gridfield-nextpage,
+                &.ss-gridfield-previouspage,
+                &.ss-gridfield-firstpage,
+                &.ss-gridfield-lastpage {
+                  background: none;
+
+                  &::after {
+                    @include icon-base(1.3em);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                  }
+                }
+                &.ss-gridfield-nextpage::after {
+                  content: $icon--step-forwards;
+                }
+
+                &.ss-gridfield-previouspage::after {
+                  content: $icon--step-backwards;
+                }
+
+                &.ss-gridfield-firstpage::after {
+                  content: $icon--step-fast-backwards;
+                }
+
+                &.ss-gridfield-lastpage::after {
+                  content: $icon--step-fast-forwards;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.cms {
+  .ui-widget{
+    &.gridfield-better-buttons-delete {
+      @include button;
+      &.ui-state-default {
+        @include button-default;
+        color: map-get-deep($palettes, 'danger', 'base');
+      }
+      &.ui-state-hover {
+        @include button-hover;
+      }
+      &.ui-state-focus,
+      &.ui-state-active {
+        @include button-focus;
+      }
+    }
+  }
+}

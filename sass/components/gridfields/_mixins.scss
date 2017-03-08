@@ -1,0 +1,19 @@
+@mixin gridfield-color() {
+  color: map-get-deep($palettes, 'secondary', 'color') !important; // TinyMCE has important tags everywhere. Sigh.
+  text-shadow: none;
+
+  span {
+    text-shadow: none;
+  }
+}
+
+@mixin gridfield-accordion-style() {
+  background: map-get-deep($palettes, 'default', 'base');
+  background: map-get-deep($palettes, 'default', 'base');
+  border-color: map-get-deep($palettes, 'default', 'dark') !important; // Override javascript hierarchy
+}
+
+@mixin gridfield-accordion-content-style() {
+  background: map-get-deep($palettes, 'default', 'base');
+  border-color: map-get-deep($palettes, 'default', 'dark') !important; // Override javascript hierarchy
+}

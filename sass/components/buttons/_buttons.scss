@@ -1,0 +1,220 @@
+@import "keyframes";
+@import "mixins";
+
+/*
+|--------------------------------------------------------------------------
+| Buttons
+|--------------------------------------------------------------------------
+*/
+
+.cms .ss-ui-button[class*="font-icon-"],
+.cms .ss-ui-button[class^="font-icon-"],
+.cms .ss-ui-button.ss-ui-button-constructive[class*="font-icon-"] {
+  padding: 0 $button-padding-x !important; // Remove left padding, since these are inline.
+}
+
+.cms .ss-ui-button {
+  @include button;
+
+  // Default State
+  &.ui-state-default,
+  &[class*="font-icon-"],
+  &[class*="font-icon-"].no-text,
+  &[class^="font-icon-"],
+  &[class^="font-icon-"].no-text
+  {
+    @include button-default;
+  }
+  // Hover State
+  &.ui-state-hover,
+  &[class*="font-icon-"]:hover,
+  &[class*="font-icon-"].no-text:hover,
+  &[class^="font-icon-"]:hover,
+  &[class^="font-icon-"].no-text:hover
+  {
+    @include button-hover;
+  }
+  // Active/Focus state
+  &.ui-state-focus,
+  &.ui-state-active,
+  &[class*="font-icon-"]:focus,
+  &[class*="font-icon-"].no-text:focus,
+  &[class*="font-icon-"].active,
+  &[class*="font-icon-"].no-text.active,
+  &[class^="font-icon-"]:focus,
+  &[class^="font-icon-"].no-text:focus,
+  &[class^="font-icon-"].active,
+  &[class^="font-icon-"].no-text.active
+  {
+    @include button-focus;
+  }
+
+  &.ss-ui-button-small {
+    min-height: $button-height--small;
+    line-height: $button-height--small;
+    padding: 0 $button-padding-x--small;
+  }
+
+  &.ui-button-text-icon-primary,
+  &.ui-button-text-icons {
+    padding-left: 2.24em;
+  }
+
+  &.ui-corner-left {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  &.ui-corner-right {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  .ui-button-text {
+    padding: 0;
+    line-height: $button-height;
+    text-decoration: none;
+  }
+
+  &.loading {
+    .ui-icon {
+      background: transparent none !important;
+
+      &::after {
+        color: currentColor;
+        animation: loading 2000ms linear infinite; // @TODO - Ryan Potter - 1/3/17 Stop the spinner from wobbling.
+        content: $icon--loader;
+      }
+    }
+  }
+  // States
+  &.ss-ui-action-constructive {
+    font-weight: normal;
+    color: map-get-deep($palettes, 'success', 'color');
+    background: map-get-deep($palettes, 'success', 'base');
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat map-get-deep($palettes, 'success', 'base');
+
+    .ui-icon {
+      &::after {
+        color: currentColor;
+      }
+    }
+
+    &.ui-state-hover,
+    &.ui-state-focus,
+    &.ui-state-active {
+      box-shadow: inset 0 0 0 1px $border-color, inset 0 -1px 0 $border-color--light;
+      background: map-get-deep($palettes, 'success', 'dark');
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) left no-repeat, center no-repeat map-get-deep($palettes, 'success', 'dark');
+    }
+  }
+
+  &.gridfield-better-buttons-delete,
+  &.ss-ui-action-destructive {
+    color: map-get-deep($palettes, 'danger', base);
+  }
+  // Gridfield
+  &.gridfield-better-buttons-prevnext {
+    .ui-button-text {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &.gridfield-better-buttons-prev {
+    .ui-button-text::before {
+      @include icon-base(1em);
+      content: "\f0d9";
+    }
+  }
+
+  &.gridfield-better-buttons-next {
+    .ui-button-text::after {
+      @include icon-base(1em);
+      content: "\f0da";
+    }
+  }
+  // Icons
+  .ui-icon {
+    @include icon-base(1em);
+    background: transparent none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    transform: translate3d(0, -50%, 0);
+    text-indent: 0;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Icons
+|--------------------------------------------------------------------------
+*/
+
+.btn-icon {
+  &-add::after {
+    content: $icon--plus-circle;
+  }
+
+  &-accept::after {
+    color: map-get-deep($palettes, 'success', 'base');
+    content: $icon--tick;
+  }
+
+  &-disk::after {
+    content: $icon--save;
+  }
+
+  &-addpage::after {
+    content: $icon--file-text;
+  }
+
+  &-addMedia::after {
+    content: $icon--plus-circle;
+  }
+
+  &-minus-circle::after,
+  &-decline::after {
+    color: map-get-deep($palettes, 'danger', 'base');
+    content: $icon--minus-circle;
+  }
+
+  &-download-csv::after {
+    content: $icon--download;
+  }
+
+  &-grid_print::after {
+    content: $icon--print;
+  }
+
+  &-chain--plus::after {
+    content: $icon--link;
+  }
+
+  &-pencil::after {
+    content: $icon--edit;
+  }
+
+  &-chain--minus::after,
+  &-plug-disconnect-prohibition::after {
+    content: $icon--link-broken;
+  }
+
+  &-network-cloud::after {
+    content: $icon--cloud-upload;
+  }
+
+  &-back::after {
+    content: $icon--back;
+  }
+
+  //@TODO - Ryan Potter - Set height and width for TinyMCE image upload field.
+  &-drive-upload-large::after,
+  &-drive-upload::after {
+    content: $icon--upload;
+  }
+}

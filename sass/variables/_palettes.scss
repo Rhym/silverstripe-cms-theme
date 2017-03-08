@@ -1,0 +1,37 @@
+/**
+ * base: 500
+ * dark: 700
+ * darker: 800
+ */
+
+$palettes: (
+  'default': (
+    'base': #f0f2f4,
+    'light': #f9f9f9,
+    'dark': #ccd0d3,
+    'color': #4f5861,
+  ),
+  'primary': (
+    'base': #1976d2,
+    'dark': #1565c0,
+    'darker': #0d47a1,
+    'color': #fff,
+    'link': #1976d2,
+  ),
+  'secondary': (
+    'base': #f0f2f4,
+    'color': #4f5861,
+  ),
+  'success': (
+    'base': #4caf50,
+    'dark': #388e3c,
+    'darker': #2e7d32,
+    'color': #fff,
+  ),
+  'danger': (
+    'base': #f44336,
+    'dark': #d32f2f,
+    'darker': #c62828,
+    'color': #fff,
+  ),
+);

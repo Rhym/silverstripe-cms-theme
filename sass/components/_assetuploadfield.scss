@@ -1,0 +1,195 @@
+/*
+|--------------------------------------------------------------------------
+| Asset Upload Field
+|--------------------------------------------------------------------------
+*/
+.cms {
+  .ss-assetuploadfield,
+  .ss-uploadfield {
+    .ss-uploadfield-editandorganize {
+      .ss-uploadfield-files {
+        .ss-uploadfield-item {
+          &.template-upload {
+            .ss-uploadfield-item-name {
+              .name {
+                color: map-get-deep($palettes, 'primary', 'color');
+                text-shadow: none;
+              }
+
+              .ss-uploadfield-item-status {
+                color: map-get-deep($palettes, 'primary', 'color');
+                text-shadow: none;
+              }
+            }
+          }
+        }
+
+        .ss-uploadfield-item-progressbar {
+          background: map-get-deep($palettes, 'default', 'base');
+        }
+
+        .ss-uploadfield-item-progressbarvalue {
+          background: map-get-deep($palettes, 'primary', 'base');
+        }
+
+        .ss-uploadfield-item-progress {
+          .ss-uploadfield-item-progressbar {
+            background: map-get-deep($palettes, 'default', 'base');
+          }
+
+          .ss-uploadfield-item-progressbarvalue {
+            background: map-get-deep($palettes, 'primary', 'base');
+          }
+        }
+      }
+    }
+  }
+}
+
+.cms {
+  .htmleditorfield-mediaform {
+    .ss-assetuploadfield {
+      .ss-uploadfield-editandorganize {
+        .ss-uploadfield-files {
+          .ss-uploadfield-item-info {
+            background: map-get-deep($palettes, 'default', 'light');
+            color: map-get-deep($palettes, 'default', 'color');
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cms {
+  .ss-assetuploadfield {
+    .ss-uploadfield-addfile {
+      .ss-uploadfield-fromcomputer.ss-ui-button {
+        font-size: 1.3em;
+        padding-left: 2.24em;
+
+        .ui-icon {
+          background: none;
+        }
+
+        .btn-icon-drive-upload-large {
+          margin: 0;
+          width: 1em;
+          height: 1em;
+        }
+      }
+    }
+
+    .ss-uploadfield-files {
+      .ss-uploadfield-item {
+        border-width: 0;
+        border-radius: 0;
+      }
+
+      .ss-uploadfield-item-preview {
+        width: 39px;
+        height: 28px;
+        top: 1px;
+        left: 1px;
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .ss-uploadfield-item-info {
+        border-radius: $border-radius;
+        background: map-get-deep($palettes, 'default', 'light');
+        background: linear-gradient(to bottom, map-get-deep($palettes, 'default', 'light'), mix(map-get-deep($palettes, 'default', 'light'), #000, 97)) left no-repeat, center no-repeat;
+        box-shadow: inset 0 0 0 1px $border-color--dark, inset 0 -1px 0 $border-color;
+        color: map-get-deep($palettes, 'default', 'color');
+      }
+
+      .ss-uploadfield-item-name {
+        background: transparent none;
+
+        .name {
+          text-shadow: none;
+        }
+      }
+
+      .ss-uploadfield-item-actions {
+        .ss-ui-button {
+          color: map-get-deep($palettes, 'default', 'color');
+
+          .ui-icon {
+            display: block;
+          }
+
+          &.ss-uploadfield-item-edit {
+            .ui-icon {
+              display: block;
+            }
+
+            .ui-button-text {
+              .toggle-details {
+                display: none;
+              }
+            }
+          }
+
+          &.ss-uploadfield-item-cancel {
+            position: relative;
+
+            .ui-icon {
+              position: absolute;
+              top: 50%;
+              margin: 0;
+              transform: translate3d(0, -50%, 0);
+              color: map-get-deep($palettes, 'danger', 'base');
+
+              &::after {
+                @include icon-base(1em);
+                content: $icon--minus-circle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cms {
+  .composite {
+    &.ss-assetuploadfield {
+      .details {
+        fieldset {
+          background: map-get-deep($palettes, 'default', 'light');
+          box-shadow: inset 0 0 0 1px $border-color--dark, inset 0 -1px 0 $border-color;
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| iFrames
+|--------------------------------------------------------------------------
+*/
+
+html {
+  .ss-assetuploadfield .ss-uploadfield-files .ss-uploadfield-item-editform iframe,
+  body.cms.ss-uploadfield-edit-iframe,
+  .composite.ss-assetuploadfield .details fieldset {
+    background: map-get-deep($palettes, 'default', 'light');
+  }
+}
+
+.cms {
+  .cms-file-info {
+    box-shadow: none;
+    border-color: $border-color;
+  }
+}

@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| Content Tools
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .cms-content-tools {
+    table {
+      tr {
+        &.active {
+          background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+          color: map-get-deep($palettes, 'default', 'color');
+
+          td {
+            border-color: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+          }
+        }
+
+        td {
+          &.last-column,
+          &.first-column {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

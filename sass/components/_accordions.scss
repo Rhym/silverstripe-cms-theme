@@ -1,0 +1,15 @@
+@import "gridfields/mixins";
+
+/*
+|--------------------------------------------------------------------------
+| Accordions
+|--------------------------------------------------------------------------
+*/
+
+.ss-toggle {
+  .ui-accordion-header {
+    &.ui-state-default {
+      @include gridfield-accordion-style;
+    }
+  }
+}

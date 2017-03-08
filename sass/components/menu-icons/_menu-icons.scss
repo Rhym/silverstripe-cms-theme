@@ -1,0 +1,16 @@
+@import "mixins";
+
+/*
+|--------------------------------------------------------------------------
+| Menu Icon
+|--------------------------------------------------------------------------
+|
+| Menu isn"t part of the menu loop, so it needs to be targeted individually.
+|
+*/
+
+#Menu-Help {
+  .icon {
+    @include cms-icon("\f128");
+  }
+}
