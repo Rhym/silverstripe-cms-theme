@@ -1,9 +1,18 @@
 Silverstripe CMS Branding
 =========================
 
+[![Build Status](https://travis-ci.org/Rhym/silverstripe-cms-theme.svg?branch=master)](https://travis-ci.org/Rhym/silverstripe-cms-theme)
+
 Just a nice little UI change for the cms.
 
 The theme supports an UploadField in the *Settings > Settings Tab > CMS Tab* for a logo to be displayed in the left-hand menu of the CMS.
+
+Installation
+------------
+
+```bash
+composer require ryanpotter/silverstripe-cms-theme
+```
 
 Configuration
 -------------
@@ -25,7 +34,7 @@ LeftAndMain:
 
 ### Example
 
-![demo-image](https://github.com/Rhym/silverstripe-cms-theme/blob/4.0/screenshot.jpg?raw=true)
+![demo-image](https://github.com/Rhym/silverstripe-cms-theme/blob/master/screenshot.jpg?raw=true)
 
 Grouping CMS Menus
 ------------------
