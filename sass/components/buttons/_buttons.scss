@@ -125,14 +125,14 @@
   &.gridfield-better-buttons-prev {
     .ui-button-text::before {
       @include icon-base(1em);
-      content: "\f0d9";
+      content: $icon--caret-left;
     }
   }
 
   &.gridfield-better-buttons-next {
     .ui-button-text::after {
       @include icon-base(1em);
-      content: "\f0da";
+      content: $icon--caret-right;
     }
   }
   // Icons
@@ -177,6 +177,7 @@
     content: $icon--plus-circle;
   }
 
+  &-delete::after,
   &-minus-circle::after,
   &-decline::after {
     color: map-get-deep($palettes, 'danger', 'base');
@@ -191,6 +192,7 @@
     content: $icon--print;
   }
 
+  &-plug-disconnect-prohibition::after,
   &-chain--plus::after {
     content: $icon--link;
   }
@@ -199,8 +201,8 @@
     content: $icon--edit;
   }
 
-  &-chain--minus::after,
-  &-plug-disconnect-prohibition::after {
+  &-unpublish::after,
+  &-chain--minus::after{
     content: $icon--link-broken;
   }
 

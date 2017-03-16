@@ -1,0 +1,21 @@
+.cms {
+  .dropdown-form-action {
+    .dropdown-form-action-menu {
+      > li {
+        > .ss-ui-button {
+          box-shadow: none;
+          background: none;
+          border-width: 0;
+          border-radius: 0;
+
+          &:hover,
+          &:focus {
+            box-shadow: none;
+            background: $border-color--light;
+          }
+        }
+      }
+    }
+  }
+}
+

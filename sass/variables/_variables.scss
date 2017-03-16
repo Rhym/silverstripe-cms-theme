@@ -24,6 +24,8 @@ $input-shadow--focus-darker: inset 0 0 0 1px rgba(map-get-deep($input, 'border')
 // Icons
 $icon-size--large: 1.3em;
 
+$icon--question: "\f29c";
+
 $icon--save: "\f0c7";
 $icon--tick: "\f00c";
 $icon--plus-circle: "\f055";
@@ -49,6 +51,8 @@ $icon--sort: "\f0dc";
 $icon--sort-asc: "\f0de";
 $icon--sort-desc: "\f0dd";
 $icon--caret-up: "\f0d8";
+$icon--caret-right: "\f0da";
+$icon--caret-left: "\f0d9";
 $icon--caret-down: "\f0d7";
 
 $icon--back: "\f0a8";
