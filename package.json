@@ -8,7 +8,8 @@
   "scripts": {
     "start": "./node_modules/.bin/gulp sass:watch",
     "build": "./node_modules/.bin/gulp sass && ./node_modules/.bin/gulp postcss",
-    "test": "stylelint sass/**/*.scss"
+    "test": "stylelint sass/**/*.scss",
+    "style-lint": "stylelint sass/**/*.scss"
   },
   "devDependencies": {},
   "dependencies": {

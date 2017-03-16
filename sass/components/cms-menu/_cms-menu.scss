@@ -121,6 +121,7 @@
         &.children {
           &.current {
             > a {
+              color: currentColor;
               background: transparent none;
             }
           }
@@ -169,6 +170,7 @@
       }
     }
 
+    // Hide the bottom panel
     .cms-panel-toggle.south {
       display: none;
     }
