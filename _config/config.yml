@@ -1,0 +1,29 @@
+AssetAdmin:
+  menu_icon_class: 'fa fa-files-o'
+
+CMSPagesController:
+  menu_icon_class: 'fa fa-sitemap'
+
+CMSSettingsController:
+  menu_icon_class: 'fa fa-cog'
+
+LeftAndMain:
+  extra_requirements_css:
+    - http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic,300italic,300,600,600italic
+    - https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    - silverstripe-branding/css/main.css
+  extensions:
+    - CMSBrandingLeftAndMainExtension
+
+ReportAdmin:
+  menu_icon_class: 'fa fa-area-chart'
+
+SecurityAdmin:
+  menu_icon_class: 'fa fa-lock'
+
+HelpAdmin:
+  menu_icon_class: 'fa fa-lock'
+
+SiteConfig:
+  extensions:
+    - CMSBrandingSiteConfigExtension

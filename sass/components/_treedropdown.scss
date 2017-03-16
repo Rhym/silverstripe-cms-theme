@@ -1,0 +1,78 @@
+/*
+|--------------------------------------------------------------------------
+| Tree Dropdown Field
+|--------------------------------------------------------------------------
+*/
+
+.field {
+  .TreeDropdownField {
+    background: transparent none;
+    border-width: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+
+    &:focus {
+      border-width: 0;
+      box-shadow: none;
+
+      .treedropdownfield-title {
+        background: map-get-deep($input, 'background');
+        box-shadow: 0 0 0 1px map-get-deep($palettes, 'primary', 'base'), 0 0 0 3px rgba(map-get-deep($palettes, 'primary', 'base'), 0.3);
+        border-width: 0;
+      }
+    }
+
+    &.treedropdownfield-with-rise {
+      .treedropdownfield-panel {
+        margin: 0;
+      }
+    }
+
+    .treedropdownfield-title {
+      box-sizing: border-box;
+      border-radius: $border-radius;
+      height: $input-height;
+      vertical-align: middle;
+      line-height: $input-height;
+      padding: 0 $input-padding-x;
+      outline: none;
+      border: 0;
+      box-shadow: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.15);
+      background: linear-gradient(to bottom, map-get-deep($input, 'background'), mix(map-get-deep($input, 'background'), #000, 97)) left no-repeat, center no-repeat;
+      transition: $border-transition;
+      float: none;
+      width: 100%;
+      display: block;
+    }
+
+    .treedropdownfield-toggle-panel-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0;
+      width: 24px; // Matching the chzn styling.
+      height: 100%;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &::after {
+        @include icon-base;
+        color: map-get-deep($input, 'icon');
+        content: "\f0d7";
+      }
+
+      .ui-icon {
+        display: none;
+      }
+    }
+
+    .treedropdownfield-panel {
+      margin: -1px 0 0;
+      border-color: $border-color;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/*
+|--------------------------------------------------------------------------
+| Fields
+|--------------------------------------------------------------------------
+*/
+
+.field.CompositeField.tabset {
+  border-width: 0;
+  box-shadow: none;
+}
+
+.tab {
+  > .field {
+    border-width: 1px;
+  }
+}
+
+.field {
+  border-color: $border-color;
+}

@@ -1,0 +1,20 @@
+/*
+|--------------------------------------------------------------------------
+| Device Preview
+|--------------------------------------------------------------------------
+*/
+
+.cms-preview.mobile .preview-scroll .preview-device-outer,
+.cms-preview.mobileLandscape .preview-scroll .preview-device-outer,
+.cms-preview.tablet .preview-scroll .preview-device-outer,
+.cms-preview.tabletLandscape .preview-scroll .preview-device-outer,
+.cms-preview.desktop .preview-scroll .preview-device-outer {
+  background: map-get-deep($palettes, 'default', 'base');
+  border: 1px solid $border-color;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+
+  .preview-device-inner {
+    border: 1px solid $border-color;
+  }
+}

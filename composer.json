@@ -1,0 +1,30 @@
+{
+  "name": "ryanpotter/silverstripe-cms-theme",
+  "description": "CMS Theme",
+  "type": "silverstripe-module",
+  "keywords": [
+    "silverstripe",
+    "theme"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Ryan Potter",
+      "homepage": "http://ryanpotter.co.nz/",
+      "role": "Developer"
+    }
+  ],
+  "suggest": {
+    "silverstripe-australia/grouped-cms-menu": "Group CMS menus to provide a better UX"
+  },
+  "require": {
+    "silverstripe/framework": "~3.3",
+    "composer/installers": "*"
+  },
+  "support": {
+    "issues": "https://github.com/Rhym/silverstripe-cms-theme/issues"
+  },
+  "extra": {
+    "installer-name": "silverstripe-branding"
+  }
+}

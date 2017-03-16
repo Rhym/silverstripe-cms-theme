@@ -1,0 +1,58 @@
+/*
+|--------------------------------------------------------------------------
+| Actions
+|--------------------------------------------------------------------------
+*/
+
+.cms-content-actions,
+.cms-preview-controls {
+  background: map-get-deep($palettes, 'default', 'light');
+  box-shadow: none;
+}
+
+.cms {
+  .ss-ui-action-tabset.action-menus.ss-tabset {
+    .ui-tabs-panel {
+      background: map-get-deep($palettes, 'default', 'light');
+      color: map-get-deep($palettes, 'default', 'color');
+
+      button.ss-ui-button {
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+          background: map-get-deep($palettes, 'default', 'base');
+        }
+      }
+    }
+  }
+
+  .cms-batch-actions {
+    display: flex;
+  }
+
+  .cms-content-batchactions-dropdown {
+    .Actions {
+      margin-left: -1px;
+    }
+
+    .field {
+      margin: 0;
+
+      .chzn-container-single .chzn-single {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    .dropdown {
+      height: auto;
+    }
+
+    .action {
+      font-size: 12px;
+      line-height: $button-height;
+      height: $button-height;
+    }
+  }
+}

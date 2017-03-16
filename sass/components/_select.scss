@@ -1,0 +1,49 @@
+/*
+|--------------------------------------------------------------------------
+| Select
+|--------------------------------------------------------------------------
+*/
+
+.field {
+  .chzn-container-single {
+    // Active State
+    &.chzn-container-active {
+      .chzn-single {
+        background: map-get-deep($input, 'background');
+        box-shadow: 0 0 0 1px map-get-deep($palettes, 'primary', 'base'), 0 0 0 3px rgba(map-get-deep($palettes, 'primary', 'base'), 0.3);
+      }
+    }
+
+    .chzn-single {
+      border-radius: $border-radius;
+      height: $input-height;
+      vertical-align: middle;
+      line-height: $input-height;
+      padding: 0 $input-padding-x;
+      outline: none;
+      border: 0;
+      box-shadow: inset 0 0 0 1px rgba(map-get-deep($input, 'border'), 0.15);
+      background: linear-gradient(to bottom, map-get-deep($input, 'background'), mix(map-get-deep($input, 'background'), #000, 97)) left no-repeat, center no-repeat;
+      transition: $border-transition;
+
+      div b {
+        background: transparent none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &::after {
+          @include icon-base;
+          color: map-get-deep($input, 'icon');
+          content: "\f0d7";
+        }
+      }
+    }
+
+    .chzn-drop {
+      background: map-get-deep($input, 'background');
+      border-color: rgba(map-get-deep($input, 'border'), 0.15);
+    }
+  }
+}

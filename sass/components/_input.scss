@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| Input
+|--------------------------------------------------------------------------
+*/
+
+.field {
+  input {
+    &.text {
+      outline: none;
+      border: none;
+      border-radius: $border-radius;
+      box-shadow: $input-shadow;
+      background: map-get-deep($input, 'background');
+      padding: 0 $input-padding-x;
+      font-size: $input-font-size;
+      font-weight: 400;
+      transition: $border-transition;
+      height: $input-height;
+      vertical-align: middle;
+      line-height: $input-height;
+
+      &:focus {
+        border: none;
+        box-shadow: $input-shadow--focus;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@keyframes infinite-spinning {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+
+  to {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}

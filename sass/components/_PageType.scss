@@ -1,0 +1,10 @@
+/*
+|--------------------------------------------------------------------------
+| Page Types
+|--------------------------------------------------------------------------
+*/
+
+#PageType ul li:hover,
+#PageType ul li.selected {
+  background: rgba(map-get-deep($palettes, 'primary', 'base'), 0.1);
+}

@@ -1,0 +1,20 @@
+/*
+|--------------------------------------------------------------------------
+| Upload
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .ss-uploadfield.ss-upload {
+    .middleColumn {
+      outline: none;
+      border: none;
+      border-radius: $border-radius;
+      box-shadow: $input-shadow;
+      background: map-get-deep($input, 'background');
+      padding: 0 $input-padding-x;
+      font-size: $input-font-size;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/*
+|--------------------------------------------------------------------------
+| Security
+|--------------------------------------------------------------------------
+*/
+
+#MemberImportFormIframe,
+#GroupImportFormIframe {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: map-get-deep($input, 'background');
+  border-radius: $border-radius;
+  border-width: 0;
+  box-shadow: $input-shadow;
+}

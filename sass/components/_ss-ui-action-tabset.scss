@@ -1,0 +1,74 @@
+@import "buttons/keyframes";
+
+/*
+|--------------------------------------------------------------------------
+| UI Action Tabset
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .ss-ui-action-tabset {
+    &.action-menus {
+      &.ss-tabset {
+        .ui-tabs-panel {
+          button {
+            &.loading {
+              background: transparent none;
+              display: flex;
+              align-items: center;
+
+              &::before {
+                @include icon-base(1em);
+                content: $icon--loader;
+                animation: loading 2000ms linear infinite; // @TODO - Ryan Potter - 1/3/17 Stop the spinner from wobbling.
+              }
+
+              .ui-button-text {
+                padding-left: 0.5em;
+              }
+            }
+          }
+        }
+
+        ul {
+          &.ui-tabs-nav {
+            li {
+              &.ui-state-active {
+                a {
+                  &::after {
+                    background: transparent none;
+                    content: $icon--caret-up;
+                  }
+
+                  &:hover {
+                    &::after {
+                      background: transparent none;
+                    }
+                  }
+                }
+              }
+
+              a {
+                color: map-get-deep($palettes, 'primary', 'link');
+
+                &::after {
+                  @include icon-base(1em);
+                  background: transparent none;
+                  content: $icon--caret-down;
+                }
+
+                &:hover {
+                  color: map-get-deep($palettes, 'primary', 'link');
+
+                  &::after {
+                    background: transparent none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
