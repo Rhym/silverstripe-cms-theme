@@ -1,0 +1,32 @@
+// Mixins
+
+@mixin list-anchor {
+  color: currentColor;
+  background: transparent none;
+  border-width: 0;
+  text-shadow: none;
+  padding: 1rem 0.5rem;
+  line-height: 1.5;
+  height: auto;
+}
+
+@mixin list-icon {
+  text-align: center;
+  margin: 0;
+  line-height: $icon-size--large;
+  transform: translate3d(0, -50%, 0);
+  color: currentColor;
+  opacity: 1;
+  background: none;
+  text-indent: 0;
+  font-size: $icon-size--large;
+  width: 2rem;
+  height: $icon-size--large;
+
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+  }
+}

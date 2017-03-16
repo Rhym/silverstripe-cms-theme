@@ -6,11 +6,15 @@
       </a>
       <% if $SiteConfig.CustomCMSLogo %>
         <% if $SiteConfig.CustomCMSLogo.is_a('DataObject') %>
-          <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CustomCMSLogo}</a>
-          </div><!-- /.logo -->
+          <div class="logo">
+            <a class="front-end-link" href="{$BaseHref}" target="_blank">{$SiteConfig.CustomCMSLogo}</a>
+          </div>
         <% else %>
-          <div class="logo"><a class="front-end-link" href="{$BaseHref}" target="_blank"><img
-            src="{$SiteConfig.CustomCMSLogo}" alt="$SiteConfig.Title CMS Logo"></a></div><!-- /.logo -->
+          <div class="logo">
+            <a class="front-end-link" href="{$BaseHref}" target="_blank">
+              <img src="{$SiteConfig.CustomCMSLogo}" alt="$SiteConfig.Title CMS Logo">
+            </a>
+          </div>
         <% end_if %>
       <% else %>
         <span><% if $SiteConfig %>$SiteConfig.Title<% else %>$ApplicationName<% end_if %></span>

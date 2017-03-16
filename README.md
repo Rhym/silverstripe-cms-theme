@@ -13,7 +13,6 @@ Installation
 ```bash
 composer require ryanpotter/silverstripe-cms-theme
 ```
-
 Configuration
 -------------
 

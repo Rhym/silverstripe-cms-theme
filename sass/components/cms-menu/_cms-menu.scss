@@ -1,0 +1,178 @@
+@import "mixins";
+
+/*
+|--------------------------------------------------------------------------
+| Menu
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .cms-panel {
+    .child-flyout-indicator {
+      display: none !important;
+    }
+    .collapsed-flyout {
+      position: static;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .cms-menu,
+  .cms-menu.collapsed {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: none;
+    background: map-get-deep($palettes, 'default', 'base');
+    width: 180px !important;
+
+    // The container for the Silverstripe logo, Username and logout button
+    .cms-logo-header.north {
+      padding: 0;
+      background: transparent none;
+      box-shadow: inset $border-color -1px 0 0;
+
+      span,
+      span a {
+        color: currentColor;
+      }
+    }
+
+    .cms-logo {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-bottom: 1px solid $border-color;
+
+      > a {
+        display: none;
+      }
+
+      > span {
+        margin: 0;
+      }
+
+      .logo {
+        > a {
+          padding: 0;
+          width: 100%;
+          background: transparent none;
+          position: static;
+
+          > img {
+            display: block;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .cms-login-status {
+      border-width: 0;
+      padding: 1rem;
+      height: auto;
+
+      .logout-link {
+        color: currentColor;
+        font-size: 1em;
+        display: block;
+        float: none;
+        padding: 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      > span {
+        padding: 0;
+        display: block;
+      }
+    }
+
+    .cms-panel-content,
+    .cms-panel-toggle {
+      box-shadow: inset $border-color -1px 0 0;
+    }
+    // The list of ModelAdmin actions
+    .cms-menu-list {
+      overflow: visible;
+
+      li {
+        float: none;
+
+        &.opened {
+          &.children ul {
+            display: block !important;
+          }
+        }
+
+        &.current {
+          a {
+            color: currentColor;
+            background: $border-color--light;
+
+            &:hover,
+            &:focus {
+              background: $border-color--light;
+            }
+          }
+        }
+
+        &.children {
+          &.current {
+            > a {
+              color: currentColor;
+              background: transparent none;
+            }
+          }
+
+          ul {
+            display: none !important;
+
+            li {
+              display: list-item !important;
+
+              &.current {
+                a {
+                  background: $border-color--light;
+                }
+              }
+            }
+
+            a {
+              @include list-anchor;
+              padding-left: 1rem;
+
+              .icon {
+                @include list-icon;
+              }
+            }
+          }
+        }
+
+        a {
+          @include list-anchor;
+
+          &:hover,
+          &:focus {
+            background: $border-color--lighter;
+          }
+
+          .icon {
+            @include list-icon;
+          }
+
+          .text {
+            display: block;
+            margin-left: 2.5rem;
+          }
+        }
+      }
+    }
+
+    // Hide the bottom panel
+    .cms-panel-toggle.south {
+      display: none;
+    }
+  }
+}
