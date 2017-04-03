@@ -197,6 +197,10 @@
     content: $icon--link;
   }
 
+  &-magnifier::after {
+    content: $icon--search;
+  }
+
   &-pencil::after {
     content: $icon--edit;
   }
