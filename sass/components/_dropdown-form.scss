@@ -13,6 +13,10 @@
             box-shadow: none;
             background: $border-color--light;
           }
+
+          &::after {
+            display: none;
+          }
         }
       }
     }

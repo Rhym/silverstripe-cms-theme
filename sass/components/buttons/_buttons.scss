@@ -165,6 +165,10 @@
     content: $icon--tick;
   }
 
+  &-cross-circle::after {
+    content: $icon--times;
+  }
+
   &-disk::after {
     content: $icon--save;
   }
