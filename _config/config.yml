@@ -1,0 +1,10 @@
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - _silverstripe-branding/css/main.css
+  extensions:
+    - RyanPotter\SilverStripeCMSTheme\Extensions\LeftAndMainExtension
+    - RyanPotter\SilverStripeCMSTheme\Extensions\GroupedCmsMenu
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - RyanPotter\SilverStripeCMSTheme\Extensions\SiteConfigExtension

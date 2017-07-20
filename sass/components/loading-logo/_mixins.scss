@@ -1,0 +1,19 @@
+@import "variables";
+
+@mixin loading-spinner() {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: $loader-size;
+    height: $loader-size;
+    background: transparent none;
+    border: 2px solid rgba(0, 0, 0, 0.04);
+    border-top-color: #0071c4 !important; // Fixes a bug in Chrome.
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    animation: infinite-spinning 800ms linear infinite;
+  }
+}

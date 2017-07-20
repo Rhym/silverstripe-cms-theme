@@ -1,0 +1,64 @@
+$branded-menu-toggle-size: 11px;
+
+.cms {
+  .branded-menu {
+    &--child {
+      padding-left: 0;
+    }
+
+    &__list-item {
+      list-style: none;
+
+      &--children {
+        > a {
+          &:first-child {
+            position: relative;
+          }
+        }
+
+        a {
+          padding: 16px 5px 16px 8px !important; // They are doing a shitty job of BEM, so we have to override ultra specific cascades.
+        }
+      }
+
+      .text {
+        margin-left: 30px !important;
+
+        @media (max-width: 767px) {
+          margin-left: 38px !important;
+        }
+      }
+
+      .toggle-children {
+        float: none;
+        position: absolute;
+        padding: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &-icon {
+          border-color: currentColor;
+          position: absolute;
+          top: 50%;
+          left: 21px;
+          margin-left: -($branded-menu-toggle-size / 2);
+          margin-top: -($branded-menu-toggle-size / 2);
+
+          @media (max-width: 767px) {
+            left: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cms .cms-menu__list li.current > a .toggle-children .toggle-children-icon {
+  width: $branded-menu-toggle-size;
+  height: $branded-menu-toggle-size;
+  background: none;
+}

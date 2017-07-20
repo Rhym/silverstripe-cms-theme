@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "unit-whitelist": [
+      "em",
+      "rem",
+      "ms",
+      "px",
+      "%",
+      "deg"
+    ]
+  }
+}

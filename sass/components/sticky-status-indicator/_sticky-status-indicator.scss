@@ -1,0 +1,12 @@
+.cms {
+  .sticky-status-indicator {
+    left: 26px; // Half the width of the .sticky-toggle button.
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.cms .cms-menu.collapsed {
+  .sticky-status-indicator {
+    left: 20px; // Half the width of the .sticky-toggle button in a collapsed menu.
+  }
+}

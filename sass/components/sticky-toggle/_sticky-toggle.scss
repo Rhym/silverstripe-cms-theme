@@ -1,0 +1,41 @@
+.cms {
+  .sticky-toggle {
+    position: relative;
+    background-image: none;
+
+    &.active {
+      background-image: none;
+
+      &::before {
+        display: block;
+      }
+    }
+
+    &::before,
+    &::after {
+      $size: 12px;
+
+      content: "";
+      display: block;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0);
+      border: 1px solid currentColor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    &::before {
+      $size: 7px;
+
+      display: none;
+      width: $size;
+      height: $size;
+      background: currentColor;
+      border-width: 0;
+    }
+  }
+}

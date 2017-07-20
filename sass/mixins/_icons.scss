@@ -1,0 +1,15 @@
+/*
+|--------------------------------------------------------------------------
+| Icons
+|--------------------------------------------------------------------------
+*/
+
+/**
+ * @param $icon-size {string} - Size of the icon.
+ */
+@mixin icon-base($icon-size: 1.3em) {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: normal normal normal $icon-size/1 FontAwesome;
+}
