@@ -1,6 +1,6 @@
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
-    - _silverstripe-branding/css/main.css
+    - silverstripe-cms-theme/dist/main.css
   extensions:
     - RyanPotter\SilverStripeCMSTheme\Extensions\LeftAndMainExtension
     - RyanPotter\SilverStripeCMSTheme\Extensions\GroupedCmsMenu

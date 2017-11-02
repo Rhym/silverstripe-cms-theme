@@ -4,6 +4,12 @@
     "stylelint-scss"
   ],
   "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "declaration-empty-line-before": null,
     "unit-whitelist": [
       "em",

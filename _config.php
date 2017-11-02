@@ -1,3 +1,3 @@
 <?php
 
-define('SILVERSTRIPE_BRANDING_MODULE', 'silverstripe-branding');
+define('SILVERSTRIPE_CMS_THEME_MODULE', 'silverstripe-cms-theme');

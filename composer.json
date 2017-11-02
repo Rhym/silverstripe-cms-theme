@@ -1,7 +1,7 @@
 {
   "name": "ryanpotter/silverstripe-cms-theme",
   "description": "CMS Theme",
-  "type": "silverstripe-module",
+  "type": "silverstripe-vendormodule",
   "keywords": [
     "silverstripe",
     "theme"
@@ -24,6 +24,6 @@
     "issues": "https://github.com/Rhym/silverstripe-cms-theme/issues"
   },
   "extra": {
-    "installer-name": "silverstripe-branding"
+    "installer-name": "silverstripe-cms-theme"
   }
 }
