@@ -14,9 +14,6 @@
       "role": "Developer"
     }
   ],
-  "suggest": {
-    "silverstripe-australia/grouped-cms-menu": "Group CMS menus to provide a better UX"
-  },
   "require": {
     "silverstripe/framework": "^4.0@dev"
   },
