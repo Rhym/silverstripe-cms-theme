@@ -21,6 +21,9 @@
     "issues": "https://github.com/Rhym/silverstripe-cms-theme/issues"
   },
   "extra": {
-    "installer-name": "silverstripe-cms-theme"
+    "installer-name": "silverstripe-cms-theme",
+    "expose": [
+      "dist"
+    ]
   }
 }
