@@ -22,7 +22,7 @@ class LeftAndMainExtension extends DataExtension
 
   public function init()
   {
-    Requirements::css('ryanpotter/silverstripe-cms-theme:css/main.css');
+    Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
     Requirements::css('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
     $config = $this->owner->config();
