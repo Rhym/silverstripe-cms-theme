@@ -1,0 +1,22 @@
+/*
+|--------------------------------------------------------------------------
+| Menu Icon
+|--------------------------------------------------------------------------
+*/
+
+.cms {
+  .menu__icon {
+    color: currentColor;
+    font-size: 0;
+    margin-top: 0;
+    top: 50%;
+    left: 2rem;
+    transform: translate3d(0, -50%, 0);
+    line-height: 1;
+
+    &::before {
+      color: currentColor;
+      font-size: 1.5rem;
+    }
+  }
+}

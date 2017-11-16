@@ -6,89 +6,72 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\Requirements;
 
+/**
+ * Class LeftAndMainExtension
+ * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ */
 class LeftAndMainExtension extends DataExtension
 {
-  private static $cms_header_background = '#23282d';
-  private static $cms_header_color = '#fff';
-
-  private static $cms_menu_background = '#23282d';
-  private static $cms_menu_color = '#fff';
-  private static $cms_menu_active_background = '#ce0058';
-  private static $cms_menu_active_color = '#fff';
-
-  private static $cms_footer_background = '#23282d';
-  private static $cms_footer_color = '#fff';
+  private static $cms_background = '#0747A6';
+  private static $cms_border_color = '#173778';
+  private static $cms_color = '#fff';
+  private static $cms_hover_background = '#093684';
+  private static $cms_active_background = '#173778';
+  private static $cms_active_color = '#fff';
+  private static $cms_drawer_background = '#0e418e';
 
   public function init()
   {
-    // CMS MenuHeader
-    $header_background = $this->owner->config()->cms_header_background;
-    $header_background_dark = $this->darken($header_background, 10);
-    $header_color = $this->owner->config()->cms_header_color;
+    Requirements::css('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+    $config = $this->owner->config();
+
+    $cms_background = $config->get('cms_background');
+    $cms_border_color = $config->get('cms_border_color');
+    $cms_color = $config->get('cms_color');
+    $cms_hover_background = $config->get('cms_hover_background');
+    $cms_active_background = $config->get('cms_active_background');
+    $cms_active_color = $config->get('cms_active_color');
+    $cms_drawer_background = $config->get('cms_drawer_background');
+
+    // CMS Menu Header
     Requirements::customCSS(
-      '.cms-menu__header {background: ' . $header_background . ' !important;color: ' . $header_color . ' !important;}' .
-      '.cms-sitename {border-color: ' . $header_background_dark . ' !important;}'
+      '.cms-menu__header {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.cms-sitename {border-color: ' . $cms_border_color . ' !important;}' .
+      '.cms-sitename:hover, .cms-sitename:focus {background-color: ' . $cms_hover_background . ' !important}' .
+      '.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover {background-color: ' . $cms_hover_background . ' !important;}' .
+      '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;}'
     );
 
-    // CMS Menu
-    $menu_background = $this->owner->config()->cms_menu_background;
-    $menu_active_background = $this->owner->config()->cms_menu_active_background;
-    $menu_background_dark = $this->darken($menu_background, 10);
-    $menu_background_darker = $this->darken($menu_background, 20);
-    $menu_background_darkest = $this->darken($menu_background, 30);
-    $menu_color = $this->owner->config()->cms_menu_color;
-    $menu_active_color = $this->owner->config()->cms_menu_active_color;
-
+    // Menu List
     Requirements::customCSS(
-      '.cms-menu {background: ' . $menu_background . ' !important;color: ' . $menu_color . ' !important;}' .
-      '.cms-menu__list li a {background: ' . $menu_background . ' !important;color: ' . $menu_color . ' !important;-webkit-box-shadow: inset ' . $menu_background_dark . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $menu_background_dark . ' !important;}' .
-      '.cms-menu__list li a:hover {background: ' . $menu_background_dark . ' !important;}' .
-      '.cms-menu__list li.current a {background: ' . $menu_active_background . ' !important;color: ' . $menu_active_color . ' !important;}' .
-      '.cms-menu__list .menu__icon {color: ' . $menu_color . ' !important;}' .
-      '.cms-menu__list li a .text::after {color: ' . $menu_color . ' !important;}' .
-      '.cms-menu .cms-panel-content {-webkit-box-shadow: inset ' . $menu_background_dark . ' -1px 0 0 !important; box-shadow: inset -1px 0 0 ' . $menu_background_dark . ' !important;}' .
-      '.cms-mobile-menu-toggle.cms-mobile-menu-toggle--open {background: ' . $menu_active_background . ' !important;color: ' . $menu_active_color . ' !important;}'
+      '.cms-menu {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.cms-menu__list li a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
+      '.cms-menu__list li a:hover, .cms-menu__list li a:focus {background: ' . $cms_hover_background . ' !important;}' .
+      '.cms-menu__list li.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
+      '.cms-menu__list li a .text::after {color: ' . $cms_color . ' !important;}' .
+      '.cms-menu .cms-panel-content {-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important; box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
+      '.cms-mobile-menu-toggle.cms-mobile-menu-toggle--open {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}'
     );
 
     // Branded Menu
     Requirements::customCSS(
-      '.branded-menu__list-item--children.opened a {background: ' . $menu_background_dark . ' !important;color: ' . $menu_color . ' !important;}' .
-      '.branded-menu__list-item--children.opened a:hover {background: ' . $menu_background_darker . ' !important;color: ' . $menu_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.current a {background: ' . $menu_background_dark . ' !important;color: ' . $menu_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened a:hover {background: ' . $menu_background_darkest . ' !important;color: ' . $menu_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children .branded-menu__list-item.current a {background: ' . $menu_active_background . ' !important;color: ' . $menu_active_color . ' !important;}'
+      '.branded-menu__list-item--children.opened a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu__list-item--children.opened a:hover, .branded-menu__list-item--children.opened a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.current a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened {background: ' . $cms_drawer_background . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a:hover, .branded-menu .branded-menu__list-item--children.opened a:focus {background: ' . $cms_border_color . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children .branded-menu__list-item.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a:first-child:hover, .branded-menu .branded-menu__list-item--children a:first-child:hover {background: ' . $cms_border_color . ' !important;color: ' . $cms_color . ' !important;}'
     );
 
     // CMS Menu Footer
-    $footer_background = $this->owner->config()->cms_footer_background;
-    $footer_background_dark = $this->darken($footer_background, 10);
-    $footer_color = $this->owner->config()->cms_footer_color;
-
     Requirements::customCSS(
-      '.cms-menu .cms-panel-toggle {background: ' . $footer_background . ' !important;color: ' . $footer_color . ' !important; border-color: ' . $footer_background_dark . ' !important;-webkit-box-shadow: inset ' . $footer_background_dark . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $footer_background_dark . ' !important;}' .
-      '.cms-panel .cms-panel-toggle .toggle-collapse span, .cms-panel .cms-panel-toggle .toggle-expand span {color: ' . $footer_color . ' !important}' .
-      '.cms-menu .sticky-status-indicator {color: ' . $footer_color . ' !important}'
+      '.cms-menu .cms-panel-toggle {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important; border-color: ' . $cms_border_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
+      '.cms-panel .cms-panel-toggle .toggle-collapse span, .cms-panel .cms-panel-toggle .toggle-expand span {color: ' . $cms_color . ' !important}' .
+      '.cms-menu .sticky-status-indicator {color: ' . $cms_color . ' !important}'
     );
-  }
-
-  /**
-   * Darken a colour by a percentage.
-   * @param $hex
-   * @param $percent
-   * @return string
-   */
-  private function darken($hex, $percent)
-  {
-    preg_match('/^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i', $hex, $primary_colors);
-    str_replace('%', '', $percent);
-    $color = "#";
-    for ($i = 1; $i <= 3; $i++) {
-      $primary_colors[$i] = hexdec($primary_colors[$i]);
-      $primary_colors[$i] = round($primary_colors[$i] * (100 - ($percent * 2)) / 100);
-      $color .= str_pad(dechex($primary_colors[$i]), 2, '0', STR_PAD_LEFT);
-    }
-    return $color;
   }
 
   /**

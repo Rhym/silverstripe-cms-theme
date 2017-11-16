@@ -13,14 +13,27 @@ use SilverStripe\Forms\TabSet;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Security\Permission;
 
+/**
+ * Class SiteConfigExtension
+ * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ */
 class SiteConfigExtension extends DataExtension
 {
+  /**
+   * @var bool
+   */
   private static $cms_logo = false;
 
+  /**
+   * @var array
+   */
   private static $has_one = [
     'CMSLogo' => Image::class,
   ];
 
+  /**
+   * @param FieldList $fields
+   */
   public function updateCMSFields(FieldList $fields)
   {
     if (Permission::check('ADMIN') && !Config::inst()->get('SiteConfig', 'cms_logo')) {
@@ -34,6 +47,7 @@ class SiteConfigExtension extends DataExtension
           HeaderField::create('', 'Images'),
           Injector::inst()->create(FileHandleField::class, 'CMSLogo', 'Logo')
             ->setAllowedFileCategories('image/supported')
+            ->setFolderName('Uploads/cms-branding')
             ->setRightTitle('Logo displayed in the top left-hand side of the CMS menu.'),
         ]
       );

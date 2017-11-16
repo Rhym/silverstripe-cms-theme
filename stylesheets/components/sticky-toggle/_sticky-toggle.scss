@@ -1,15 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Sticky Toggle
+|--------------------------------------------------------------------------
+*/
+
 .cms {
   .sticky-toggle {
     position: relative;
     background-image: none;
-
-    &.active {
-      background-image: none;
-
-      &::before {
-        display: block;
-      }
-    }
 
     &::before,
     &::after {
@@ -36,6 +34,17 @@
       height: $size;
       background: currentColor;
       border-width: 0;
+    }
+
+    // states
+    // ----------------------------------------
+
+    &.active {
+      background-image: none;
+
+      &::before {
+        display: block;
+      }
     }
   }
 }

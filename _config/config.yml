@@ -1,3 +1,6 @@
+---
+Name: ryanpotter/silverstripe-cms-theme
+---
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - silverstripe-cms-theme/dist/main.css

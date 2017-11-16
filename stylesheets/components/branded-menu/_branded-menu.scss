@@ -1,28 +1,94 @@
-$branded-menu-toggle-size: 11px;
+/*
+|--------------------------------------------------------------------------
+| Branded Menu
+|--------------------------------------------------------------------------
+*/
+
+$branded-menu-font-family: $font-family-base;
+$branded-menu-font-size: 14px;
+$branded-menu-font-size--small: 12px;
+
+$branded-menu__toggle-size: 11px;
 
 .cms {
   .branded-menu {
+    $this: &;
+    font-family: $branded-menu-font-family;
+
+    // Modifiers
+    // ----------------------------------------
+
     &--child {
+      display: none;
       padding-left: 0;
+
+      a {
+        // They are doing a shitty job of BEM, so we have to override ultra specific cascades.
+        font-size: $branded-menu-font-size !important;
+        height: auto !important;
+        padding: 1rem 2rem 1rem 3rem !important;
+      }
+
+      .menu__icon {
+        left: 3rem;
+
+        &::before {
+          //font-size: $branded-menu-font-size--small * 1.2;
+        }
+      }
     }
+
+    // Children
+    // ----------------------------------------
 
     &__list-item {
       list-style: none;
 
+      // Modifiers
+      // ----------------------------------------
+
       &--children {
+        &.opened {
+          .menu__icon {
+            &--open {
+              display: none;
+            }
+
+            &--closed {
+              display: block !important;
+            }
+          }
+        }
+
         > a {
           &:first-child {
             position: relative;
           }
         }
 
-        a {
-          padding: 16px 5px 16px 8px !important; // They are doing a shitty job of BEM, so we have to override ultra specific cascades.
+        .menu__icon {
+          &--closed {
+            display: none;
+          }
         }
       }
 
+      // Child Nodes
+      // ----------------------------------------
+
+      li {
+        a {
+          min-height: 0;
+        }
+      }
+
+      > a {
+        padding: 1rem 2rem;
+        font-size: $branded-menu-font-size;
+      }
+
       .text {
-        margin-left: 30px !important;
+        margin-left: 2.5rem !important;
 
         @media (max-width: 767px) {
           margin-left: 38px !important;
@@ -41,24 +107,22 @@ $branded-menu-toggle-size: 11px;
         height: 100%;
 
         &-icon {
-          border-color: currentColor;
-          position: absolute;
-          top: 50%;
-          left: 21px;
-          margin-left: -($branded-menu-toggle-size / 2);
-          margin-top: -($branded-menu-toggle-size / 2);
-
-          @media (max-width: 767px) {
-            left: 28px;
-          }
+          display: none !important; // Override chosen css
         }
       }
     }
   }
 }
 
+.cms {
+  .branded-menu .branded-menu__list-item--children.opened > a:focus,
+  .branded-menu .branded-menu__list-item--children > a:focus {
+    background: transparent none !important;
+  }
+}
+
 .cms .cms-menu__list li.current > a .toggle-children .toggle-children-icon {
-  width: $branded-menu-toggle-size;
-  height: $branded-menu-toggle-size;
+  width: $branded-menu__toggle-size;
+  height: $branded-menu__toggle-size;
   background: none;
 }

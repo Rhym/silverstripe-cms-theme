@@ -1,7 +1,22 @@
+/*
+|--------------------------------------------------------------------------
+| CMS Sitename
+|--------------------------------------------------------------------------
+*/
+
+$cms-sitename-font-family: $font-family-base;
+
 .cms {
   .cms-sitename {
+    font-family: $cms-sitename-font-family;
+    padding: 2rem;
+
+    // Modifiers
+    // ----------------------------------------
+
     &__title {
-      margin-left: 12px;
+      padding: 0;
+      margin: 0;
     }
   }
 }

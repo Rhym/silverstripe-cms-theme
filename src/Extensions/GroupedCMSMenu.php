@@ -1,6 +1,5 @@
 <?php
 
-
 namespace RyanPotter\SilverstripeCMSTheme\Extensions;
 
 use SilverStripe\Core\Config\Config;
@@ -12,6 +11,10 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\ArrayData;
 use SilverStripe\View\Requirements;
 
+/**
+ * Class GroupedCmsMenu
+ * @package RyanPotter\SilverstripeCMSTheme\Extensions
+ */
 class GroupedCmsMenu extends DataExtension
 {
   private static $menu_groups = [];
@@ -21,22 +24,6 @@ class GroupedCmsMenu extends DataExtension
    * this may require something more consistent.
    */
   private static $menu_groups_alphabetical_sorting = false;
-
-  /**
-   * Require in CSS which we need for the menu
-   */
-  public function init()
-  {
-//    Requirements::css('grouped-cms-menu/css/GroupedCmsMenu.css');
-  }
-
-  private function dd($echo)
-  {
-    echo '<pre>';
-    echo print_r($echo);
-    echo '</pre>';
-    exit();
-  }
 
   /**
    * @return ArrayList
@@ -76,6 +63,7 @@ class GroupedCmsMenu extends DataExtension
      */
     foreach ($items as $item) {
       $code = Convert::raw2xml($item->Code);
+
       if (array_key_exists($code, $itemsToGroup)) {
         $item->Group = $itemsToGroup[$code]['Group'];
         $item->Priority = $itemsToGroup[$code]['Priority'];

@@ -1,0 +1,41 @@
+/*
+|--------------------------------------------------------------------------
+| CMS Login Status
+|--------------------------------------------------------------------------
+*/
+
+$cms-login-status-font-family: $font-family-base;
+
+.cms-login-status {
+  $this: &;
+
+  &__profile-link {
+    #{$this} & {
+      padding-left: 2rem;
+    }
+
+    // Icon
+    i {
+      #{$this} & {
+        margin: 0;
+        font-size: 0;
+        left: 2rem;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        line-height: 1;
+      }
+
+      &::before {
+        font-size: 1.5rem;
+      }
+    }
+
+    // The username
+    span {
+      #{$this} & {
+        font-family: $cms-login-status-font-family;
+        padding-left: 2.5rem;
+      }
+    }
+  }
+}
