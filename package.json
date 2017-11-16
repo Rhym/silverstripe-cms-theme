@@ -1,6 +1,6 @@
 {
   "name": "silverstripe-branding",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "silverstripe-vendormodule",
   "repository": {
     "type": "git",
