@@ -3,14 +3,14 @@
 namespace RyanPotter\SilverStripeCMSTheme\Extensions;
 
 use SilverStripe\Core\Config\Config;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\View\Requirements;
 
 /**
  * Class LeftAndMainExtension
  * @package RyanPotter\SilverStripeCMSTheme\Extensions
  */
-class LeftAndMainExtension extends DataExtension
+class LeftAndMainExtension extends Extension
 {
   private static $cms_background = '#0747A6';
   private static $cms_border_color = '#173778';
