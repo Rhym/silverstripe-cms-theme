@@ -27,7 +27,7 @@ SilverStripe\SiteConfig\SiteConfig:
 You can set the theme colour of the left menu by defining it through a YML configuration like the below:
 
 ```yml
-SilverStripe\CMS\Controllers\CMSPagesController:
+SilverStripe\Admin\LeftAndMain:
   cms_background: '#0747A6'
   cms_border_color: '#173778'
   cms_color: '#fff'
