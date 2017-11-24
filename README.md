@@ -61,6 +61,6 @@ private static $menu_icon_class = 'fa fa-pencil';
 Alternatively you can set this using a YML config. e.g
 
 ```yml
-SilverStripe-CMS-Controllers-CMSPagesController:
+SilverStripe\CMS\Controllers\CMSPagesController:
   menu_icon_class: 'fa fa-sitemap'
 ```
