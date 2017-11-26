@@ -2,6 +2,7 @@
 
 namespace RyanPotter\SilverstripeCMSTheme\Extensions;
 
+use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Convert;
 use SilverStripe\ORM\ArrayList;
@@ -33,7 +34,7 @@ class GroupedCmsMenu extends DataExtension
     $items = $this->owner->MainMenu();
     $result = ArrayList::create();
     $config = Config::inst();
-    $groupSettings = $config->get('SilverStripe\Admin\LeftAndMain', 'menu_groups');
+    $groupSettings = $config->get(LeftAndMain::class, 'menu_groups');
     $itemsToGroup = [];
     $groupSort = 0;
     $itemSort = 0;
@@ -81,6 +82,7 @@ class GroupedCmsMenu extends DataExtension
         foreach ($children as $child) {
           if ($child->LinkingMode == 'current') $active = true;
         }
+
         $icon = array_key_exists('icon', $groupSettings[$group]) ? $groupSettings[$group]['icon'] : false;
         $code = str_replace(' ', '_', $group);
         $result->push(ArrayData::create([
@@ -89,7 +91,7 @@ class GroupedCmsMenu extends DataExtension
           'Link'        => $children->First()->Link,
           'Icon'        => $icon,
           'LinkingMode' => $active ? 'current' : '',
-          'Children'    => $config->get('LeftAndMain', 'menu_groups_alphabetical_sorting') ? $children->sort('Title') : $children->sort('SortOrder'),
+          'Children'    => $config->get(LeftAndMain::class, 'menu_groups_alphabetical_sorting') ? $children->sort('Title') : $children->sort('SortOrder'),
         ]));
       } else {
         $result->push($children->First());

@@ -85,7 +85,7 @@ class LeftAndMainExtension extends Extension
   public function BrandedMainMenu($cached = true)
   {
     $mainMenu = $this->owner->MainMenu($cached);
-    if ($this->owner->has_extension('RyanPotter\SilverStripeCMSTheme\Extensions\GroupedCmsMenu')) {
+    if ($this->owner->has_extension(GroupedCmsMenu::class)) {
       $mainMenu = $this->owner->GroupedMainMenu($cached);
     }
 
