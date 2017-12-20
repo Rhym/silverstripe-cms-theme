@@ -2,7 +2,11 @@
   <% if $SiteConfig.CustomCMSLogo %>
     <div class="logo">
       <a href="{$BaseHref}" target="_blank" class="cms-logo">
-        {$SiteConfig.CustomCMSLogo}
+        <% if $SiteConfig.CustomCMSLogo.ID %>
+          {$SiteConfig.CustomCMSLogo}
+        <% else %>
+          {$SiteConfig.CustomCMSLogo.RAW}
+        <% end_if %>
       </a>
     </div>
   <% else %>

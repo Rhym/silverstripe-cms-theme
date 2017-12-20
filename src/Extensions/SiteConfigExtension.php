@@ -5,6 +5,7 @@ namespace RyanPotter\SilverStripeCMSTheme\Extensions;
 use SilverStripe\Assets\Image;
 use SilverStripe\Assets\File;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Control\Director;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FileHandleField;
@@ -20,11 +21,7 @@ use SilverStripe\Security\Permission;
 class SiteConfigExtension extends DataExtension
 {
   /**
-   * @var bool
-   */
-  private static $cms_logo = false;
-
-  /**
+   * @config $has_one
    * @var array
    */
   private static $has_one = [
@@ -56,11 +53,24 @@ class SiteConfigExtension extends DataExtension
 
   /**
    * @desc Get the CMS Logo for use in the admin template.
-   * @return \SilverStripe\ORM\DataObject
+   * @return string
    */
   public function getCustomCMSLogo()
   {
-    return Config::inst()->get('SiteConfig', 'cms_logo') ?: Image::get()->byID($this->owner->CMSLogoID);
+    $imageUrl = Config::inst()->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo');
+
+    // If there's a logo in the config, return a <img>
+    if ($imageUrl) {
+      $imageAbsoluteUrl = Director::absoluteBaseURL() . $imageUrl;
+
+      return sprintf(
+        '<img src="%s" alt="%s" />',
+        $imageAbsoluteUrl,
+        'CMS Logo'
+      );
+    }
+
+    return Image::get()->byID($this->owner->CMSLogoID);
   }
 
   /**

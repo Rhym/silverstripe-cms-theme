@@ -6,6 +6,7 @@ use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Extension;
 use SilverStripe\View\Requirements;
+use SilverStripe\SiteConfig\SiteConfig;
 
 /**
  * Class LeftAndMainExtension
@@ -52,9 +53,10 @@ class LeftAndMainExtension extends Extension
       '.branded-menu .branded-menu__list-item--children.current a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
       '.branded-menu .branded-menu__list-item--children.opened a {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_color . ' !important;}' .
       '.branded-menu .branded-menu__list-item--children.opened {background: ' . $cms_drawer_background . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened a:hover, .branded-menu .branded-menu__list-item--children.opened a:focus {background: ' . $cms_border_color . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu__list-item--children .branded-menu__list-item {background: ' . $cms_drawer_background . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a:hover, .branded-menu .branded-menu__list-item--children.opened a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}' .
       '.branded-menu .branded-menu__list-item--children .branded-menu__list-item.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened a:first-child:hover, .branded-menu .branded-menu__list-item--children a:first-child:hover {background: ' . $cms_border_color . ' !important;color: ' . $cms_color . ' !important;}'
+      '.cms .branded-menu .branded-menu__list-item--children > a:hover, .cms .branded-menu .branded-menu__list-item--children.opened > a:hover {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}'
     );
     // CMS Menu Footer
     Requirements::customCSS(

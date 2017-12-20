@@ -1,5 +1,5 @@
 ---
-Name: ryanpotter/silverstripe-cms-theme
+Name: ryanpotter-silverstripe-cms-theme
 ---
 SilverStripe\Admin\LeftAndMain:
   extensions:
