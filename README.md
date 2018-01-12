@@ -1,6 +1,9 @@
 # Silverstripe CMS Branding
 
 [![Build Status](https://travis-ci.org/Rhym/silverstripe-cms-theme.svg?branch=master)](https://travis-ci.org/Rhym/silverstripe-cms-theme)
+[![Latest Stable Version](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/v/stable)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
+[![Total Downloads](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/downloads)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
+[![Monthly Downloads](https://poser.pugx.org/ryanpotter/silverstripe-cms-theme/d/monthly)](https://packagist.org/packages/ryanpotter/silverstripe-cms-theme)
 
 Just a nice little UI change for the cms sidebar.
 
