@@ -25,7 +25,6 @@ class LeftAndMainExtension extends Extension
     $cms_active_color = !$config->cms_active_color ? '#fff' : $config->cms_active_color;
     $cms_drawer_background = !$config->cms_drawer_background ? '#0e418e' : $config->cms_drawer_background;
 
-    Requirements::css('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
 
     // CMS Menu Header

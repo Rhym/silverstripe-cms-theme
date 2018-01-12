@@ -2,9 +2,15 @@
 
 [![Build Status](https://travis-ci.org/Rhym/silverstripe-cms-theme.svg?branch=master)](https://travis-ci.org/Rhym/silverstripe-cms-theme)
 
-Just a nice little UI change for the cms.
+Just a nice little UI change for the cms sidebar.
 
 The theme supports an UploadField in the *Settings > Settings Tab > CMS Tab* for a logo to be displayed in the left-hand menu of the CMS.
+
+
+Screenshot
+----------
+
+![Screenshot](https://github.com/Rhym/silverstripe-cms-theme/blob/master/screenshot.png)
 
 ## Thanks
 
@@ -52,15 +58,15 @@ SilverStripe\Admin\LeftAndMain:
 
 ### Overriding/Adding Icons
 
-The icons in this cms theme use [Font-Awesome](http://fontawesome.io/), to override these icons simply add the class that represents the icon you wish to display in your ModelAdmin extension. e.g:
+The icons in this cms theme use [Font Awesome](https://fontawesome.com), to override these icons simply add the class that represents the icon you wish to display in your ModelAdmin extension. e.g:
 
 ```php
-private static $menu_icon_class = 'fa fa-pencil';
+private static $menu_icon_class = 'fas fa-pencil-alt';
 ```
 
 Alternatively you can set this using a YML config. e.g
 
 ```yml
 SilverStripe\CMS\Controllers\CMSPagesController:
-  menu_icon_class: 'fa fa-sitemap'
+  menu_icon_class: 'fas fa-sitemap'
 ```

@@ -20,17 +20,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: extractSass.extract({
+    rules: [
+      {
+        test: /\.scss$/,
+        use: extractSass.extract({
+            use: [
+              {loader: 'css-loader', options: {sourceMap: true}},
+              {loader: 'postcss-loader', options: {sourceMap: true}},
+              {loader: 'sass-loader', options: {sourceMap: true}}
+            ],
+            // use style-loader in development
+            fallback: 'style-loader'
+          }
+        )
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
         use: [
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } }
-        ],
-        // use style-loader in development
-        fallback: 'style-loader'
-      })
-    }]
+          'file-loader'
+        ]
+      },
+    ]
   },
 };
