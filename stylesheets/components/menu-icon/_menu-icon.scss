@@ -20,6 +20,12 @@
     justify-content: center;
     text-align: center;
 
+    // Icon images
+    &--image {
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
     &::before {
       color: currentColor;
       font-size: 1.5rem;
