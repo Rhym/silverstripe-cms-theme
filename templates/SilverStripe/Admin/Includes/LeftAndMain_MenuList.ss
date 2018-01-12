@@ -2,14 +2,12 @@
   <% if $BrandedMainMenu %>
     <% loop $BrandedMainMenu %>
       <li
-        class="branded-menu__list-item $LinkingMode $FirstLast<% if $Children %> branded-menu__list-item--children children <% end_if %><% if $LinkingMode == 'link' %><% else %>opened<% end_if %>"
+        class="branded-menu__list-item {$LinkingMode} {$FirstLast}<% if $Children %> branded-menu__list-item--children children <% end_if %><% if $LinkingMode == 'link' %><% else %>opened<% end_if %>"
         id="Menu-{$Code}" title="{$Title.ATT}"
       >
         <a href="$Link" {$AttributesHTML}>
           <% if $Children %>
             <span class="menu__icon menu__icon--chevron font-icon-"></span>
-            <%--<span class="menu__icon menu__icon--open font-icon-right-open"></span>--%>
-            <%--<span class="menu__icon menu__icon--closed font-icon-down-open"></span>--%>
             <span class="text">{$Title}</span>
           <% else %>
             <% if $IconClass %>
