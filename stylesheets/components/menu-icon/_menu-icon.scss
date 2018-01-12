@@ -26,6 +26,12 @@
       background-position: center center;
     }
 
+    &--chevron {
+      &::before {
+        content: "U";
+      }
+    }
+
     &::before {
       color: currentColor;
       font-size: 1.5rem;

@@ -49,13 +49,9 @@ $branded-menu__toggle-size: 11px;
 
       &--children {
         &.opened {
-          .menu__icon {
-            &--open {
-              display: none;
-            }
-
-            &--closed {
-              display: block !important;
+          .menu__icon--chevron {
+            &::before {
+              content: "0";
             }
           }
         }
@@ -63,12 +59,6 @@ $branded-menu__toggle-size: 11px;
         > a {
           &:first-child {
             position: relative;
-          }
-        }
-
-        .menu__icon {
-          &--closed {
-            display: none;
           }
         }
       }
