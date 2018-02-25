@@ -27,6 +27,11 @@ class LeftAndMainExtension extends Extension
 
     Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
 
+    Requirements::customCSS(
+      '.cms-mobile-menu-toggle {background: ' . $cms_background . ' !important; color: ' . $cms_color . ' !important;}' .
+      '.cms-mobile-menu-toggle.cms-mobile-menu-toggle--open {background: ' . $cms_active_background . ' !important; color: ' . $cms_active_color . ' !important;}'
+    );
+
     // CMS Menu Header
     Requirements::customCSS(
       '.cms-menu__header {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
