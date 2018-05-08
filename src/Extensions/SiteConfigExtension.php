@@ -57,20 +57,31 @@ class SiteConfigExtension extends DataExtension
    */
   public function getCustomCMSLogo()
   {
-    $imageUrl = Config::inst()->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo');
+    $config = Config::inst();
+    $imageUrl = $config->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo');
+    $imageWidth = $config->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo_width');
+    $imageWidthMax = 187;
+
+    /**
+     * If there's no config for a max width, or it's larger
+     * than supported set the maximum width.
+     */
+    if (!(int)$imageWidth || (int)$imageWidth >= $imageWidthMax) {
+      $imageWidth = $imageWidthMax;
+    }
 
     // If there's a logo in the config, return a <img>
     if ($imageUrl) {
       $imageAbsoluteUrl = Director::absoluteBaseURL() . $imageUrl;
 
       return sprintf(
-        '<img src="%s" alt="%s" />',
+        '<img src="%s" alt="%s" style="max-width: ' . $imageWidth . 'px !important;" />',
         $imageAbsoluteUrl,
         'CMS Logo'
       );
     }
 
-    return Image::get()->byID($this->owner->CMSLogoID)->ScaleMaxWidth(187);
+    return Image::get()->byID($this->owner->CMSLogoID)->ScaleMaxWidth($imageWidth);
   }
 
   /**

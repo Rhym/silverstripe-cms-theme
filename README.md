@@ -31,6 +31,7 @@ You can either choose to upload a CMS logo through the Site Settings section of 
 ```yml
 SilverStripe\SiteConfig\SiteConfig:
   cms_logo: 'mysite/images/cms_logo.png'
+  cms_logo_width: 100 # Optional width constraint
 ```
 
 You can set the theme colour of the left menu by defining it through a YML configuration like the below:
