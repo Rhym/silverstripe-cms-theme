@@ -30,7 +30,7 @@ You can either choose to upload a CMS logo through the Site Settings section of 
 
 ```yml
 SilverStripe\SiteConfig\SiteConfig:
-  cms_logo: 'mysite/images/cms_logo.png'
+  cms_logo: 'path/to/your/image.png'
   cms_logo_width: 100 # Optional width constraint
 ```
 
