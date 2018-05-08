@@ -19,5 +19,12 @@ $cms-sitename-font-family: $font-family-base;
       padding: 0;
       margin: 0;
     }
+
+    // Child Nodes
+    // ----------------------------------------
+
+    .logo {
+      flex: 1 0 0;
+    }
   }
 }

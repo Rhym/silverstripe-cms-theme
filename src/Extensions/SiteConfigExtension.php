@@ -70,7 +70,7 @@ class SiteConfigExtension extends DataExtension
       );
     }
 
-    return Image::get()->byID($this->owner->CMSLogoID);
+    return Image::get()->byID($this->owner->CMSLogoID)->ScaleMaxWidth(187);
   }
 
   /**
