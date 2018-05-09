@@ -1,0 +1,6 @@
+en:
+  RyanPotter\SilverStripeCMSTheme\Extensions\SiteConfigExtension:
+    CMSBRANDINGTAB: 'CMS Branding'
+    IMAGES: Images
+    LOGODESCRIPTIOM: 'Logo displayed in the top left-hand side of the CMS menu.'
+    LOGOLABEL: Logo

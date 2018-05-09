@@ -35,17 +35,27 @@ class SiteConfigExtension extends DataExtension
   {
     if (Permission::check('ADMIN') && !Config::inst()->get('SiteConfig', 'cms_logo')) {
       if (!$fields->fieldByName('Root.Settings')) {
-        $fields->addFieldToTab('Root', TabSet::create('CMSBrandingTab', 'CMS Branding'));
+        $fields->addFieldToTab(
+          'Root',
+          TabSet::create(
+            'CMSBrandingTab',
+            _t(__CLASS__ . '.CMSBRANDINGTAB', 'CMS Branding')
+          )
+        );
       }
 
       $fields->findOrMakeTab('Root.CMSBrandingTab.CMS', 'CMS');
       $fields->addFieldsToTab('Root.CMSBrandingTab.CMS',
         [
-          HeaderField::create('', 'Images'),
-          Injector::inst()->create(FileHandleField::class, 'CMSLogo', 'Logo')
-            ->setAllowedFileCategories('image/supported')
-            ->setFolderName('Uploads/cms-branding')
-            ->setRightTitle('Logo displayed in the top left-hand side of the CMS menu.'),
+          HeaderField::create('', _t(__CLASS__ . '.IMAGES', 'Images')),
+          Injector::inst()->create(
+            FileHandleField::class,
+            'CMSLogo',
+            _t(__CLASS__ . '.LOGOLABEL', 'Logo')
+          )
+          ->setAllowedFileCategories('image/supported')
+          ->setFolderName('Uploads/cms-branding')
+          ->setRightTitle(_t(__CLASS__ . '.LOGODESCRIPTIOM', 'Logo displayed in the top left-hand side of the CMS menu.')),
         ]
       );
     }
