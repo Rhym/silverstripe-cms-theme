@@ -27,6 +27,9 @@
     }
 
     &--chevron {
+      right: 1rem;
+      left: auto;
+
       &::before {
         content: "U";
       }

@@ -5,10 +5,11 @@
         class="branded-menu__list-item {$LinkingMode} {$FirstLast}<% if $Children %> branded-menu__list-item--children children <% end_if %><% if $LinkingMode == 'link' %><% else %>opened<% end_if %>"
         id="Menu-{$Code}" title="{$Title.ATT}"
       >
-        <a href="$Link" {$AttributesHTML}>
+        <a href="{$Link}" {$AttributesHTML}>
           <% if $Children %>
-            <span class="menu__icon menu__icon--chevron font-icon-"></span>
+            <span class="menu__icon {$Icon}"></span>
             <span class="text">{$Title}</span>
+            <span class="menu__icon menu__icon--chevron font-icon-"></span>
           <% else %>
             <% if $IconClass %>
               <span class="menu__icon {$IconClass}"></span>

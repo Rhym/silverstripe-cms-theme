@@ -54,9 +54,12 @@ You can add menu items to a list by using adding the menu code to the `menu_grou
 SilverStripe\Admin\LeftAndMain:
   menu_groups:
     Misc:
-      - SilverStripe-CampaignAdmin-CampaignAdmin
-      - Help
-      - SilverStripe-Reports-ReportAdmin
+      icon_class: 'fa fa-folder' # (optional) Defaults to 'fa fa-folder'
+      priority: 0 # (optional) Defaults to menu item order
+      items:
+        - SilverStripe-CampaignAdmin-CampaignAdmin
+        - Help
+        - SilverStripe-Reports-ReportAdmin
 ```
 
 ### Overriding/Adding Icons

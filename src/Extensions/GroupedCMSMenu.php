@@ -18,6 +18,9 @@ use SilverStripe\View\Requirements;
  */
 class GroupedCmsMenu extends DataExtension
 {
+  /**
+   * @var array
+   */
   private static $menu_groups = [];
 
   /**
@@ -34,27 +37,28 @@ class GroupedCmsMenu extends DataExtension
     $items = $this->owner->MainMenu();
     $result = ArrayList::create();
     $config = Config::inst();
-    $groupSettings = $config->get(LeftAndMain::class, 'menu_groups');
+    $menus = $config->get(LeftAndMain::class, 'menu_groups');
     $itemsToGroup = [];
-    $groupSort = 0;
+    $menuSort = 0;
     $itemSort = 0;
 
-    /**
-     * Add all menu items to their group arrays.
-     */
-    foreach ($groupSettings as $groupName => $menuItems) {
+    // Add all menu items to their group arrays.
+    foreach ($menus as $title => $settings) {
+      $children = $settings['items'];
+      $priority = $settings['priority'];
+
       // If there are any menu items in the group
-      if (count($menuItems)) {
-        foreach ($menuItems as $key => $menuItem) {
+      if (count($items)) {
+        foreach ($children as $key => $item) {
           if (is_numeric($key))
-            $itemsToGroup[$menuItem] = [
-              'Group'     => $groupName,
-              'Priority'  => (array_key_exists('priority', $groupSettings[$groupName])) ? $groupSettings[$groupName]['priority'] : $groupSort,
+            $itemsToGroup[$item] = [
+              'Group'     => $title,
+              'Priority'  => $priority ? $priority : $menuSort,
               'SortOrder' => $itemSort,
             ];
           $itemSort++;
         }
-        $groupSort--;
+        $menuSort--;
       }
     }
 
@@ -76,15 +80,24 @@ class GroupedCmsMenu extends DataExtension
       }
     }
 
+    /**
+     * Loop through all the current menu items
+     */
     foreach (GroupedList::create($items->sort(['Priority' => 'DESC']))->groupBy('Group') as $group => $children) {
       if (count($children) > 1) {
+        // If any of the groups children are the current page, add the active flag.
         $active = false;
         foreach ($children as $child) {
           if ($child->LinkingMode == 'current') $active = true;
         }
 
-        $icon = array_key_exists('icon', $groupSettings[$group]) ? $groupSettings[$group]['icon'] : false;
+        // Check if the menu group has an associated icon class.
+        $icon = array_key_exists('icon_class', $menus[$group]) ? $menus[$group]['icon_class'] : 'far fa-folder-open';
+
+        // Replace any white text with underscores for use as IDs in the template.
         $code = str_replace(' ', '_', $group);
+
+        // Push all the menu data to an array for looping in the template.
         $result->push(ArrayData::create([
           'Title'       => _t('GroupedCmsMenuLabel.' . $code, $group),
           'Code'        => DBField::create_field('Text', $code),
@@ -94,9 +107,15 @@ class GroupedCmsMenu extends DataExtension
           'Children'    => $config->get(LeftAndMain::class, 'menu_groups_alphabetical_sorting') ? $children->sort('Title') : $children->sort('SortOrder'),
         ]));
       } else {
+        // If there's only one child, return the first child as a model admin.
         $result->push($children->First());
       }
     }
+
+//    echo '<pre>';
+//    print_r($result);
+//    exit();
+
     return $result;
   }
 }

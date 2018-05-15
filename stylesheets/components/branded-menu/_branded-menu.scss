@@ -26,11 +26,11 @@ $branded-menu__toggle-size: 11px;
         // They are doing a shitty job of BEM, so we have to override ultra specific cascades.
         font-size: $branded-menu-font-size !important;
         height: auto !important;
-        padding: 1rem 2rem 1rem 3rem !important;
+        padding: 1rem 2rem 1rem 2.5rem !important;
       }
 
       .menu__icon {
-        left: 3rem;
+        left: 2.5rem;
 
         &::before {
           //font-size: $branded-menu-font-size--small * 1.2;
@@ -58,6 +58,7 @@ $branded-menu__toggle-size: 11px;
 
         > a {
           &:first-child {
+            padding: 1rem 3rem 1rem 2rem;
             position: relative;
           }
         }
