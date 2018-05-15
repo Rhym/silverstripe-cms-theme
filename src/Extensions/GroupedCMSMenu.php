@@ -44,8 +44,8 @@ class GroupedCmsMenu extends DataExtension
 
     // Add all menu items to their group arrays.
     foreach ($menus as $title => $settings) {
-      $children = $settings['items'];
-      $priority = $settings['priority'];
+      $children = array_key_exists('items', $settings) ? $settings['items'] : [];
+      $priority = array_key_exists('priority', $settings) ? $settings['priority'] : null;
 
       // If there are any menu items in the group
       if (count($items)) {
@@ -111,10 +111,6 @@ class GroupedCmsMenu extends DataExtension
         $result->push($children->First());
       }
     }
-
-//    echo '<pre>';
-//    print_r($result);
-//    exit();
 
     return $result;
   }
