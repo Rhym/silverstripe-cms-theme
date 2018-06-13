@@ -39,11 +39,13 @@ You can set the theme colour of the left menu by defining it through a YML confi
 SilverStripe\Admin\LeftAndMain:
   cms_background: '#0747A6'
   cms_border_color: '#173778'
-  cms_color: '#fff'
+  cms_color: '#ffffff'
   cms_hover_background: '#093684'
+  cms_hover_color: '#ffffff'
   cms_active_background: '#173778'
   cms_active_color: '#fff'
   cms_drawer_background: '#0e418e'
+  cms_drawer_color: '#ffffff'
 ```
 
 ## Grouping CMS Menus
