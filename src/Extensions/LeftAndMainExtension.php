@@ -21,9 +21,11 @@ class LeftAndMainExtension extends Extension
     $cms_border_color = !$config->cms_border_color ? '#173778' : $config->cms_border_color;
     $cms_color = !$config->cms_color ? '#fff' : $config->cms_color;
     $cms_hover_background = !$config->cms_hover_background ? '#093684' : $config->cms_hover_background;
+    $cms_hover_color = !$config->cms_hover_color ? '#fff' : $config->cms_hover_color;
     $cms_active_background = !$config->cms_active_background ? '#173778' : $config->cms_active_background;
     $cms_active_color = !$config->cms_active_color ? '#fff' : $config->cms_active_color;
     $cms_drawer_background = !$config->cms_drawer_background ? '#0e418e' : $config->cms_drawer_background;
+    $cms_drawer_color = !$config->cms_drawer_color ? '#fff' : $config->cms_drawer_color;
 
     Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">');
     Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
@@ -38,15 +40,15 @@ class LeftAndMainExtension extends Extension
       '.cms-menu__header {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
       '.cms-menu__header span, .cms-login-status .cms-login-status__profile-link, .cms-login-status .cms-login-status__logout-link, .cms-sitename .cms-sitename__title {color: ' . $cms_color . ' !important;}' .
       '.cms-sitename {border-color: ' . $cms_border_color . ' !important;}' .
-      '.cms-sitename:hover, .cms-sitename:focus {background-color: ' . $cms_hover_background . ' !important}' .
-      '.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover {background-color: ' . $cms_hover_background . ' !important;}' .
-      '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;}'
+      '.cms-sitename:hover, .cms-sitename:focus {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
+      '.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover, .cms-login-status .cms-login-status__profile-link:focus span, .cms-login-status .cms-login-status__profile-link:hover span {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
+      '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}'
     );
     // Menu List
     Requirements::customCSS(
       '.cms-menu {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
       '.cms-menu__list li a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
-      '.cms-menu__list li a:hover, .cms-menu__list li a:focus {background: ' . $cms_hover_background . ' !important;}' .
+      '.cms-menu__list li a:hover, .cms-menu__list li a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
       '.cms-menu__list li.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
       '.cms-menu__list li a .text::after {color: ' . $cms_color . ' !important;}' .
       '.cms-menu .cms-panel-content {-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important; box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
@@ -55,14 +57,14 @@ class LeftAndMainExtension extends Extension
     // Branded Menu
     Requirements::customCSS(
       '.branded-menu__list-item--children.opened a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
-      '.branded-menu__list-item--children.opened a:hover, .branded-menu__list-item--children.opened a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu__list-item--children.opened a:hover, .branded-menu__list-item--children.opened a:focus, .cms .branded-menu .branded-menu__list-item--children.opened>a:focus, .cms .branded-menu .branded-menu__list-item--children>a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
       '.branded-menu .branded-menu__list-item--children.current a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened a {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_color . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened {background: ' . $cms_drawer_background . ' !important;}' .
-      '.branded-menu__list-item--children .branded-menu__list-item {background: ' . $cms_drawer_background . ' !important;}' .
-      '.branded-menu .branded-menu__list-item--children.opened a:hover, .branded-menu .branded-menu__list-item--children.opened a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_drawer_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_drawer_color . ' !important;}' .
+      '.branded-menu__list-item--children .branded-menu__list-item {background: ' . $cms_drawer_background . ' !important;color: ' . $cms_drawer_color . ' !important;}' .
+      '.branded-menu .branded-menu__list-item--children.opened a:hover, .branded-menu .branded-menu__list-item--children.opened a:focus {background: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
       '.branded-menu .branded-menu__list-item--children .branded-menu__list-item.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
-      '.cms .branded-menu .branded-menu__list-item--children > a:hover, .cms .branded-menu .branded-menu__list-item--children.opened > a:hover {background: ' . $cms_hover_background . ' !important;color: ' . $cms_color . ' !important;}'
+      '.cms .branded-menu .branded-menu__list-item--children > a:hover, .cms .branded-menu .branded-menu__list-item--children.opened > a:hover {background: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}'
     );
     // CMS Menu Footer
     Requirements::customCSS(
