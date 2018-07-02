@@ -45,6 +45,7 @@ class LeftAndMainExtension extends Extension
       '.cms-login-status .cms-login-status__profile-link:focus, .cms-login-status .cms-login-status__profile-link:hover, .cms-login-status .cms-login-status__profile-link:focus span, .cms-login-status .cms-login-status__profile-link:hover span {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}' .
       '.cms-login-status .cms-login-status__logout-link:focus, .cms-login-status .cms-login-status__logout-link:hover {background-color: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}'
     );
+
     // Menu List
     Requirements::customCSS(
       '.cms-menu {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
@@ -55,6 +56,7 @@ class LeftAndMainExtension extends Extension
       '.cms-menu .cms-panel-content {-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important; box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
       '.cms-mobile-menu-toggle.cms-mobile-menu-toggle--open {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}'
     );
+
     // Branded Menu
     Requirements::customCSS(
       '.branded-menu__list-item--children.opened a {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important;}' .
@@ -67,6 +69,7 @@ class LeftAndMainExtension extends Extension
       '.branded-menu .branded-menu__list-item--children .branded-menu__list-item.current a {background: ' . $cms_active_background . ' !important;color: ' . $cms_active_color . ' !important;}' .
       '.cms .branded-menu .branded-menu__list-item--children > a:hover, .cms .branded-menu .branded-menu__list-item--children.opened > a:hover {background: ' . $cms_hover_background . ' !important;color: ' . $cms_hover_color . ' !important;}'
     );
+
     // CMS Menu Footer
     Requirements::customCSS(
       '.cms-menu .cms-panel-toggle {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important; border-color: ' . $cms_border_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
@@ -74,8 +77,11 @@ class LeftAndMainExtension extends Extension
       '.cms-menu .sticky-status-indicator {color: ' . $cms_color . ' !important}'
     );
 
+    // Icons
     Requirements::customCSS(
-      '.cms .menu__icon, .cms-login-status__profile-link i, .cms-login-status .cms-login-status__logout-link {color: ' . $cms_icon_color . ' !important;}'
+      '.cms .menu__icon, .cms-login-status__profile-link i, .cms-login-status .cms-login-status__logout-link {color: ' . $cms_icon_color . ' !important;}' .
+      '.cms-menu__list > li.current:not(.branded-menu__list-item--children) > a > .menu__icon {color: currentColor !important;}' .
+      '.branded-menu.branded-menu--child > li.current > a > .menu__icon {color: currentColor !important;}'
     );
   }
 
