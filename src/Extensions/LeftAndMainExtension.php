@@ -17,15 +17,16 @@ class LeftAndMainExtension extends Extension
   public function init()
   {
     $config = LeftAndMain::config();
-    $cms_background = !$config->cms_background ? '#0747A6' : $config->cms_background;
+    $cms_background = !$config->cms_background ? '#1d48a0' : $config->cms_background;
     $cms_border_color = !$config->cms_border_color ? '#173778' : $config->cms_border_color;
     $cms_color = !$config->cms_color ? '#fff' : $config->cms_color;
-    $cms_hover_background = !$config->cms_hover_background ? '#093684' : $config->cms_hover_background;
-    $cms_hover_color = !$config->cms_hover_color ? '#fff' : $config->cms_hover_color;
+    $cms_hover_background = !$config->cms_hover_background ? 'inherit' : $config->cms_hover_background;
+    $cms_hover_color = !$config->cms_hover_color ? 'currentColor' : $config->cms_hover_color;
     $cms_active_background = !$config->cms_active_background ? '#173778' : $config->cms_active_background;
-    $cms_active_color = !$config->cms_active_color ? '#fff' : $config->cms_active_color;
-    $cms_drawer_background = !$config->cms_drawer_background ? '#0e418e' : $config->cms_drawer_background;
-    $cms_drawer_color = !$config->cms_drawer_color ? '#fff' : $config->cms_drawer_color;
+    $cms_active_color = !$config->cms_active_color ? 'currentColor' : $config->cms_active_color;
+    $cms_drawer_background = !$config->cms_drawer_background ? '#1a3e88' : $config->cms_drawer_background;
+    $cms_drawer_color = !$config->cms_drawer_color ? 'currentColor' : $config->cms_drawer_color;
+    $cms_icon_color = !$config->cms_icon_color ? 'currentColor' : $config->cms_icon_color;
 
     Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">');
     Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
@@ -71,6 +72,10 @@ class LeftAndMainExtension extends Extension
       '.cms-menu .cms-panel-toggle {background: ' . $cms_background . ' !important;color: ' . $cms_color . ' !important; border-color: ' . $cms_border_color . ' !important;-webkit-box-shadow: inset ' . $cms_border_color . ' -1px 0 0 !important;box-shadow: inset -1px 0 0 ' . $cms_border_color . ' !important;}' .
       '.cms-panel .cms-panel-toggle .toggle-collapse span, .cms-panel .cms-panel-toggle .toggle-expand span {color: ' . $cms_color . ' !important}' .
       '.cms-menu .sticky-status-indicator {color: ' . $cms_color . ' !important}'
+    );
+
+    Requirements::customCSS(
+      '.cms .menu__icon, .cms-login-status__profile-link i, .cms-login-status .cms-login-status__logout-link {color: ' . $cms_icon_color . ' !important;}'
     );
   }
 
