@@ -3,21 +3,31 @@
 namespace RyanPotter\SilverstripeCMSTheme\Extensions;
 
 use SilverStripe\Admin\LeftAndMain;
-use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Convert;
 use SilverStripe\ORM\ArrayList;
-use SilverStripe\ORM\GroupedList;
-use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\GroupedList;
 use SilverStripe\View\ArrayData;
-use SilverStripe\View\Requirements;
 
 /**
  * Class GroupedCmsMenu
+ *
  * @package RyanPotter\SilverstripeCMSTheme\Extensions
+ * @property \SilverStripe\Admin\LeftAndMain $owner
  */
 class GroupedCmsMenu extends DataExtension
 {
+  use ExtensionDefinesDefaultConfig;
+
+  /**
+   * @var array
+   */
+  const CONFIG_SETTINGS_WITH_DEFAULTS = [
+    'menu_groups',
+    'menu_groups_alphabetical_sorting',
+  ];
+
   /**
    * @var array
    */
@@ -36,8 +46,8 @@ class GroupedCmsMenu extends DataExtension
   {
     $items = $this->owner->MainMenu();
     $result = ArrayList::create();
-    $config = Config::inst();
-    $menus = $config->get(LeftAndMain::class, 'menu_groups');
+    $config = LeftAndMain::config();
+    $menus = $config->get('menu_groups');
     $itemsToGroup = [];
     $menuSort = 0;
     $itemSort = 0;
@@ -104,7 +114,7 @@ class GroupedCmsMenu extends DataExtension
           'Link'        => $children->First()->Link,
           'Icon'        => $icon,
           'LinkingMode' => $active ? 'current' : '',
-          'Children'    => $config->get(LeftAndMain::class, 'menu_groups_alphabetical_sorting') ? $children->sort('Title') : $children->sort('SortOrder'),
+          'Children'    => $config->get('menu_groups_alphabetical_sorting') ? $children->sort('Title') : $children->sort('SortOrder'),
         ]));
       } else {
         // If there's only one child, return the first child as a model admin.

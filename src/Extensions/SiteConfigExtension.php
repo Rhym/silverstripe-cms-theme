@@ -3,8 +3,6 @@
 namespace RyanPotter\SilverStripeCMSTheme\Extensions;
 
 use SilverStripe\Assets\Image;
-use SilverStripe\Assets\File;
-use SilverStripe\Core\Config\Config;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\FieldList;
@@ -13,10 +11,12 @@ use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\TabSet;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Security\Permission;
+use SilverStripe\SiteConfig\SiteConfig;
 
 /**
  * Class SiteConfigExtension
  * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ * @property \SilverStripe\SiteConfig\SiteConfig $owner
  */
 class SiteConfigExtension extends DataExtension
 {
@@ -33,7 +33,7 @@ class SiteConfigExtension extends DataExtension
    */
   public function updateCMSFields(FieldList $fields)
   {
-    if (Permission::check('ADMIN') && !Config::inst()->get('SiteConfig', 'cms_logo')) {
+    if (Permission::check('ADMIN') && !SiteConfig::config()->get('cms_logo')) {
       if (!$fields->fieldByName('Root.Settings')) {
         $fields->addFieldToTab(
           'Root',
@@ -68,9 +68,9 @@ class SiteConfigExtension extends DataExtension
   public function getCustomCMSLogo()
   {
     $owner = $this->owner;
-    $config = Config::inst();
-    $imageUrl = $config->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo');
-    $imageWidth = $config->get('SilverStripe\SiteConfig\SiteConfig', 'cms_logo_width');
+    $config = SiteConfig::config();
+    $imageUrl = $config->get('cms_logo');
+    $imageWidth = $config->get('cms_logo_width');
     $imageWidthMax = 187;
 
     /**
@@ -102,14 +102,7 @@ class SiteConfigExtension extends DataExtension
    */
   public function onAfterWrite()
   {
-    $hasOnes = $this->owner->stat('has_one');
-    foreach ($hasOnes as $relation => $class) {
-      if ($class == Image::class || $class == File::class) {
-        $this->publishRelatedObject($this->owner->$relation());
-      }
-    }
-
-    parent::onAfterWrite();
+    $this->publishRelatedObject($this->owner->CMSLogo());
   }
 
   /**
