@@ -6,11 +6,11 @@ use SilverStripe\Admin\LeftAndMain;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Extension;
 use SilverStripe\View\Requirements;
-use SilverStripe\SiteConfig\SiteConfig;
 
 /**
  * Class LeftAndMainExtension
  * @package RyanPotter\SilverStripeCMSTheme\Extensions
+ * @property \SilverStripe\Admin\LeftAndMain $owner
  */
 class LeftAndMainExtension extends Extension
 {
