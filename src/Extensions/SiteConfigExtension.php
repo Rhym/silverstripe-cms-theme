@@ -102,14 +102,7 @@ class SiteConfigExtension extends DataExtension
    */
   public function onAfterWrite()
   {
-    $hasOnes = $this->owner->stat('has_one');
-    foreach ($hasOnes as $relation => $class) {
-      if ($class == Image::class || $class == File::class) {
-        $this->publishRelatedObject($this->owner->$relation());
-      }
-    }
-
-    parent::onAfterWrite();
+    $this->publishRelatedObject($this->owner->CMSLogo());
   }
 
   /**
