@@ -28,7 +28,7 @@ class LeftAndMainExtension extends Extension
     $cms_drawer_color = !$config->cms_drawer_color ? 'currentColor' : $config->cms_drawer_color;
     $cms_icon_color = !$config->cms_icon_color ? 'currentColor' : $config->cms_icon_color;
 
-    Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">');
+    Requirements::insertHeadTags('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">');
     Requirements::css('ryanpotter/silverstripe-cms-theme:dist/main.css');
 
     Requirements::customCSS(
