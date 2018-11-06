@@ -1,1 +1,318 @@
-.cms .branded-menu{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}.cms .branded-menu--child{display:none;padding-left:0}.cms .branded-menu--child a{font-size:14px!important;height:auto!important;padding:16px 32px 16px 40px!important;padding:1rem 2rem 1rem 2.5rem!important}.cms .branded-menu--child .menu__icon{left:40px;left:2.5rem}.cms .branded-menu__list-item{list-style:none}.cms .branded-menu__list-item--children.opened .menu__icon--chevron:before{content:"0"}.cms .branded-menu__list-item--children>a:first-child{padding:16px 48px 16px 32px;padding:1rem 3rem 1rem 2rem;position:relative}.cms .branded-menu__list-item li a{min-height:0}.cms .branded-menu__list-item>a{padding:16px 32px;padding:1rem 2rem;font-size:14px}.cms .branded-menu__list-item .text{margin-left:40px!important;margin-left:2.5rem!important}@media (max-width:767px){.cms .branded-menu__list-item .text{margin-left:38px!important}}.cms .branded-menu__list-item .toggle-children{float:none;position:absolute;padding:0;top:0;right:0;bottom:0;left:0;width:100%;height:100%}.cms .branded-menu__list-item .toggle-children-icon{display:none!important}.cms .branded-menu .branded-menu__list-item--children.opened>a:focus,.cms .branded-menu .branded-menu__list-item--children>a:focus{background:transparent none!important}.cms .cms-menu__list li.current>a .toggle-children .toggle-children-icon{width:11px;height:11px;background:none}.cms-login-status .cms-login-status__profile-link{padding-left:32px;padding-left:2rem}.cms-login-status .cms-login-status__profile-link i{margin:0;font-size:0;left:32px;left:2rem;top:50%;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0);line-height:1}.cms-login-status__profile-link i:before{font-size:24px;font-size:1.5rem}.cms-login-status .cms-login-status__profile-link span{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;padding-left:40px;padding-left:2.5rem}.cms-logo{display:block;text-align:center;padding:0;-webkit-box-flex:1;-ms-flex:1 0 0px;flex:1 0 0}.cms-logo>img{max-width:100%;height:auto}.cms .cms-menu{width:294.4px!important;width:18.4rem!important}.cms .cms-panel-toggle{display:none!important}.cms .cms-sitename{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;padding:32px;padding:2rem;height:auto}.cms .cms-sitename__title{padding:0;margin:0}.cms .cms-sitename .logo{-webkit-box-flex:1;-ms-flex:1 0 0px;flex:1 0 0}@-webkit-keyframes a{0%{-webkit-transform:translate3d(-50%,-50%,0) rotate(0deg);transform:translate3d(-50%,-50%,0) rotate(0deg)}to{-webkit-transform:translate3d(-50%,-50%,0) rotate(1turn);transform:translate3d(-50%,-50%,0) rotate(1turn)}}@keyframes a{0%{-webkit-transform:translate3d(-50%,-50%,0) rotate(0deg);transform:translate3d(-50%,-50%,0) rotate(0deg)}to{-webkit-transform:translate3d(-50%,-50%,0) rotate(1turn);transform:translate3d(-50%,-50%,0) rotate(1turn)}}.ss-loading-screen .loading-logo{background:transparent none}.ss-loading-screen .loading-logo:after{position:absolute;content:"";display:block;width:48px;width:3rem;height:48px;height:3rem;background:transparent none;border:2px solid rgba(0,0,0,.04);border-top-color:#0071c4!important;border-radius:50%;top:50%;left:50%;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0);-webkit-animation:a .8s linear infinite;animation:a .8s linear infinite}.ss-loading-screen .loading-logo .loading-animation{display:none!important}.cms-content-loading-spinner{background-image:none}.cms-content-loading-spinner:after{position:absolute;content:"";display:block;width:48px;width:3rem;height:48px;height:3rem;background:transparent none;border:2px solid rgba(0,0,0,.04);border-top-color:#0071c4!important;border-radius:50%;top:50%;left:50%;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0);-webkit-animation:a .8s linear infinite;animation:a .8s linear infinite}.cms .menu__icon{color:currentColor;font-size:0;margin-top:0;top:50%;left:32px;left:2rem;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0);line-height:1;width:24px;width:1.5rem;height:24px;height:1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.cms .menu__icon--image{background-repeat:no-repeat;background-position:50%}.cms .menu__icon--chevron{right:16px;right:1rem;left:auto}.cms .menu__icon--chevron:before{content:"U"}.cms .menu__icon:before{color:currentColor;font-size:24px;font-size:1.5rem}.cms .menu__icon.fa:before,.cms .menu__icon.fab:before,.cms .menu__icon.fal:before,.cms .menu__icon.far:before,.cms .menu__icon.fas:before{font-size:20.8px;font-size:1.3rem}.cms .sticky-status-indicator{left:26px;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0)}.cms .cms-menu.collapsed .sticky-status-indicator{left:20px}.cms .sticky-toggle{position:relative;background-image:none}.cms .sticky-toggle:after,.cms .sticky-toggle:before{content:"";display:block;width:12px;height:12px;border-radius:50%;background:transparent;border:1px solid currentColor;position:absolute;top:50%;left:50%;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}.cms .sticky-toggle:before{display:none;width:7px;height:7px;background:currentColor;border-width:0}.cms .sticky-toggle.active{background-image:none}.cms .sticky-toggle.active:before{display:block}
+.cms .branded-menu {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif
+}
+
+.cms .branded-menu--child {
+  display: none;
+  padding-left: 0
+}
+
+.cms .branded-menu--child a {
+  font-size: 14px !important;
+  height: auto !important;
+  padding: 1rem 2rem 1rem 2.5rem !important
+}
+
+.cms .branded-menu--child .menu__icon {
+  left: 40px;
+  left: 2.5rem
+}
+
+.cms .branded-menu__list-item {
+  list-style: none
+}
+
+.cms .branded-menu__list-item--children.opened .menu__icon--chevron:before {
+  content: "0"
+}
+
+.cms .branded-menu__list-item--children > a:first-child {
+  padding: 1rem 3rem 1rem 2rem;
+  position: relative
+}
+
+.cms .branded-menu__list-item > a {
+  padding: 1rem 2rem;
+  font-size: 14px
+}
+
+.cms .branded-menu__list-item li a {
+  min-height: 0
+}
+
+.cms .branded-menu__list-item .text {
+  margin-left: 2.5rem !important
+}
+
+@media (max-width: 767px) {
+  .cms .branded-menu__list-item .text {
+    margin-left: 38px !important
+  }
+}
+
+.cms .branded-menu__list-item .toggle-children {
+  float: none;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+.cms .branded-menu__list-item .toggle-children-icon {
+  display: none !important
+}
+
+.cms .branded-menu .branded-menu__list-item--children.opened > a:focus, .cms .branded-menu .branded-menu__list-item--children > a:focus {
+  background: transparent none !important
+}
+
+.cms .cms-menu__list li.current > a .toggle-children .toggle-children-icon {
+  width: 11px;
+  height: 11px;
+  background: none
+}
+
+.cms-login-status .cms-login-status__profile-link {
+  padding-left: 2rem
+}
+
+.cms-login-status .cms-login-status__profile-link i {
+  margin: 0;
+  font-size: 0;
+  left: 32px;
+  left: 2rem;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  line-height: 1
+}
+
+.cms-login-status__profile-link i:before {
+  font-size: 24px;
+  font-size: 1.5rem
+}
+
+.cms-login-status .cms-login-status__profile-link span {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  padding-left: 2.5rem
+}
+
+.cms-logo {
+  display: block;
+  text-align: center;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0
+}
+
+.cms-logo > img {
+  max-width: 100%;
+  height: auto
+}
+
+.cms .cms-menu {
+  width: 294.4px !important;
+  width: 18.4rem !important
+}
+
+.cms .cms-menu__header {
+  border-right: 1px solid !important
+}
+
+.cms .cms-panel-toggle {
+  display: none !important
+}
+
+.cms .cms-sitename {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  padding: 2rem;
+  height: auto
+}
+
+.cms .cms-sitename__title {
+  padding: 0;
+  margin: 0
+}
+
+.cms .cms-sitename .logo {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0
+}
+
+@-webkit-keyframes infinite-spinning {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotate(0deg)
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(1turn);
+    transform: translate3d(-50%, -50%, 0) rotate(1turn)
+  }
+}
+
+@keyframes infinite-spinning {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotate(0deg)
+  }
+  to {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(1turn);
+    transform: translate3d(-50%, -50%, 0) rotate(1turn)
+  }
+}
+
+.ss-loading-screen .loading-logo {
+  background: transparent none
+}
+
+.ss-loading-screen .loading-logo:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 48px;
+  width: 3rem;
+  height: 48px;
+  height: 3rem;
+  background: transparent none;
+  border: 2px solid rgba(0, 0, 0, .04);
+  border-top-color: #0071c4 !important;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-animation: infinite-spinning .8s linear infinite;
+  animation: infinite-spinning .8s linear infinite
+}
+
+.ss-loading-screen .loading-logo .loading-animation {
+  display: none !important
+}
+
+.cms-content-loading-spinner {
+  background-image: none
+}
+
+.cms-content-loading-spinner:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 48px;
+  width: 3rem;
+  height: 48px;
+  height: 3rem;
+  background: transparent none;
+  border: 2px solid rgba(0, 0, 0, .04);
+  border-top-color: #0071c4 !important;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-animation: infinite-spinning .8s linear infinite;
+  animation: infinite-spinning .8s linear infinite
+}
+
+.cms .menu__icon {
+  color: currentColor;
+  font-size: 0;
+  margin-top: 0;
+  top: 50%;
+  left: 32px;
+  left: 2rem;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  line-height: 1;
+  width: 24px;
+  width: 1.5rem;
+  height: 24px;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center
+}
+
+.cms .menu__icon--image {
+  background-repeat: no-repeat;
+  background-position: 50%
+}
+
+.cms .menu__icon--chevron {
+  right: 16px;
+  right: 1rem;
+  left: auto
+}
+
+.cms .menu__icon--chevron:before {
+  content: "U"
+}
+
+.cms .menu__icon:before {
+  color: currentColor;
+  font-size: 24px;
+  font-size: 1.5rem
+}
+
+.cms .menu__icon.fa:before, .cms .menu__icon.fab:before, .cms .menu__icon.fal:before, .cms .menu__icon.far:before, .cms .menu__icon.fas:before {
+  font-size: 20.8px;
+  font-size: 1.3rem
+}
+
+.cms .sticky-status-indicator {
+  left: 26px;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0)
+}
+
+.cms .cms-menu.collapsed .sticky-status-indicator {
+  left: 20px
+}
+
+.cms .sticky-toggle {
+  position: relative;
+  background-image: none
+}
+
+.cms .sticky-toggle:after, .cms .sticky-toggle:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0)
+}
+
+.cms .sticky-toggle:before {
+  display: none;
+  width: 7px;
+  height: 7px;
+  background: currentColor;
+  border-width: 0
+}
+
+.cms .sticky-toggle.active {
+  background-image: none
+}
+
+.cms .sticky-toggle.active:before {
+  display: block
+}

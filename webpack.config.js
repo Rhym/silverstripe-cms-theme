@@ -1,11 +1,10 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const extractSass = new ExtractTextPlugin({
-  filename: '[name].css',
-  disable: process.env.NODE_ENV === 'development'
+const extractSass = new MiniCssExtractPlugin({
+  filename: '[name].css'
 });
 
 module.exports = {
@@ -23,16 +22,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: extractSass.extract({
-            use: [
-              {loader: 'css-loader', options: {sourceMap: true}},
-              {loader: 'postcss-loader', options: {sourceMap: true}},
-              {loader: 'sass-loader', options: {sourceMap: true}}
-            ],
-            // use style-loader in development
-            fallback: 'style-loader'
-          }
-        )
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,

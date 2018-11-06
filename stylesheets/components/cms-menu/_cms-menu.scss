@@ -11,6 +11,10 @@ $cms-menu-width: 18.4rem;
     width: $cms-menu-width !important; // Important to override JS
   }
 
+  .cms-menu__header {
+    border-right: 1px solid currentcolor !important;
+  }
+
   // Remove this in css, since subsites overrides the template.
   .cms-panel-toggle {
     display: none !important;

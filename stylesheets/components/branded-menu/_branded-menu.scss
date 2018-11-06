@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /*
 |--------------------------------------------------------------------------
 | Branded Menu
@@ -67,15 +69,15 @@ $branded-menu__toggle-size: 11px;
       // Child Nodes
       // ----------------------------------------
 
+      > a {
+        padding: 1rem 2rem;
+        font-size: $branded-menu-font-size;
+      }
+
       li {
         a {
           min-height: 0;
         }
-      }
-
-      > a {
-        padding: 1rem 2rem;
-        font-size: $branded-menu-font-size;
       }
 
       .text {
@@ -103,9 +105,7 @@ $branded-menu__toggle-size: 11px;
       }
     }
   }
-}
 
-.cms {
   .branded-menu .branded-menu__list-item--children.opened > a:focus,
   .branded-menu .branded-menu__list-item--children > a:focus {
     background: transparent none !important;
