@@ -70,11 +70,11 @@
  * GridFields / Accordions
  * ----------------------------------------*/
 
-.cms .defaultSkin .mceStatusbar,
-.cms .defaultSkin .mceToolbar,
-.cms table.ss-gridfield-table tr td.bottom-all,
+.ss-toggle .ui-accordion-header.ui-state-default,
 .cms table.ss-gridfield-table tr.title th,
-.ss-toggle .ui-accordion-header.ui-state-default {
+.cms table.ss-gridfield-table tr td.bottom-all,
+.cms .defaultSkin .mceToolbar,
+.cms .defaultSkin .mceStatusbar {
 	background: #f9f9f9;
 	background: linear-gradient(#f9f9f9, #f2f2f2);
 	border-color: #BDBDBD !important;
@@ -308,7 +308,7 @@
 }
 
 .cms-menu .cms-menu-list li a {
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #fff;
 	font-weight: 600;
 	background: transparent none;
@@ -326,8 +326,8 @@
 
 .cms-menu .cms-menu-list li a .icon {
 	margin-left: 0; /**
-   * Display full opacity to inverse icons.
-   */
+       * Display full opacity to inverse icons.
+       */
 	opacity: 1;
 }
 
@@ -373,9 +373,9 @@
 	text-indent: 0;
 	height: 16px;
 	width: 16px;
-	content: "";
+	content: '\f0c9';
 	padding: 4px;
-	content: "";
+	content: '\f10c';
 	color: #fff;
 	text-shadow: none;
 }
@@ -385,7 +385,7 @@
 }
 
 .cms-menu .ss-ui-button.sticky-toggle.active::before {
-	content: "";
+	content: '\f192';
 }
 
 /** =========================================
@@ -401,22 +401,22 @@
  * Gridfields
  ===========================================*/
 
-.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number,
+.cms table.ss-gridfield-table .right .pagination-records-number,
+.cms table.ss-gridfield-table tr th.main,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort,
 .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover,
 .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort,
-.cms table.ss-gridfield-table tr th.main,
-.cms table.ss-gridfield-table .right .pagination-records-number {
+.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number {
 	color: #444 !important;
 	text-shadow: none;
 }
 
-.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number span,
+.cms table.ss-gridfield-table .right .pagination-records-number span,
+.cms table.ss-gridfield-table tr th.main span,
+.cms table.ss-gridfield-table tr th button.ss-gridfield-sort span,
 .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:hover span,
 .cms table.ss-gridfield-table tr th button.ss-gridfield-sort:active span,
-.cms table.ss-gridfield-table tr th button.ss-gridfield-sort span,
-.cms table.ss-gridfield-table tr th.main span,
-.cms table.ss-gridfield-table .right .pagination-records-number span {
+.cms table.ss-gridfield-table tr td.bottom-all .pagination-records-number span {
 	text-shadow: none;
 }
 
@@ -447,8 +447,8 @@
 .cms table.ss-gridfield-table tr.filter-header .extra {
 	background: #212121;
 	color: #fff; /**
-   * Input fields in the search filter.
-   */
+     * Input fields in the search filter.
+     */
 }
 
 .cms table.ss-gridfield-table tr.filter-header .extra .fieldholder-small {
@@ -457,8 +457,8 @@
 
 .cms table.ss-gridfield-table tr th {
 	border-radius: 0; /**
-   * Sortable GridField bar
-   */
+     * Sortable GridField bar
+     */
 }
 
 .cms table.ss-gridfield-table tr th.main {
@@ -477,8 +477,8 @@
 }
 
 .cms table.ss-gridfield-table tr th button { /**
-   * Search Icon
-   */
+       * Search Icon
+       */
 }
 
 .cms table.ss-gridfield-table tr th button.ss-ui-button.ss-gridfield-button-filter.trigger {
@@ -491,13 +491,13 @@
 
 .cms table.ss-gridfield-table tr td.bottom-all {
 	border: 1px solid #BDBDBD; /**
-   * Pagination
-   */
+     * Pagination
+     */
 }
 
 .cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination { /**
-   * Pagination buttons
-   */
+       * Pagination buttons
+       */
 }
 
 .cms table.ss-gridfield-table tr td.bottom-all .datagrid-pagination .ui-button-text,
@@ -555,8 +555,8 @@
 	text-indent: 0;
 	height: 16px;
 	width: 16px;
-	content: "";
-	content: "";
+	content: '\f0c9';
+	content: '\f0c9';
 	position: absolute;
 	top: 50%;
 	left: 16px;
@@ -633,7 +633,7 @@
 
 .cms-menu .cms-menu-list li.children .toggle-children.opened .toggle-children-icon::before {
 	margin-top: 0;
-	content: "";
+	content: '\f0d8';
 }
 
 .cms-menu .cms-menu-list li.children .toggle-children .toggle-children-icon {
@@ -655,10 +655,10 @@
 	text-indent: 0;
 	height: 16px;
 	width: 16px;
-	content: "";
+	content: '\f0c9';
 	color: rgba(255, 255, 255, 0.3);
 	margin-top: 1px;
-	content: "";
+	content: '\f0d7';
 }
 
 .cms-menu .cms-menu-list.collapsed li.children > a {
@@ -693,7 +693,7 @@
 
 .ss-loading-screen .loading-logo:after {
 	position: absolute;
-	content: "";
+	content: '';
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -718,7 +718,7 @@
 
 .cms-content-loading-spinner:after {
 	position: absolute;
-	content: "";
+	content: '';
 	display: block;
 	width: 25px;
 	height: 25px;
@@ -752,7 +752,7 @@
 	text-indent: 0;
 	height: 16px;
 	width: 16px;
-	content: "";
+	content: '\f0c9';
 	text-indent: 0;
 	content: "";
 	height: 16px;
@@ -775,10 +775,10 @@
 }
 
 .cms .defaultSkin { /**
-   * Buttons
-   */ /**
-   * Layout
-   */
+     * Buttons
+     */ /**
+     * Layout
+     */
 }
 
 .cms .defaultSkin a:link,
