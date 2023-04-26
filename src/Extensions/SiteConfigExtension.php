@@ -83,7 +83,7 @@ class SiteConfigExtension extends DataExtension
 
     // If there's a logo in the config, return a <img>
     if ($imageUrl) {
-      $imageAbsoluteUrl = Director::absoluteBaseURL() . $imageUrl;
+      $imageAbsoluteUrl = ModuleResourceLoader::resourceURL($imageUrl);
 
       return sprintf(
         '<img src="%s" alt="%s" style="max-width: ' . $imageWidth . 'px !important;" />',
