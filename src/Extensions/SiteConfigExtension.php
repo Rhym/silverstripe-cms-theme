@@ -5,6 +5,7 @@ namespace RyanPotter\SilverStripeCMSTheme\Extensions;
 use SilverStripe\Assets\Image;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Core\Manifest\ModuleResourceLoader;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FileHandleField;
 use SilverStripe\Forms\HeaderField;
