@@ -9,6 +9,9 @@ $cms-menu-width: 18.4rem;
 .cms {
   .cms-menu {
     width: $cms-menu-width !important; // Important to override JS
+    &.collapsed {
+      width: 60px !important;
+    }
   }
 
   .cms-menu__header {
@@ -16,7 +19,7 @@ $cms-menu-width: 18.4rem;
   }
 
   // Remove this in css, since subsites overrides the template.
-  .cms-panel-toggle {
+  .cms-panel-toggle .sticky-toggle {
     display: none !important;
   }
 }
