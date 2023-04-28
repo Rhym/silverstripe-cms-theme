@@ -5,6 +5,7 @@ namespace RyanPotter\SilverStripeCMSTheme\Extensions;
 use SilverStripe\Assets\Image;
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Core\Manifest\ModuleResourceLoader;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FileHandleField;
 use SilverStripe\Forms\HeaderField;
@@ -83,7 +84,7 @@ class SiteConfigExtension extends DataExtension
 
     // If there's a logo in the config, return a <img>
     if ($imageUrl) {
-      $imageAbsoluteUrl = Director::absoluteBaseURL() . $imageUrl;
+      $imageAbsoluteUrl = ModuleResourceLoader::resourceURL($imageUrl);
 
       return sprintf(
         '<img src="%s" alt="%s" style="max-width: ' . $imageWidth . 'px !important;" />',
