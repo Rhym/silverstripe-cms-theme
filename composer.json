@@ -15,9 +15,9 @@
     }
   ],
   "require": {
-    "silverstripe/framework": "^4.0",
-    "silverstripe/admin": "^1.0",
-    "silverstripe/siteconfig": "^4.0"
+    "silverstripe/framework": "^4.0 || ^5.0",
+    "silverstripe/admin": "^1.0 || ^2.0",
+    "silverstripe/siteconfig": "^4.0 || ^5.0"
   },
   "support": {
     "issues": "https://github.com/Rhym/silverstripe-cms-theme/issues"
