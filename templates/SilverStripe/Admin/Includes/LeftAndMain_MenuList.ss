@@ -29,7 +29,7 @@
                   <% else %>
                     <span class="menu__icon menu__icon--image icon icon-16 icon-{$Icon}">&nbsp;</span>
                   <% end_if %>
-                  <span class="text">{$Title}</span>
+                  <span class="text"><% if $SectionTitle %>$SectionTitle<% else %>$Title<% end_if %></span>
                 </a>
               </li>
             <% end_loop %>
